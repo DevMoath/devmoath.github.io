@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "profile"
+        "educations"
+        "abilities"
+        "projects"
+        "footer"
+    ;
+}
+
+.background-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../image/background.png");
+    opacity: 0.80;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.heading1 {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    margin: 10px auto;
+    background: black;
+}
+
+.limit {
+    width: auto;
+}
+
+.heading2 {
+    font-size: 50px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.heading3 {
+    font-size: 40px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.type1 {
+    display: table;
+    margin: 10px auto;
+}
+
+.paragraph1 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.paragraph2 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.white {
+    color: #fff;
+}
+
+
+.left-side {
+    grid-area: left;
+}
+
+.right-side {
+    grid-area: right;
+}
