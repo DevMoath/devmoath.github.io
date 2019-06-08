@@ -24,14 +24,21 @@
 <div class="background-image"></div>
 
 <!-- Page Loader -->
-<div class="loader">
-    <ul>
-        <li class="card-loader">&nbsp;</li>
-        <li class="card-loader">&nbsp;</li>
-        <li class="card-loader">&nbsp;</li>
-        <li class="card-loader">&nbsp;</li>
-        <li class="card-loader">&nbsp;</li>
-    </ul>
+<!--<div class="loader">-->
+<!--    <ul>-->
+<!--        <li class="card-loader">&nbsp;</li>-->
+<!--        <li class="card-loader">&nbsp;</li>-->
+<!--        <li class="card-loader">&nbsp;</li>-->
+<!--        <li class="card-loader">&nbsp;</li>-->
+<!--        <li class="card-loader">&nbsp;</li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<div class="loader-container">
+    <div>
+        <div class="loader"></div>
+        <p id="loading">Loading...</p>
+    </div>
 </div>
 
 <!-- Main Container -->
@@ -114,7 +121,8 @@
                     <ul>
                         <li>System Analyst and Design</li>
                         <li>HTML, CSS, JS, PHP Developer</li>
-                        <li>JAVA Developer</li>
+                        <li>Java Developer</li>
+                        <li>Python Developer</li>
                         <li>Data Analyst with Python</li>
                     </ul>
                 </div>
@@ -122,9 +130,9 @@
                     <p class="heading2 left-align">Interests</p>
                     <ul>
                         <li>Self-Education</li>
+                        <li>Database Management System</li>
                         <li>Networking</li>
                         <li>Information Security</li>
-                        <li>Database Management System</li>
                     </ul>
                 </div>
                 <div class="languages">
@@ -145,19 +153,22 @@
             <div class="line"></div>
             <div class="grid-container">
                 <div class="project one">
-                    <div class="hidden"><p>Weather app with dark-sky API.</p>
+                    <div class="hidden">
+                        <p>Weather app with dark-sky API.</p>
                         <a class="link small" href="https://weather-app.cf/">VIEW WEBSITE →</a>
                         <a class="link small" href="https://github.com/DevMoath/Weather-App">VIEW CODE →</a>
                     </div>
                 </div>
                 <div class="project two">
-                    <div class="hidden"><p>Application used to encrypt/decrypt text using Columnar Keyword Algorithm.</p>
+                    <div class="hidden">
+                        <p>Application for encrypt/decrypt text using Columnar Keyword Cipher.</p>
                         <a class="link small none" href="#">VIEW WEBSITE →</a>
                         <a class="link small" href="https://github.com/DevMoath/Cryptography-Application">VIEW CODE →</a>
                     </div>
                 </div>
                 <div class="project three">
-                    <div class="hidden"><p>Application used to track football match goals and fouls of both teams.</p>
+                    <div class="hidden">
+                        <p>Application for track football match goals/fouls of both teams.</p>
                         <a class="link small none" href="#">VIEW WEBSITE →</a>
                         <a class="link small" href="https://github.com/DevMoath/ScoreKeeper">VIEW CODE →</a>
                     </div>
@@ -197,7 +208,7 @@
     <script>
         // This function is to remove the loader tag after the page is loaded and enable the scroll
         window.onload = function() {
-            document.getElementsByClassName("loader")[0].style.display = 'none';
+            document.getElementsByClassName("loader-container")[0].style.display = 'none';
             document.getElementById('page').style.overflowY = 'scroll';
 
             var typed = new Typed('.type', {

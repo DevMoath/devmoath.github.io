@@ -26,11 +26,11 @@
     height: 200px;
     width: 90%;
     padding: 10px;
+    border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-    transition: all 0.5s ease-in-out;
 }
 
 .projects p {
@@ -66,7 +66,7 @@
     text-align: center;
     color: #000;
     font-size: 18px;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 15px 20px;
     border: 2px solid #000;
     transition: all 0.2s ease-in-out;
@@ -74,7 +74,7 @@
 
 .small {
     width: auto;
-    max-width: 150px;
+    max-width: 140px;
     color: #fff;
     border-color: #fff;
 }
@@ -87,21 +87,23 @@
     display: none;
 }
 
+.hidden p {
+    margin: 10px auto;
+}
+
 .one:hover, .one:active {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/one.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/one.png") center top;
     background-size: cover;
 }
 
 .two:hover, .two:active {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/two.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/two.png") center top;
     background-size: cover;
-    background-position: center bottom;
 }
 
 .three:hover, .three:active {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/three.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/three.png") center top;
     background-size: cover;
-    background-position: center bottom;
 }
 
 .project:hover .hidden, .project:active {

@@ -2,69 +2,107 @@ body {
     overflow: hidden;
 }
 
-.loader {
+.loader-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    z-index: 3;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #576574, #2f3640);
+    z-index: 2;
 }
 
-.loader ul {
-    list-style: none;
-    margin: 50px;
-}
-
-.card-loader {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.card-loader {
-    padding: 8px;
+.loader-container div {
     position: relative;
-    border-radius: 2px;
-    margin-bottom: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.card-loader:only-child {
-    margin-top: 0;
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top-color: #2f3640;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 2s linear infinite;
 }
 
-.card-loader:before {
-    content: '';
-    height: 30px;
-    display: block;
-    background-color: #ccc;
-    box-shadow: -68px -98px 0 -48px #ededed, -50px 110px 0 -48px #ededed;
+#loading {
+    text-align: center;
+    margin: 20px auto;
 }
 
-.card-loader:after {
-    content: '';
-    background-color: #333;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation-duration: 1.4s;
-    animation-iteration-count: infinite;
-    animation-name: loader-animate;
-    animation-timing-function: linear;
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);
-}
-
-@keyframes loader-animate {
+@keyframes spin {
     0% {
-        transform: translate3d(-100%, 0, 0);
+        transform: rotate(0deg);
     }
     100% {
-        transform: translate3d(100%, 0, 0);
+        transform: rotate(360deg);
     }
 }
+
+/*.loader {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: #fff;*/
+/*    z-index: 3;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.loader ul {*/
+/*    list-style: none;*/
+/*    margin: 50px;*/
+/*}*/
+
+/*.card-loader {*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.card-loader {*/
+/*    padding: 8px;*/
+/*    position: relative;*/
+/*    border-radius: 2px;*/
+/*    margin-bottom: 0;*/
+/*}*/
+
+/*.card-loader:only-child {*/
+/*    margin-top: 0;*/
+/*}*/
+
+/*.card-loader:before {*/
+/*    content: '';*/
+/*    height: 30px;*/
+/*    display: block;*/
+/*    background-color: #ccc;*/
+/*    box-shadow: -68px -98px 0 -48px #ededed, -50px 110px 0 -48px #ededed;*/
+/*}*/
+
+/*.card-loader:after {*/
+/*    content: '';*/
+/*    background-color: #333;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    animation-duration: 1.4s;*/
+/*    animation-iteration-count: infinite;*/
+/*    animation-name: loader-animate;*/
+/*    animation-timing-function: linear;*/
+/*    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);*/
+/*    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);*/
+/*    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);*/
+/*    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);*/
+/*}*/
+
+/*@keyframes loader-animate {*/
+/*    0% {*/
+/*        transform: translate3d(-100%, 0, 0);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translate3d(100%, 0, 0);*/
+/*    }*/
+/*}*/
