@@ -75,12 +75,9 @@
 .small {
     width: auto;
     max-width: 140px;
+    border-radius: 20px;
     color: #fff;
     border-color: #fff;
-}
-
-.none {
-    visibility: hidden;
 }
 
 .hidden {
@@ -92,17 +89,17 @@
 }
 
 .one:hover, .one:active {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/one.png") center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/one.png") center top;
     background-size: cover;
 }
 
 .two:hover, .two:active {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/two.png") center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/two.png") center top;
     background-size: cover;
 }
 
 .three:hover, .three:active {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/three.png") center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/three.png") center top;
     background-size: cover;
 }
 
@@ -114,4 +111,10 @@
     background: #000;
     color: #fff;
     border-color: #000;
+}
+
+.small:hover, .small:active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
 }

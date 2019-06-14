@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Moath Alhajri</title>
+    <!-- Style Sheets -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/scroll_bar.css">
     <link rel="stylesheet" href="css/loader.css">
@@ -14,9 +15,12 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/media_query.css">
-    <link rel="icon" href="https://img.icons8.com/ios/50/000000/source-code-filled.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!-- page icon -->
+    <link rel="icon" href="https://img.icons8.com/ios/50/000000/source-code-filled.png">
+    <!-- javascript files -->
     <script src="js/typed.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body id="page">
 
@@ -24,16 +28,6 @@
 <div class="background-image"></div>
 
 <!-- Page Loader -->
-<!--<div class="loader">-->
-<!--    <ul>-->
-<!--        <li class="card-loader">&nbsp;</li>-->
-<!--        <li class="card-loader">&nbsp;</li>-->
-<!--        <li class="card-loader">&nbsp;</li>-->
-<!--        <li class="card-loader">&nbsp;</li>-->
-<!--        <li class="card-loader">&nbsp;</li>-->
-<!--    </ul>-->
-<!--</div>-->
-
 <div class="loader-container">
     <div>
         <div class="loader"></div>
@@ -152,25 +146,24 @@
             <p class="heading1">Projects</p>
             <div class="line"></div>
             <div class="grid-container">
-                <div class="project one">
+                <div class="project one" onclick="go_to_project_one()">
                     <div class="hidden">
                         <p>Weather app with dark-sky API.</p>
                         <a class="link small" href="https://weather-app.cf/">VIEW WEBSITE →</a>
                         <a class="link small" href="https://github.com/DevMoath/Weather-App">VIEW CODE →</a>
                     </div>
                 </div>
-                <div class="project two">
+                <div class="project two" onclick="go_to_project_two()">
                     <div class="hidden">
                         <p>Application for encrypt/decrypt text using Columnar Keyword Cipher.</p>
-                        <a class="link small none" href="#">VIEW WEBSITE →</a>
                         <a class="link small" href="https://github.com/DevMoath/Cryptography-Application">VIEW CODE →</a>
                     </div>
                 </div>
-                <div class="project three">
+                <div class="project three" onclick="go_to_project_three()">
                     <div class="hidden">
-                        <p>Application for track football match goals/fouls of both teams.</p>
-                        <a class="link small none" href="#">VIEW WEBSITE →</a>
-                        <a class="link small" href="https://github.com/DevMoath/ScoreKeeper">VIEW CODE →</a>
+                        <p>Budget app to manage your finance tasks.</p>
+                        <a class="link small" href="https://budget-app.cf/">VIEW WEBSITE →</a>
+                        <a class="link small" href="https://github.com/DevMoath/Budget-App-with-Bootsrtap">VIEW CODE →</a>
                     </div>
                 </div>
             </div>
@@ -204,26 +197,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // This function is to remove the loader tag after the page is loaded and enable the scroll
-        window.onload = function() {
-            document.getElementsByClassName("loader-container")[0].style.display = 'none';
-            document.getElementById('page').style.overflowY = 'scroll';
-
-            var typed = new Typed('.type', {
-                strings: ["Moath Alhajri"],
-                showCursor: false,
-                typeSpeed: 100
-            });
-
-            var typed1 = new Typed('.type1', {
-                strings: ["Bachelor in Information Systems"],
-                showCursor: false,
-                typeSpeed: 50
-            });
-        }
-    </script>
 </div>
 </body>
 </html>
