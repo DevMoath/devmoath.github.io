@@ -2,93 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Moath Alhajri</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 4.3.1 Style Sheet-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-142122097-1');
+    </script>
+    <!-- Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="assets/bootstrap-4.3.1/bootstrap.min.css">
+    <script src="assets/bootstrap-4.3.1/jquery-3.4.1.min.js"></script>
+    <script src="assets/bootstrap-4.3.1/popper.min.js"></script>
+    <script src="assets/bootstrap-4.3.1/bootstrap.min.js"></script>
     <!-- index Style Sheet-->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <!-- Fontawesome 5.7.2 Style Sheet-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="assets/fontawesome-5.9.0/css/all.min.css">
     <!-- page icon -->
-    <link rel="icon" href="https://img.icons8.com/ios/50/000000/source-code-filled.png">
+    <link rel="icon" href="assets/image/icon.png">
     <!-- javascript files -->
-    <script src="js/typed.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="assets/js/typed.min.js"></script>
+    <script src="assets/js/index.js"></script>
 </head>
-<body>
+
+<body class="overflow-hidden" id="body_page">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMM3Z9H"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Page Background -->
-<div class="background-image"></div>
+<div class="position-fixed row vh-100 w-100 m-0"
+     style="background: url('assets/image/background.jpg') no-repeat center; background-size: cover; z-index: -1;"></div>
 
 <!-- Page Loader -->
-<div class="loader-container" id="loader">
-    <div>
-        <div class="loader"></div>
-        <p id="loading">Loading...</p>
+<div class="position-fixed row vh-100 w-100 m-0 align-items-center text-light bg-dark" style="z-index: 1000"
+     id="page_loader">
+    <div class="mx-auto">
+        <div class="spinner-border my-5" style="width: 8rem; height: 8rem;" role="status"></div>
+        <h4 class="font-weight-normal">Loading ...</h4>
     </div>
 </div>
 
 <!-- Main Container -->
 <div class="container-fluid">
 
+    <div class="dropdown position-fixed m-3" style="z-index: 500">
+        <button type="button" class="btn btn-dark btn-lg dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+            English
+        </button>
+        <div class="dropdown-menu px-1" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item text-center" href="ar/index.html">العربية</a>
+        </div>
+    </div>
+
     <!-- Header Container -->
-    <header class="row align-items-center text-light">
+    <header class="row vh-100 w-100 m-0 align-items-center text-light">
         <div class="col">
-            <h1 class="text-center text-uppercase font-weight-bold"><span class="name"></span></h1>
+            <h1 class="text-center text-uppercase font-weight-normal"><span class="name"></span></h1>
             <hr class="col-sm-5 border-light" style="border-top: 2px solid #555; width: auto">
-            <h2 class="text-center font-weight-bold"><span class="major"></span></h2>
+            <h2 class="text-center font-weight-normal"><span class="major"></span></h2>
         </div>
     </header>
 
     <!-- Profile Container -->
-    <section class="row py-5 bg-white">
+    <section class="row py-5 bg-costume-dark text-light">
 
         <div class="col-sm-12">
             <h1 class="text-center">Profile</h1>
             <hr class="col-sm-5" style="border-top: 2px solid #555; width: auto">
         </div>
 
-        <div class="col-sm-5 mx-auto my-4 text-center">
+        <div class="col-md-5 mx-auto my-4 text-center">
             <h3>About Me</h3>
-            <p>With a passion for programming, I have both the skills and background necessary to dive deep into the
-                programming world. Browse my site to see all my information.</p>
+            <p class="m-3">With a passion for programming, I have both the skills and background necessary to dive deep
+                into the programming world. I'm 22 and I love new challenges.</p>
         </div>
 
-        <div class="col-sm-5 mx-auto my-4 align-items-center">
+        <div class="col-md-5 mx-auto my-4 align-items-center text-center">
             <h3 class="text-center">Info</h3>
-            <p><b class="font-weight-bold">Name:</b> Moath Alhajri</p>
-            <p><b class="font-weight-bold">Location:</b> Saudi Arabia, Riyadh</p>
-            <p><b class="font-weight-bold">E-mail: </b><u><a class="text-info" href="mailto:Moath.Alhajrii@gmail.com">Moath.Alhajrii@gmail.com</a></u></p>
+            <p class="m-3"><b class="font-weight-bold">Name:</b> Moath Alhajri</p>
+            <p class="m-3"><b class="font-weight-bold">Location:</b> Saudi Arabia, Riyadh</p>
+            <p class="m-3"><b class="font-weight-bold">E-mail: </b><u><a class="text-info"
+                                                                         href="mailto:Moath.Alhajrii@gmail.com">Moath.Alhajrii@gmail.com</a></u>
+            </p>
         </div>
 
-        <div class="col-sm-12">
-            <div class="social">
-                <a class="buttons" href="https://twitter.com/Dev_Moath">
-                    <i class="fab fa-twitter"></i>
+        <div class="col-sm-12 d-flex">
+            <div class="mx-auto">
+                <a href="https://twitter.com/Dev_Moath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
+                   role="button">
+                    <i class="fab fa-twitter m-2" style="font-size: 26px"></i>
                 </a>
-                <a class="buttons" href="https://github.com/DevMoath">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/DevMoath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
+                   role="button">
+                    <i class="fab fa-github m-2" style="font-size: 26px"></i>
                 </a>
-                <a class="buttons" href="https://www.linkedin.com/in/moath-alhajri/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="buttons" href="https://codepen.io/DevMoath">
-                    <i class="fab fa-codepen"></i>
+                <a href="https://www.linkedin.com/in/moath-alhajri/"
+                   class="btn btn-outline-light btn-lg rounded-pill mx-2" role="button">
+                    <i class="fab fa-linkedin m-2" style="font-size: 26px"></i>
                 </a>
             </div>
         </div>
 
         <div class="col-auto mx-auto mt-5">
-            <a href="Moath-CV.pdf" class="btn btn-outline-info btn-lg">Download My CV</a>
+            <a href="Moath-CV.pdf" target="_blank" class="btn btn-outline-light btn-lg shadow-lg rounded-pill px-4">
+                <i class="fas fa-download mr-2"></i>
+                Download My CV
+            </a>
         </div>
 
     </section>
 
-    <section class="row py-5 bg-light-cyan">
+    <section class="row py-5 bg-costume-darker">
 
         <div class="col-sm-12">
-            <h1 class="text-center">Education</h1>
+            <h1 class="text-center text-light">Education</h1>
             <hr class="col-sm-5" style="border-top: 2px solid #555; width: auto">
         </div>
 
@@ -103,7 +137,7 @@
                 </div>
 
                 <h5 class="m-2">
-                    <span class="badge badge-pill bg-success">&nbsp;</span>
+                    <span class="badge badge-pill bg-light">&nbsp;</span>
                 </h5>
 
                 <div class="row h-50">
@@ -114,13 +148,14 @@
             </div>
 
             <div class="col-auto py-2">
-                <div class="card border-info shadow">
+                <div class="card border-light bg-transparent shadow rounded">
                     <div class="card-body">
-                        <div class="float-right text-success">2015 - 2019</div>
-                        <h4 class="card-title text-success">Bachelor Degree</h4>
-                        <p class="card-text">
+                        <p class="float-right text-primary font-weight-bold my-0">2015 - 2019</p>
+                        <h4 class="card-title text-primary font-weight-normal">Bachelor Degree</h4>
+                        <p class="card-text text-light font-weight-normal my-2">
                             In Information Systems From College of Computer and Information Sciences at
-                            <u><a class="text-uppercase text-info text-decoration" href="https://ccis.ksu.edu.sa/en">king saud university</a></u>
+                            <u><a class="text-uppercase text-info text-decoration" href="https://ccis.ksu.edu.sa/en">king
+                                saud university</a></u>
                         </p>
                     </div>
                 </div>
@@ -130,10 +165,10 @@
 
     </section>
 
-    <section class="row py-5 bg-white">
+    <section class="row py-5 bg-costume-dark">
 
         <div class="col-sm-12">
-            <h1 class="text-center">Experience</h1>
+            <h1 class="text-center text-light">Experience</h1>
             <hr class="col-sm-5" style="border-top: 2px solid #555; width: auto">
         </div>
 
@@ -148,7 +183,7 @@
                 </div>
 
                 <h5 class="m-2">
-                    <span class="badge badge-pill bg-success">&nbsp;</span>
+                    <span class="badge badge-pill bg-light">&nbsp;</span>
                 </h5>
 
                 <div class="row h-50">
@@ -159,17 +194,15 @@
             </div>
 
             <div class="col-auto py-2">
-                <div class="card border-success shadow">
+                <div class="card border-light bg-transparent shadow">
                     <div class="card-body">
-                        <div class="float-right text-success">6/2019 - 8/2019</div>
-                        <h4 class="card-title text-success">Data Analytic</h4>
-                        <p class="card-text">
+                        <p class="float-right text-primary font-weight-bold my-0">Jun/19 - Aug/19</p>
+                        <h4 class="card-title text-primary font-weight-normal">Data Analyst</h4>
+                        <p class="card-text text-light my-2">
                             In
-                            <u><a class="text-uppercase text-info" href="https://siwwak.com/">Siwwak Company</a></u>
+                            <u><a class="text-uppercase text-info mx-1" href="https://siwwak.com/">Siwwak Company</a></u>
                             I did
-                            <u><a class="text-uppercase text-info" href="https://en.wikipedia.org/wiki/Descriptive_statistics">Descriptive Analysis</a></u>
-                            and <u><a class="text-uppercase text-info" href="https://en.wikipedia.org/wiki/Predictive_analytics">Predictive Analysis</a></u>
-                            for the Orders data
+                            <u><a class="text-uppercase text-info mx-1" href="https://en.wikipedia.org/wiki/Descriptive_statistics">Descriptive Analysis</a></u> for orders and customers data
                         </p>
                     </div>
                 </div>
@@ -179,127 +212,153 @@
 
     </section>
 
-    <section class="row py-5 bg-light-cyan">
+    <section class="row py-5 bg-costume-darker">
 
         <div class="col-sm-12">
-            <h1 class="text-center">Abilities</h1>
+            <h1 class="text-center text-light">Abilities</h1>
             <hr class="col-sm-5" style="border-top: 2px solid #555; width: auto">
         </div>
 
-        <div class="col-sm-5 mx-auto my-4">
-            <h3 class="text-center">Skills</h3>
+        <div class="col-md-5 mx-auto my-4">
+            <h3 class="text-center text-light">Skills</h3>
             <hr style="border-top: 2px solid #555; width: 50%">
             <ul class="list-group">
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-cogs text-info mx-2"></i>System Analyst and Design</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-code text-warning mx-2"></i>HTML, CSS, JS, PHP Developer</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fab fa-java text-danger mx-2"></i>Java Developer</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fab fa-python text-info mx-2"></i>Python Developer</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-chart-bar text-warning mx-2"></i>Data Analyst with Python</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-cloud text-danger mx-2"></i> Firebase Cloud</li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow">
+                    <i class="fas fa-cogs text-info mx-2"></i>Information System Analyst and Design
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-code text-warning mx-2"></i>
+                    <kbd>HTML</kbd> , <kbd>CSS</kbd> , <kbd>JS</kbd> , <kbd>PHP</kbd> Developer
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fab fa-java text-danger mx-2"></i><kbd>Java</kbd> Developer
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fab fa-python text-info mx-2"></i><kbd>Python</kbd> Developer
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-chart-bar text-warning mx-2"></i>Data Analyst with <kbd>Python</kbd></li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-cloud text-danger mx-2"></i> <kbd>Firebase</kbd> Cloud
+                </li>
             </ul>
         </div>
 
-        <div class="col-sm-5 mx-auto my-4">
-            <h3 class="text-center">Interests</h3>
+        <div class="col-md-5 mx-auto my-4">
+            <h3 class="text-center text-light">Interests</h3>
             <hr style="border-top: 2px solid #555; width: 50%">
             <ul class="list-group">
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-book-reader text-info mx-2"></i>Self-Education</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-database text-warning mx-2"></i>Database Management System</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-network-wired text-danger mx-2"></i>Networking</li>
-                <li class="list-group-item border-dark my-1 rounded shadow"><i class="fas fa-user-shield text-info mx-2"></i>Information Security</li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-book-reader text-info mx-2"></i>Self-Education
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-database text-warning mx-2"></i>Database Management System
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-network-wired text-danger mx-2"></i>Networking
+                </li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow"><i
+                        class="fas fa-user-shield text-info mx-2"></i>Information Security
+                </li>
             </ul>
         </div>
 
-        <div class="col-sm-4 mx-auto my-4 text-center">
-            <h3 class="text-center">Languages</h3>
+        <div class="col-md-4 mx-auto my-4 text-center">
+            <h3 class="text-center text-light">Languages</h3>
             <hr style="border-top: 2px solid #555; width: 50%">
             <ul class="list-group">
-                <li class="list-group-item border-dark my-1 rounded shadow">Arabic</li>
-                <li class="list-group-item border-dark my-1 rounded shadow">English</li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow">Arabic</li>
+                <li class="list-group-item border-light bg-transparent text-light my-1 rounded shadow">English</li>
             </ul>
         </div>
 
     </section>
 
-    <section class="row py-5 bg-white">
+    <section class="row py-5 bg-costume-dark">
 
         <div class="col-sm-12">
-            <h1 class="text-center">Projects</h1>
+            <h1 class="text-center text-light">Projects</h1>
             <hr class="col-sm-5" style="border-top: 2px solid #555; width: auto">
         </div>
 
-        <div class="col-sm-4 mx-auto my-4">
+        <div class="col-md-4 mx-auto my-4">
 
-            <div class="card bg-dark text-white shadow-lg rounded" style="cursor: pointer">
-                <img class="card-img" src="image/one.png" alt="Card image">
+            <div class="card bg-dark border border-light text-white shadow-lg rounded" style="cursor: pointer">
+                <img class="card-img" src="assets/image/one.png" alt="Card image">
                 <div class="card-img-overlay">
                     <h5 class="card-title mt-0 mb-1 text-info">Weather-App</h5>
                     <p class="card-text my-1">Weather app with dark-sky API</p>
                     <a href="https://weather-app.cf/" class="btn btn-outline-info my-1">View Website</a>
-                    <a href="https://github.com/DevMoath/Weather-App" class="btn btn-secondary my-1">View Source Code</a>
+                    <a href="https://github.com/DevMoath/Weather-App" class="btn btn-secondary my-1">View Source
+                        Code</a>
                 </div>
             </div>
 
         </div>
 
-        <div class="col-sm-4 mx-auto my-4">
+        <div class="col-md-4 mx-auto my-4">
 
-            <div class="card bg-dark text-white shadow-lg rounded" style="cursor: pointer">
-                <img class="card-img" src="image/three.png" alt="Card image">
+            <div class="card bg-dark border border-light text-white shadow-lg rounded" style="cursor: pointer">
+                <img class="card-img" src="assets/image/two.png" alt="Card image">
                 <div class="card-img-overlay">
-                    <h5 class="card-title mt-0 mb-1 text-info">Budget App</h5>
+                    <h5 class="card-title mt-0 mb-1 text-info card-title-animation">Budget App</h5>
                     <p class="card-text my-1">Manage your finance tasks</p>
                     <a href="https://budget-app.cf/" class="btn btn-outline-info my-1">View Website</a>
-                    <a href="https://github.com/DevMoath/Budget-App-with-Bootsrtap" class="btn btn-secondary my-1">View Source Code</a>
+                    <a href="https://github.com/DevMoath/Budget-App-with-Bootsrtap" class="btn btn-secondary my-1">View
+                        Source Code</a>
                 </div>
             </div>
 
         </div>
 
-        <div class="col-sm-4 mx-auto my-4">
+        <div class="col-md-4 mx-auto my-4">
 
-            <div class="card bg-dark text-white shadow-lg rounded" style="cursor: pointer">
-                <img class="card-img" src="image/two.png" alt="Card image">
+            <div class="card bg-dark border border-light text-white shadow-lg rounded" style="cursor: pointer">
+                <img class="card-img" src="assets/image/three.png" alt="Card image">
                 <div class="card-img-overlay">
                     <h5 class="card-title mt-0 mb-1 text-info">Cryptography Application</h5>
                     <p class="card-text my-1">Encrypt/Decrypt text using Columnar Keyword Cipher.</p>
-                    <a href="https://github.com/DevMoath/Cryptography-Application" class="btn btn-secondary my-1">View Source Code</a>
+                    <a href="https://github.com/DevMoath/Cryptography-Application" class="btn btn-secondary my-1">View
+                        Source Code</a>
                 </div>
             </div>
 
         </div>
 
         <div class="col-auto my-3 mx-auto">
-            <a href="https://github.com/DevMoath" class="btn btn-outline-dark btn-lg">Discover More Projects</a>
+            <a href="https://github.com/DevMoath" target="_blank"
+               class="btn btn-outline-light btn-lg shadow-lg rounded-pill px-4">
+                Discover More Projects
+                <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
         </div>
 
     </section>
 
     <footer class="row py-4 bg-dark">
 
-        <div class="col-sm-6 mx-auto my-4">
-            <h3 class="text-uppercase text-center text-white font-weight-bold">Don't forget to follow me</h3>
+        <div class="col-md-6 my-4">
+            <h4 class="text-uppercase text-center text-white font-weight-normal">Don't forget to follow me</h4>
         </div>
 
-        <div class="col-sm-6 mx-auto my-2">
-            <div class="social">
-                <a class="buttons" href="https://twitter.com/Dev_Moath">
-                    <i class="fab fa-twitter"></i>
+        <div class="col-md-6 d-flex my-auto">
+            <div class="mx-auto">
+                <a href="https://twitter.com/Dev_Moath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
+                   role="button">
+                    <i class="fab fa-twitter m-2" style="font-size: 26px"></i>
                 </a>
-                <a class="buttons" href="https://github.com/DevMoath">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/DevMoath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
+                   role="button">
+                    <i class="fab fa-github m-2" style="font-size: 26px"></i>
                 </a>
-                <a class="buttons" href="https://www.linkedin.com/in/moath-alhajri/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="buttons" href="https://codepen.io/DevMoath">
-                    <i class="fab fa-codepen"></i>
+                <a href="https://www.linkedin.com/in/moath-alhajri/"
+                   class="btn btn-outline-light btn-lg rounded-pill mx-2" role="button">
+                    <i class="fab fa-linkedin m-2" style="font-size: 26px"></i>
                 </a>
             </div>
         </div>
 
     </footer>
-
 
 </div>
 </body>
