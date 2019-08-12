@@ -30,14 +30,12 @@
 
 <body class="overflow-hidden" id="body_page">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMM3Z9H"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Page Background -->
-<div class="position-fixed row vh-100 w-100 m-0"
-     style="background: url('assets/image/background.jpg') no-repeat center; background-size: cover; z-index: -1;"></div>
+<!--&lt;!&ndash; Page Background &ndash;&gt;-->
+<!--<div class="position-fixed row vh-100 w-100 m-0"-->
+<!--     style="background: url('assets/image/background.jpg') no-repeat center; background-size: cover; z-index: -1;"></div>-->
+<div class="position-fixed row vh-100 w-100 m-0 bg-dark" style="z-index: -1">
+    <div class="w-100" id="particles-js"></div>
+</div>
 
 <!-- Page Loader -->
 <div class="position-fixed row vh-100 w-100 m-0 align-items-center text-light bg-dark" style="z-index: 1000"
@@ -52,7 +50,7 @@
 <div class="container-fluid">
 
     <div class="dropdown position-fixed m-3" style="z-index: 500">
-        <button type="button" class="btn btn-dark btn-lg dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
+        <button type="button" class="btn btn-secondary btn-lg dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" data-offset="0,10">
             English
         </button>
@@ -64,7 +62,7 @@
     <!-- Header Container -->
     <header class="row vh-100 w-100 m-0 align-items-center text-light">
         <div class="col">
-            <h1 class="text-center text-uppercase font-weight-normal"><span class="name"></span></h1>
+            <h1 class="text-center text-uppercase font-weight-normal header"><span class="name"></span></h1>
             <hr class="col-sm-5 border-light" style="border-top: 2px solid #555; width: auto">
             <h2 class="text-center font-weight-normal"><span class="major"></span></h2>
         </div>
@@ -361,5 +359,14 @@
     </footer>
 
 </div>
+
+<script src="assets/js/particles.min.js"></script>
+<script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+
 </body>
 </html>
