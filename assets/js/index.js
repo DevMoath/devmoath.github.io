@@ -12,7 +12,7 @@ class UI {
         new Typed('.major', {
             strings: [major],
             showCursor: true,
-            typeSpeed: 130
+            typeSpeed: 80
         });
     }
 }
@@ -22,6 +22,6 @@ window.onload = function() {
     ui.body_page.classList.remove('overflow-hidden');
     let href = window.location.href;
     href.includes('ar') || href.includes('AR')
-        ? ui.start_type('معاذ الهاجري', 'مطور ويب')
-        : ui.start_type('Moath Alhajri', 'Web Developer');
+        ? ui.start_type('معاذ الهاجري', 'نظم معلومات')
+        : ui.start_type('Moath Alhajri', 'Information Systems');
 };
