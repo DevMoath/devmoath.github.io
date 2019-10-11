@@ -3,6 +3,7 @@ class UI {
         this.page_loader = document.getElementById('page_loader');
         this.body_page = document.getElementById('body_page');
     }
+
     start_type(name, major) {
         new Typed('.name', {
             strings: [name],
@@ -16,7 +17,8 @@ class UI {
         });
     }
 }
-window.onload = function() {
+
+window.onload = () => {
     const ui = new UI();
     ui.page_loader.classList.add('d-none');
     ui.body_page.classList.remove('overflow-hidden');
@@ -25,13 +27,25 @@ window.onload = function() {
         ? ui.start_type('معاذ الهاجري', 'نظم معلومات')
         : ui.start_type('Moath Alhajri', 'Information Systems');
 
-    const link = document.querySelector('#link');
-    function checkPosition() {
+    window.addEventListener('scroll', () => {
+        let link = document.querySelector('#link');
+        let top = document.querySelector('#top');
         if (window.scrollY < 100) {
             link.classList.remove('link-hide');
+            top.classList.remove('show');
         } else {
             link.classList.add('link-hide');
+            top.classList.add('show');
         }
-    }
-    window.addEventListener('scroll', checkPosition);
+    });
+
+    $('a[href^="#"]').on('click', function (event) {
+        let target = $(this.getAttribute('href'));
+        if(target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
 };
