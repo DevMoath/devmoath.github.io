@@ -1,13 +1,6 @@
 * {
     font-family: "Georgia" ,serif;
 }
-html {
-    scroll-behavior:smooth;
-}
-kbd {
-    background: #f8f9fa;
-    color: #343a40;
-}
 @media (max-width: 800px) {
     .header {
         font-size: 33px;
@@ -19,6 +12,9 @@ kbd {
 }
 .link-hide {
     opacity: 0;
+}
+.vh-80 {
+    height:90vh!important;
 }
 #link i {
     animation-name: animate;
