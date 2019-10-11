@@ -24,4 +24,14 @@ window.onload = function() {
     href.includes('ar') || href.includes('AR')
         ? ui.start_type('معاذ الهاجري', 'نظم معلومات')
         : ui.start_type('Moath Alhajri', 'Information Systems');
+
+    const link = document.querySelector('#link');
+    function checkPosition() {
+        if (window.scrollY < 100) {
+            link.classList.remove('link-hide');
+        } else {
+            link.classList.add('link-hide');
+        }
+    }
+    window.addEventListener('scroll', checkPosition);
 };
