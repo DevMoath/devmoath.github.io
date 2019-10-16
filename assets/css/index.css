@@ -13,25 +13,17 @@
 .link-hide {
     opacity: 0;
 }
-.vh-80 {
-    height:90vh!important;
+.vh-95 {
+    height:95vh!important;
 }
 #link i {
     animation-name: animate;
-    animation-duration: 2s;
+    animation-duration: 1.8s;
     animation-iteration-count: infinite;
 }
 @keyframes animate {
     0% {opacity: 1;}
-    10% {opacity: .8;}
-    20% {opacity: .6;}
-    30% {opacity: .4;}
-    40% {opacity: .2;}
     50% {opacity: 0;}
-    60% {opacity: .2;}
-    70% {opacity: .4;}
-    80% {opacity: .6;}
-    90% {opacity: .8;}
     100% {opacity: 1;}
 }
 .divider {
