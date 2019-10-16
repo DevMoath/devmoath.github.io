@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Moath Alhajri</title>
     <meta name="description" content="My personal website.">
-    <meta property="og:title" content="Moath Alhajri" />
-    <meta property="og:url" content="https://moath.cf/" />
+    <meta property="og:title" content="Moath Alhajri"/>
+    <meta property="og:url" content="https://moath.cf/"/>
     <meta property="og:description" content="My personal website.">
     <meta property="og:image" content="assets/image/icon.png">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'UA-142122097-1');
     </script>
@@ -51,7 +55,8 @@
 <div class="container-fluid">
 
     <div class="dropdown position-fixed m-3" style="z-index: 500">
-        <button type="button" class="btn btn-secondary btn-lg dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
+        <button type="button" class="btn btn-secondary btn-lg dropdown-toggle" id="dropdownMenuOffset"
+                data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" data-offset="0,10">English
         </button>
         <div class="dropdown-menu px-1" aria-labelledby="dropdownMenuOffset">
@@ -59,10 +64,11 @@
         </div>
     </div>
 
-    <a href="#body_page" class="position-fixed fade btn btn-lg btn-primary rounded-circle" style="bottom: 2%; right: 2%; z-index: 10" id="top" role="button"><i class="fas fa-arrow-up"></i></a>
+    <a href="#body_page" class="position-fixed fade btn btn-lg btn-primary rounded-circle"
+       style="bottom: 2%; right: 2%; z-index: 10" id="top" role="button"><i class="fas fa-arrow-up" style="transform: scale(1.5)"></i></a>
 
     <!-- Header Container -->
-    <header class="position-relative vh-80 w-100 m-0 d-flex align-items-center text-light">
+    <header class="position-relative vh-95 w-100 m-0 d-flex align-items-center text-light">
         <div class="col">
             <h1 class="text-center text-uppercase font-weight-normal header">
                 <span class="name"></span>
@@ -118,7 +124,7 @@
         </div>
 
         <div class="col-auto mx-auto mt-5">
-            <a href="Moath-Alhajri-CV.pdf" target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4">
+            <a href="Moath-Alhajri-CV.pdf" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4">
                 Download My CV
                 <i class="fas fa-download ml-2"></i>
             </a>
@@ -163,7 +169,8 @@
                             <ul class="list-group text-light">
                                 <li class="list-group-item bg-transparent">
                                     <i class="fas fa-circle fa-1x mr-1 text-primary"></i>
-                                    The graduation project is a website that will provide people with historical knowledge in visual manner, and allow them to interactive with it.
+                                    The graduation project is a website that will provide people with historical
+                                    knowledge in visual manner, and allow them to interactive with it.
                                 </li>
                                 <li class="list-group-item bg-transparent">
                                     <i class="fas fa-circle fa-1x mr-1 text-primary"></i>
@@ -262,50 +269,95 @@
             <hr class="col-sm-5 divider">
         </div>
 
-        <div class="col-md-4 mx-auto my-4">
+        <div class="card-deck mx-0">
 
-            <div class="card bg-dark border border-light text-white rounded">
-                <img class="card-img" src="assets/image/one.png" alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-info">Weather-App</h5>
-                    <p class="card-text">Weather app with dark-sky API</p>
-                    <a href="https://weather-app.cf/" class="btn btn-outline-info my-1"><i class="fas fa-globe-africa fa-fw"></i> Website</a>
-                    <a href="https://github.com/DevMoath/Weather-App" class="btn btn-secondary my-1"><i class="fas fa-code fa-fw"></i> Code</a>
+
+            <div class="col-lg-4 my-2">
+                <div class="card bg-dark text-light border-light">
+                    <img src="assets/image/one.png" class="card-img-top border-bottom" alt="Project Preview">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Weather-App</h5>
+                        <p class="card-text">Weather app with dark-sky API</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark border-light">
+                            <b class="text-info">App Function: <br></b>
+                            <ul class="mt-2">
+                                <li>Display the temperature degree in your current location</li>
+                                <li>Change the temperature degree unit</li>
+                                <li>Change the language (English, Arabic)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="card-footer d-flex justify-content-between border-top">
+                        <a href="https://weather-app.cf/" class="btn btn-info my-1"><i
+                                class="fas fa-globe-africa fa-fw"></i> Website</a>
+                        <a href="https://github.com/DevMoath/Weather-App" class="btn btn-secondary my-1"><i
+                                class="fas fa-code fa-fw"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 my-2">
+                <div class="card bg-dark text-light border-light">
+                    <img src="assets/image/two.png" class="card-img-top border-bottom" alt="Project Preview">
+                    <div class="card-body">
+                        <h5 class="card-title text-info card-title-animation">Budget-App</h5>
+                        <p class="card-text">Manage your finance tasks</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark border-light">
+                            <b class="text-info">App Function: <br></b>
+                            <ul class="mt-2">
+                                <li>Add budget</li>
+                                <li>Edit budget</li>
+                                <li>Add expense</li>
+                                <li>Edit expense</li>
+                                <li>Delete expense</li>
+                                <li>Save your data (Account Required)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="card-footer d-flex justify-content-between border-top">
+                        <a href="https://budget-app.cf/" class="btn btn-info my-1">
+                            <i class="fas fa-globe-africa fa-fw"></i> Website
+                        </a>
+                        <a href="https://github.com/DevMoath/Budget-App" class="btn btn-secondary my-1">
+                            <i class="fas fa-code fa-fw"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 my-2">
+                <div class="card bg-dark text-light border-light">
+                    <img src="assets/image/three.png" class="card-img-top border-bottom" alt="Project Preview">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Cryptography-App</h5>
+                        <p class="card-text">Encrypt/Decrypt text using Columnar Keyword Cipher.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark border-light">
+                            <b class="text-info">App Function: <br></b>
+                            <ul class="mt-2">
+                                <li>Encrypt string value</li>
+                                <li>Decrypt string value</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="card-footer d-flex justify-content-between border-top">
+                        <a href="https://github.com/DevMoath/Cryptography-Application" class="btn btn-secondary my-1 ml-auto">
+                            <i class="fas fa-code fa-fw"></i> Code
+                        </a>
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="col-md-4 mx-auto my-4">
-
-            <div class="card bg-dark border border-light text-white rounded">
-                <img class="card-img" src="assets/image/two.png" alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-info card-title-animation">Budget-App</h5>
-                    <p class="card-text">Manage your finance tasks</p>
-                    <a href="https://budget-app.cf/" class="btn btn-outline-info my-1"><i class="fas fa-globe-africa fa-fw"></i> Website</a>
-                    <a href="https://github.com/DevMoath/Budget-App" class="btn btn-secondary my-1"><i class="fas fa-code fa-fw"></i></i> Code</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-4 mx-auto my-4">
-
-            <div class="card bg-dark border border-light text-white rounded">
-                <img class="card-img" src="assets/image/three.png" alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-info">Cryptography-App</h5>
-                    <p class="card-text">Encrypt/Decrypt text using Columnar Keyword Cipher.</p>
-                    <a href="https://github.com/DevMoath/Cryptography-Application" class="btn btn-secondary my-1"><i class="fas fa-code fa-fw"></i></i> Code</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-auto my-3 mx-auto">
+        <div class="col-auto my-4 mx-auto">
             <a href="https://github.com/DevMoath" target="_blank"
-               class="btn btn-outline-light btn-lg rounded-pill px-4">
+               class="btn btn-primary btn-lg rounded-pill px-4">
                 More Projects
                 <i class="fas fa-external-link-alt fa-fw ml-1"></i>
             </a>
