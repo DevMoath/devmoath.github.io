@@ -1,5 +1,5 @@
 * {
-    font-family: "Georgia" ,serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 @media (max-width: 800px) {
     .header {
@@ -31,10 +31,10 @@
     width: auto;
 }
 .bg-costume-dark {
-    background: #222831;
+    background: #2F363D;
 }
 .bg-costume-darker {
-    background: #13171D;
+    background: #24292E;
 }
 .card-img-overlay {
     display: none;
