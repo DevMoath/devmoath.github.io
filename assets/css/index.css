@@ -57,6 +57,19 @@
         opacity: 1;
     }
 }
+.animate {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+.action-button {
+    position: relative;
+    float: left;
+}
+.action-button:active {
+    transform: translate(0,5px);
+    -webkit-transform: translate(0,5px);
+    border-bottom: 1px solid;
+}
 footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5) inset;
 }
