@@ -21,6 +21,11 @@ class UI {
 }
 
 window.onload = () => {
+
+    document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+    });
+
     const ui = new UI();
     ui.page_loader.classList.add('d-none');
     ui.body_page.classList.remove('overflow-y-hidden');
