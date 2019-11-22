@@ -2,6 +2,8 @@ class UI {
     constructor() {
         this.page_loader = document.getElementById('page_loader');
         this.body_page = document.getElementById('body_page');
+        this.copy = document.getElementById('copy');
+        this.email = document.getElementById('email');
     }
 
     start_type(name, major) {
@@ -23,6 +25,24 @@ window.onload = () => {
     ui.page_loader.classList.add('d-none');
     ui.body_page.classList.remove('overflow-y-hidden');
     ui.start_type('Moath Alhajri', 'Information Systems');
+
+    ui.copy.addEventListener('click', () => {
+
+        ui.email.select();
+        ui.email.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+
+        swal.fire({
+            type: 'success',
+            title: 'Email Copied',
+            toast: true,
+            position: 'top-right',
+            showConfirmButton: false,
+            timer: 5000
+        });
+    });
 
     window.addEventListener('scroll', () => {
         let link = document.querySelector('#link');

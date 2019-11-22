@@ -1,12 +1,12 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
-/*.overflow-x-hidden {*/
-/*    overflow-x: hidden!important;*/
-/*}*/
-/*.overflow-y-hidden {*/
-/*    overflow-y: hidden!important;*/
-/*}*/
+.overflow-x-hidden {
+    overflow-x: hidden!important;
+}
+.overflow-y-hidden {
+    overflow-y: hidden!important;
+}
 .row {
     overflow-x: hidden;
     overflow-y: hidden;

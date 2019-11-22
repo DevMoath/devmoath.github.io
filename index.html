@@ -33,8 +33,10 @@
     <!-- page icon -->
     <link rel="icon" href="image/icon-link.png">
     <!-- javascript files -->
+    <script src="js/sweetalert2@8.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="../../../Users/Moath/WebstormProjects/Password-Generator/js/app.js"></script>
 </head>
 <body class="overflow-x-hidden overflow-y-hidden" id="body_page">
 
@@ -90,9 +92,18 @@
             <h3 class="text-center">Info</h3>
             <p class="m-3"><b class="font-weight-bold">Name:</b> Moath Alhajri</p>
             <p class="m-3"><b class="font-weight-bold">Location:</b> Saudi Arabia, Riyadh</p>
-            <p class="m-3"><b class="font-weight-bold">E-mail: </b><u><a class="text-info"
-                                                                         href="mailto:Moath.Alhajrii@gmail.com">Moath.Alhajrii@gmail.com</a></u>
-            </p>
+
+            <div class="input-group mb-3 text-center mx-auto col-lg-8">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email</span>
+                </div>
+                <input type="text" class="form-control" id="email" value="Moath.Alhajrii@gmail.com" readonly>
+                <div class="input-group-append">
+                    <button class="input-group-append btn btn-primary" id="copy">
+                        <i class="far fa-clipboard fa-fw"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <div class="col-sm-12 d-flex">
