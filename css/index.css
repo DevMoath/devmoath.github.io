@@ -1,6 +1,12 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+.overflow-x-hidden {
+    overflow-x: hidden!important;
+}
+.overflow-y-hidden {
+    overflow-y: hidden!important;
+}
 @media (max-width: 800px) {
     .header {
         font-size: 33px;

@@ -21,11 +21,8 @@ class UI {
 window.onload = () => {
     const ui = new UI();
     ui.page_loader.classList.add('d-none');
-    ui.body_page.classList.remove('overflow-hidden');
-    let href = window.location.href;
-    href.includes('ar') || href.includes('AR')
-        ? ui.start_type('معاذ الهاجري', 'نظم معلومات')
-        : ui.start_type('Moath Alhajri', 'Information Systems');
+    ui.body_page.classList.remove('overflow-y-hidden');
+    ui.start_type('Moath Alhajri', 'Information Systems');
 
     window.addEventListener('scroll', () => {
         let link = document.querySelector('#link');
@@ -41,7 +38,7 @@ window.onload = () => {
 
     $('a[href^="#"]').on('click', function (event) {
         let target = $(this.getAttribute('href'));
-        if(target.length) {
+        if (target.length) {
             event.preventDefault();
             $('html, body').stop().animate({
                 scrollTop: target.offset().top
