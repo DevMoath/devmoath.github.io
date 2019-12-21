@@ -1,494 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Moath Alhajri</title>
-    <link rel="apple-touch-icon" sizes="128x128" href="image/icon-apple.png">
-    <meta name="description" content="B.S. in Information Systems - Software Developer at Tamkeen Technologies.">
-    <meta property="og:title" content="Moath Alhajri"/>
-    <meta property="og:url" content="https://devmoath.github.io/"/>
-    <meta property="og:description" content="B.S. in Information Systems - Software Developer at Tamkeen Technologies.">
-    <meta property="og:image" content="https://devmoath.github.io/image/icon-link.png">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-142122097-1');
-    </script>
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- index Style Sheet-->
-    <link rel="stylesheet" href="css/index.css">
-    <!-- Fontawesome 5 Style Sheet-->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- AOS animation library -->
-    <link rel="stylesheet" href="css/aos.css">
-    <!-- page icon -->
-    <link rel="icon" href="image/icon-link.png">
-    <!-- javascript files -->
-    <script src="js/sweetalert2@8.js"></script>
-    <script src="js/typed.min.js"></script>
-    <script src="js/index.js"></script>
-</head>
-<body class="overflow-x-hidden overflow-y-hidden" id="body_page">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Moath Alhajri</title>
+        <link rel="apple-touch-icon" sizes="128x128" href="image/icon-apple.png">
+        <meta name="description" content="B.S. in Information Systems - Software Developer at Tamkeen Technologies.">
+        <meta property="og:title" content="Moath Alhajri"/>
+        <meta property="og:url" content="https://devmoath.github.io/"/>
+        <meta property="og:description"
+              content="B.S. in Information Systems - Software Developer at Tamkeen Technologies.">
+        <meta property="og:image" content="https://devmoath.github.io/image/icon-link.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-<div class="position-fixed row vh-100 w-100 m-0 bg-dark" style="z-index: -1">
-    <div class="w-100" id="particles-js"></div>
-</div>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-<!-- Page Loader -->
-<div class="position-fixed row vh-100 w-100 m-0 align-items-center text-light bg-dark" style="z-index: 1000"
-     id="page_loader">
-    <div class="mx-auto">
-        <div class="spinner-border my-5" style="width: 8rem; height: 8rem;" role="status"></div>
-        <h4 class="font-weight-normal">Loading ...</h4>
-    </div>
-</div>
-
-<!-- Main Container -->
-<div class="container-fluid">
-    <a href="#body_page" class="position-fixed fade btn btn-lg btn-primary rounded-circle"
-       style="bottom: 2%; right: 2%; z-index: 10" id="top" role="button"><i class="fas fa-arrow-up" style="transform: scale(1.5)"></i></a>
-
-    <!-- Header Container -->
-    <header class="position-relative vh-95 w-100 m-0 d-flex align-items-center text-light">
-        <div class="col">
-            <h1 class="text-center text-uppercase font-weight-normal header">
-                <span class="name"></span>
-            </h1>
-            <hr class="col-sm-6 border-light divider">
-            <h2 class="text-center font-weight-normal"><span class="major"></span></h2>
+            gtag("js", new Date());
+            gtag("config", "UA-142122097-1");
+        </script>
+        <!-- Bootstrap 4 -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- index Style Sheet-->
+        <link rel="stylesheet" href="css/index.css">
+        <!-- Fontawesome 5 Style Sheet-->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- AOS animation library -->
+        <link rel="stylesheet" href="css/aos.css">
+        <!-- page icon -->
+        <link rel="icon" href="image/icon-link.png">
+        <!-- javascript files -->
+        <script src="js/sweetalert2@8.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body class="overflow-x-hidden overflow-y-hidden" id="body_page">
+        <div class="position-fixed row vh-100 w-100 m-0 bg-dark" style="z-index: -1">
+            <div class="w-100" id="particles-js"></div>
         </div>
-        <div class="position-absolute" style="bottom: 3%; left: 50%; transform: translateX(-50%)">
-            <a href="#profile" id="link" role="button" class="fade show btn btn-primary btn-lg text-center">
-                <i class="fas fa-angle-double-down fa-fw"></i>
-            </a>
-        </div>
-    </header>
-
-    <!-- Profile Container -->
-    <section class="row py-5 bg-costume-dark text-light" id="profile" data-aos="zoom-in-down" data-aos-duration="1300">
-
-        <div class="col-sm-12">
-            <h1 class="text-center">Profile</h1>
-            <hr class="col-sm-5 divider">
-        </div>
-
-        <div class="col-md-5 mx-auto my-4 text-center">
-            <h3>About Me</h3>
-            <p class="m-3">With a passion for programming, I have both the skills and background necessary to dive deep
-                into the programming world. I'm 22 and I love new challenges.</p>
-        </div>
-
-        <div class="col-md-5 mx-auto my-4 align-items-center text-center">
-            <h3 class="text-center">Info</h3>
-            <p class="m-3"><b class="font-weight-bold">Name:</b> Moath Alhajri</p>
-            <p class="m-3"><b class="font-weight-bold">Location:</b> Saudi Arabia, Riyadh</p>
-
-            <div class="input-group mb-3 text-center mx-auto col-lg-8">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Email</span>
-                </div>
-                <input type="text" class="form-control" id="email" value="Moath.Alhajrii@gmail.com" readonly>
-                <div class="input-group-append">
-                    <button class="input-group-append btn btn-primary" id="copy">
-                        <i class="far fa-clipboard fa-fw"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-12 d-flex">
+        <!-- Page Loader -->
+        <div class="position-fixed row vh-100 w-100 m-0 align-items-center text-light bg-dark" style="z-index: 1000"
+             id="page_loader">
             <div class="mx-auto">
-                <a href="https://twitter.com/Dev_Moath" class="btn btn-outline-primary btn-lg rounded-pill mx-2"
-                   role="button">
-                    <i class="fab fa-twitter icon"></i>
-                </a>
-                <a href="https://github.com/DevMoath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
-                   role="button">
-                    <i class="fab fa-github icon"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/moath-alhajri/"
-                   class="btn btn-outline-primary btn-lg rounded-pill mx-2" role="button">
-                    <i class="fab fa-linkedin icon"></i>
-                </a>
+                <div class="spinner-border my-5" style="width: 8rem; height: 8rem;" role="status"></div>
+                <h4 class="font-weight-normal">Loading ...</h4>
             </div>
         </div>
-
-        <div class="col-auto mx-auto mt-5">
-            <a href="InformationSystems-MoathAlhajri.pdf" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4 action-button shadow-lg animate">
-                Download My CV
-                <i class="fas fa-download ml-2"></i>
-            </a>
-        </div>
-
-    </section>
-
-    <section class="row py-5 bg-costume-darker" data-aos="zoom-in-up" data-aos-duration="1300">
-
-        <div class="col-sm-12">
-            <h1 class="text-center text-light">Education</h1>
-            <hr class="col-sm-5 divider">
-        </div>
-
-        <div class="row mx-auto my-4">
-
-            <div class="col-auto text-center flex-column d-none d-xl-flex">
-
-                <div class="row h-50">
-                    <div class="col">&nbsp;</div>
-                    <div class="col">&nbsp;</div>
+        <!-- Main Container -->
+        <div class="container-fluid">
+            <a href="#body_page" class="position-fixed fade btn btn-lg btn-primary rounded-circle"
+               style="bottom: 2%; right: 2%; z-index: 10" id="top" role="button"><i class="fas fa-arrow-up"
+                                                                                    style="transform: scale(1.5)"></i></a>
+            <!-- Header Container -->
+            <header class="position-relative vh-95 w-100 m-0 d-flex align-items-center text-light">
+                <div class="col">
+                    <h1 class="text-center text-uppercase font-weight-normal header">
+                        <span class="name"></span>
+                    </h1>
+                    <hr class="col-sm-6 border-light divider">
+                    <h2 class="text-center font-weight-normal"><span class="major"></span></h2>
                 </div>
-
-                <h5 class="m-2">
-                    <span class="badge badge-pill bg-light">&nbsp;</span>
-                </h5>
-
-                <div class="row h-50">
-                    <div class="col">&nbsp;</div>
-                    <div class="col">&nbsp;</div>
+                <div class="position-absolute" style="bottom: 3%; left: 50%; transform: translateX(-50%)">
+                    <a href="#profile" id="link" role="button" class="fade show btn btn-primary btn-lg text-center">
+                        <i class="fas fa-angle-double-down fa-fw"></i>
+                    </a>
                 </div>
-
-            </div>
-
-            <div class="col-auto py-2">
-                <div class="card border-light bg-transparent rounded">
-                    <div class="card-body">
-                        <h5 class="float-right text-primary font-weight-bold my-0">2015 - 2019</h5>
-                        <h3 class="card-title text-primary font-weight-normal">King Saud University</h3>
-                        <div class="card-text font-weight-normal my-2">
-                            <h5 class="text-info mb-3">Bachelor Degree, Information Systems</h5>
-                            <ul class="list-group text-light">
-                                <li class="list-group-item bg-transparent border-0">
-                                    <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
-                                    The graduation project is a website that will provide people with historical
-                                    knowledge in visual manner, and allow them to interactive with it.
-                                </li>
-                                <li class="list-group-item bg-transparent border-0">
-                                    <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
-                                    Technologies used: HTML, CSS, JavaScript, PHP, and MySQL
-                                </li>
-                            </ul>
+            </header>
+            <!-- Profile Container -->
+            <section class="row py-5 bg-costume-dark text-light" id="profile" data-aos="zoom-in-down"
+                     data-aos-duration="1300">
+                <div class="col-sm-12">
+                    <h1 class="text-center">Profile</h1>
+                    <hr class="col-sm-5 divider">
+                </div>
+                <div class="col-md-5 mx-auto my-4 text-center">
+                    <h3>About Me</h3>
+                    <p class="m-3">With a passion for programming, I have both the skills and background necessary to
+                        dive deep
+                        into the programming world. I'm 22 and I love new challenges.</p>
+                </div>
+                <div class="col-md-5 mx-auto my-4 align-items-center text-center">
+                    <h3 class="text-center">Info</h3>
+                    <p class="m-3"><b class="font-weight-bold">Name:</b> Moath Alhajri</p>
+                    <p class="m-3"><b class="font-weight-bold">Location:</b> Saudi Arabia, Riyadh</p>
+                    <div class="input-group mb-3 text-center mx-auto col-lg-8">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email</span>
+                        </div>
+                        <input type="text" class="form-control" id="email" value="Moath.Alhajrii@gmail.com" readonly>
+                        <div class="input-group-append">
+                            <button class="input-group-append btn btn-primary" id="copy">
+                                <i class="far fa-clipboard fa-fw"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="row py-5 bg-costume-dark" data-aos="zoom-in" data-aos-duration="1300">
-
-        <div class="col-sm-12">
-            <h1 class="text-center text-light">Experience</h1>
-            <hr class="col-sm-5 divider">
-        </div>
-
-        <div class="row mx-auto my-4">
-
-            <div class="col-auto text-center flex-column d-none d-xl-flex">
-
-                <div class="row h-50">
-                    <div class="col">&nbsp;</div>
-                    <div class="col">&nbsp;</div>
+                <div class="col-sm-12 d-flex">
+                    <div class="mx-auto">
+                        <a href="https://twitter.com/Dev_Moath" class="btn btn-outline-primary btn-lg rounded-pill mx-2"
+                           role="button">
+                            <i class="fab fa-twitter icon"></i>
+                        </a>
+                        <a href="https://github.com/DevMoath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
+                           role="button">
+                            <i class="fab fa-github icon"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/moath-alhajri/"
+                           class="btn btn-outline-primary btn-lg rounded-pill mx-2" role="button">
+                            <i class="fab fa-linkedin icon"></i>
+                        </a>
+                    </div>
                 </div>
-
-                <h5 class="m-2">
-                    <span class="badge badge-pill bg-light">&nbsp;</span>
-                </h5>
-
-                <div class="row h-50">
-                    <div class="col">&nbsp;</div>
-                    <div class="col">&nbsp;</div>
+                <div class="col-auto mx-auto mt-5">
+                    <a href="InformationSystems-MoathAlhajri.pdf" target="_blank"
+                       class="btn btn-primary btn-lg rounded-pill px-4 action-button shadow-lg animate">
+                        Download My CV
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
                 </div>
-
-            </div>
-
-            <div class="col-auto py-2">
-                <div class="card border-light bg-transparent rounded">
-                    <div class="card-body">
-                        <h5 class="float-right text-primary font-weight-bold my-0">Oct 2019 - Present</h5>
-                        <h3 class="card-title text-primary font-weight-normal">Software Developer</h3>
-                        <div class="card-text font-weight-normal my-2">
-                            <h5 class="text-info mb-3">At:
-                                <a href="https://tamkeentech.sa/" class="text-info"><u>Tamkeen Technologies</u></a>
-                            </h5>
-                            <ul class="list-group text-light">
-                                <li class="list-group-item bg-transparent border-0">
-                                    <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
-                                    Responsible for developing websites in business filed like
-                                    Strategies Tools and Licenses/Legacies system for Hospitals
-                                    employees
-                                </li>
-                            </ul>
+            </section>
+            <section class="row py-5 bg-costume-darker" data-aos="zoom-in-up" data-aos-duration="1300">
+                <div class="col-sm-12">
+                    <h1 class="text-center text-light">Education</h1>
+                    <hr class="col-sm-5 divider">
+                </div>
+                <div class="row mx-auto my-4">
+                    <div class="col-auto text-center flex-column d-none d-xl-flex">
+                        <div class="row h-50">
+                            <div class="col">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                        <h5 class="m-2">
+                            <span class="badge badge-pill bg-light">&nbsp;</span>
+                        </h5>
+                        <div class="row h-50">
+                            <div class="col">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col-auto py-2">
+                        <div class="card border-light bg-transparent rounded">
+                            <div class="card-body">
+                                <h5 class="float-right text-primary font-weight-bold my-0">2015 - 2019</h5>
+                                <h3 class="card-title text-primary font-weight-normal">King Saud University</h3>
+                                <div class="card-text font-weight-normal my-2">
+                                    <h5 class="text-info mb-3">Bachelor Degree, Information Systems</h5>
+                                    <ul class="list-group text-light">
+                                        <li class="list-group-item bg-transparent border-0">
+                                            <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
+                                            The graduation project is a website that will provide people with historical
+                                            knowledge in visual manner, and allow them to interactive with it.
+                                        </li>
+                                        <li class="list-group-item bg-transparent border-0">
+                                            <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
+                                            Technologies used: HTML, CSS, JavaScript, PHP, and MySQL
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="row py-5 bg-costume-darker" data-aos="zoom-in-down" data-aos-duration="1300">
-
-        <div class="col-sm-12">
-            <h1 class="text-center text-light">Skills</h1>
-            <hr class="col-sm-5 divider">
-        </div>
-
-        <div class="col-md-4 mx-auto my-4" data-aos="zoom-in-down" data-aos-duration="1300">
-            <ul class="list-group">
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fas fa-cogs text-info fa-fw mr-3"></i> Information System Analyst
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fas fa-pencil-ruler text-warning fa-fw mr-3"></i> Information System Design
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded "><i
-                        class="fas fa-database text-info fa-fw mr-3"></i> Database Management System
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded "><i
-                        class="fas fa-project-diagram text-warning fa-fw mr-3"></i> Problem Solving
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-html5 text-danger fa-fw mr-3"></i> HTML
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-css3-alt text-info fa-fw mr-3"></i> CSS
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-node-js text-warning fa-fw mr-3"></i> JavaScript
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-node-js text-warning fa-fw mr-3"></i> jQuery
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fas fa-cloud text-danger fa-fw mr-3"></i> Firebase Cloud
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-md-4 mx-auto my-4" data-aos="zoom-in-up" data-aos-duration="1300">
-            <ul class="list-group">
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-php text-info fa-fw mr-3"></i> PHP
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-laravel text-danger fa-fw mr-3"></i> Laravel Framework
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="far fa-clone text-info fa-fw mr-3"></i> MVC
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-vuejs text-warning fa-fw mr-3"></i> Vue.js Framework
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fas fa-database text-danger fa-fw mr-3"></i> MySQL
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-java text-danger fa-fw mr-3"></i> Java
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fab fa-python text-info fa-fw mr-3"></i> Python
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
-                    <i class="fas fa-chart-bar text-warning fa-fw mr-3"></i> Data Analyst
-                </li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded"><i
-                        class="fas fa-book-reader text-info fa-fw mr-3"></i> Self-Education
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-md-5 mx-auto my-4" data-aos="zoom-in" data-aos-duration="1300">
-            <h3 class="text-center text-light">Languages</h3>
-            <hr class="divider w-50">
-            <ul class="list-group text-center">
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">Arabic</li>
-                <li class="list-group-item border-light bg-transparent text-light my-1 rounded">English</li>
-            </ul>
-        </div>
-
-    </section>
-
-    <section class="row py-5 bg-costume-dark" data-aos="zoom-in" data-aos-duration="1300">
-
-        <div class="col-sm-12">
-            <h1 class="text-center text-light">Projects</h1>
-            <hr class="col-sm-5 divider">
-        </div>
-
-        <div class="card-deck mx-0">
-
-            <div class="col-lg-4 my-2" data-aos="zoom-in-up" data-aos-duration="1300">
-                <div class="card bg-dark text-light border-light">
-                    <img src="image/one.png" class="card-img-top border-bottom" alt="Project Preview">
-                    <div class="card-body">
-                        <h5 class="card-title text-info">Weather-App</h5>
-                        <p class="card-text">Weather app with dark-sky API</p>
+            </section>
+            <section class="row py-5 bg-costume-dark" data-aos="zoom-in" data-aos-duration="1300">
+                <div class="col-sm-12">
+                    <h1 class="text-center text-light">Experience</h1>
+                    <hr class="col-sm-5 divider">
+                </div>
+                <div class="row mx-auto my-4">
+                    <div class="col-auto text-center flex-column d-none d-xl-flex">
+                        <div class="row h-50">
+                            <div class="col">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                        <h5 class="m-2">
+                            <span class="badge badge-pill bg-light">&nbsp;</span>
+                        </h5>
+                        <div class="row h-50">
+                            <div class="col">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-dark border-light">
-                            <b class="text-info">App Function: <br></b>
-                            <ul class="mt-2">
-                                <li>Display the temperature degree in your current location</li>
-                                <li>Change the temperature degree unit</li>
-                                <li>Change the language (English, Arabic)</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-dark border-light">
-                            <b class="text-info">Technologies used:<br></b>
-                            <ul class="mt-2">
-                                <li>Display the temperature degree in your current location</li>
-                                <li>Change the temperature degree unit</li>
-                                <li>Change the language (English, Arabic)</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="card-footer d-flex justify-content-between border-top">
-                        <a href="https://weather-app.cf/" class="btn btn-info my-1"><i
-                                class="fas fa-globe-africa fa-fw"></i> Website</a>
-                        <a href="https://github.com/DevMoath/Weather-App" class="btn btn-secondary my-1"><i
-                                class="fas fa-code fa-fw"></i> Code</a>
+                    <div class="col-auto py-2">
+                        <div class="card border-light bg-transparent rounded">
+                            <div class="card-body">
+                                <h5 class="float-right text-primary font-weight-bold my-0">Oct 2019 - Present</h5>
+                                <h3 class="card-title text-primary font-weight-normal">Software Developer</h3>
+                                <div class="card-text font-weight-normal my-2">
+                                    <h5 class="text-info mb-3">At:
+                                        <a href="https://tamkeentech.sa/" class="text-info"><u>Tamkeen Technologies</u></a>
+                                    </h5>
+                                    <ul class="list-group text-light">
+                                        <li class="list-group-item bg-transparent border-0">
+                                            <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
+                                            Front-End Developer with HTML, CSS, JavaScript, and jQuery
+                                        </li>
+                                        <li class="list-group-item bg-transparent border-0">
+                                            <i class="fas fa-circle fa-1x mr-2 text-primary"></i>
+                                            Back-End Developer with PHP, Laravel Framework, SQL, and MySQL
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 my-2" data-aos="zoom-in-down" data-aos-duration="1300">
-                <div class="card bg-dark text-light border-light">
-                    <img src="image/two.png" class="card-img-top border-bottom" alt="Project Preview">
-                    <div class="card-body">
-                        <h5 class="card-title text-info card-title-animation">Budget-App</h5>
-                        <p class="card-text">Manage your finance tasks</p>
+            </section>
+            <section class="row py-5 bg-costume-darker" data-aos="zoom-in-down" data-aos-duration="1300">
+                <div class="col-sm-12">
+                    <h1 class="text-center text-light">Skills</h1>
+                    <hr class="col-sm-5 divider">
+                </div>
+                <div class="col-md-4 mx-auto my-4" data-aos="zoom-in-down" data-aos-duration="1300">
+                    <ul class="list-group">
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fas fa-cogs text-info fa-fw mr-3"></i> Information System Analyst
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fas fa-pencil-ruler text-warning fa-fw mr-3"></i> Information System Design
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded "><i
+                                class="fas fa-database text-info fa-fw mr-3"></i> Database Management System
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded "><i
+                                class="fas fa-project-diagram text-warning fa-fw mr-3"></i> Problem Solving
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-html5 text-danger fa-fw mr-3"></i> HTML
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-css3-alt text-info fa-fw mr-3"></i> CSS
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-node-js text-warning fa-fw mr-3"></i> JavaScript
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-node-js text-warning fa-fw mr-3"></i> jQuery
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fas fa-cloud text-danger fa-fw mr-3"></i> Firebase Cloud
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mx-auto my-4" data-aos="zoom-in-up" data-aos-duration="1300">
+                    <ul class="list-group">
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-php text-info fa-fw mr-3"></i> PHP
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-laravel text-danger fa-fw mr-3"></i> Laravel Framework
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="far fa-clone text-info fa-fw mr-3"></i> MVC
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-vuejs text-warning fa-fw mr-3"></i> Vue.js Framework
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fas fa-database text-danger fa-fw mr-3"></i> MySQL
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-java text-danger fa-fw mr-3"></i> Java
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fab fa-python text-info fa-fw mr-3"></i> Python
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded">
+                            <i class="fas fa-chart-bar text-warning fa-fw mr-3"></i> Data Analyst
+                        </li>
+                        <li class="list-group-item border-light bg-transparent text-light my-1 rounded"><i
+                                class="fas fa-book-reader text-info fa-fw mr-3"></i> Self-Education
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="row py-5 bg-costume-dark" data-aos="zoom-in" data-aos-duration="1300">
+                <div class="col-sm-12">
+                    <h1 class="text-center text-light">Projects</h1>
+                    <hr class="col-sm-5 divider">
+                </div>
+                <div class="card-deck mx-0">
+                    <div class="col-lg-4 my-2" data-aos="zoom-in-up" data-aos-duration="1300">
+                        <div class="card bg-dark text-light border-light">
+                            <img src="image/one.png" class="card-img-top border-bottom" alt="Project Preview">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Weather-App</h5>
+                                <p class="card-text">Weather app with dark-sky API</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark border-light">
+                                    <b class="text-info">App Function: <br></b>
+                                    <ul class="mt-2">
+                                        <li>Display the temperature degree in your current location</li>
+                                        <li>Change the temperature degree unit</li>
+                                        <li>Change the language (English, Arabic)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark border-light">
+                                    <b class="text-info">Technologies used:<br></b>
+                                    <ul class="mt-2">
+                                        <li>Display the temperature degree in your current location</li>
+                                        <li>Change the temperature degree unit</li>
+                                        <li>Change the language (English, Arabic)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="card-footer d-flex justify-content-between border-top">
+                                <a href="https://weather-app.cf/" class="btn btn-info my-1"><i
+                                        class="fas fa-globe-africa fa-fw"></i> Website</a>
+                                <a href="https://github.com/DevMoath/Weather-App" class="btn btn-secondary my-1"><i
+                                        class="fas fa-code fa-fw"></i> Code</a>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-dark border-light">
-                            <b class="text-info">App Function: <br></b>
-                            <ul class="mt-2">
-                                <li>Add budget</li>
-                                <li>Edit budget</li>
-                                <li>Add expense</li>
-                                <li>Edit expense</li>
-                                <li>Delete expense</li>
-                                <li>Save your data (Account Required)</li>
+                    <div class="col-lg-4 my-2" data-aos="zoom-in-down" data-aos-duration="1300">
+                        <div class="card bg-dark text-light border-light">
+                            <img src="image/two.png" class="card-img-top border-bottom" alt="Project Preview">
+                            <div class="card-body">
+                                <h5 class="card-title text-info card-title-animation">Budget-App</h5>
+                                <p class="card-text">Manage your finance tasks</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark border-light">
+                                    <b class="text-info">App Function: <br></b>
+                                    <ul class="mt-2">
+                                        <li>Add budget</li>
+                                        <li>Edit budget</li>
+                                        <li>Add expense</li>
+                                        <li>Edit expense</li>
+                                        <li>Delete expense</li>
+                                        <li>Save your data (Account Required)</li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-dark border-light">
-                            <b class="text-info">Technologies used:<br></b>
-                            <ul class="mt-2">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Bootstrap 4</li>
-                                <li>JavaScript</li>
-                                <li>Firebase Cloud</li>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark border-light">
+                                    <b class="text-info">Technologies used:<br></b>
+                                    <ul class="mt-2">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Bootstrap 4</li>
+                                        <li>JavaScript</li>
+                                        <li>Firebase Cloud</li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
-                    <div class="card-footer d-flex justify-content-between border-top">
-                        <a href="https://budget-app.cf/" class="btn btn-info my-1">
-                            <i class="fas fa-globe-africa fa-fw"></i> Website
+                            <div class="card-footer d-flex justify-content-between border-top">
+                                <a href="https://budget-app.cf/" class="btn btn-info my-1">
+                                    <i class="fas fa-globe-africa fa-fw"></i> Website
+                                </a>
+                                <a href="https://github.com/DevMoath/Budget-App" class="btn btn-secondary my-1">
+                                    <i class="fas fa-code fa-fw"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 my-2" data-aos="zoom-in-up" data-aos-duration="1300">
+                        <div class="card bg-dark text-light border-light">
+                            <img src="image/three.png" class="card-img-top border-bottom" alt="Project Preview">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Mini-CRM</h5>
+                                <p class="card-text">Simple system to manage companies and their employees.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark border-light">
+                                    <b class="text-info">App Function: <br></b>
+                                    <ul class="mt-2">
+                                        <li>Add company</li>
+                                        <li>Update company info</li>
+                                        <li>Delete company</li>
+                                        <li>Add employee</li>
+                                        <li>Update employee info</li>
+                                        <li>Delete employee</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark border-light">
+                                    <b class="text-info">Technologies used:<br></b>
+                                    <ul class="mt-2">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Bootstrap 4</li>
+                                        <li>JavaScript</li>
+                                        <li>Laravel Framework</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="card-footer d-flex justify-content-between border-top">
+                                <a href="https://github.com/DevMoath/Mini-CRM" class="btn btn-secondary my-1 ml-auto">
+                                    <i class="fas fa-code fa-fw"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-4 mx-auto">
+                    <a href="https://github.com/DevMoath" target="_blank"
+                       class="btn btn-primary btn-lg rounded-pill px-4 action-button shadow-lg animate">
+                        More Projects
+                        <i class="fas fa-long-arrow-alt-up fa-fw ml-1" style="transform: scale(1.1) rotate(40deg)"></i>
+                    </a>
+                </div>
+            </section>
+            <footer class="row py-4 bg-dark" data-aos="fade-up" data-aos-duration="1300">
+                <div class="col-md-6 my-4">
+                    <h4 class="text-uppercase text-center text-white font-weight-normal">Don't forget to follow me</h4>
+                </div>
+                <div class="col-md-6 d-flex my-auto">
+                    <div class="mx-auto">
+                        <a href="https://twitter.com/Dev_Moath" class="btn btn-outline-primary btn-lg rounded-pill mx-2"
+                           role="button">
+                            <i class="fab fa-twitter icon"></i>
                         </a>
-                        <a href="https://github.com/DevMoath/Budget-App" class="btn btn-secondary my-1">
-                            <i class="fas fa-code fa-fw"></i> Code
+                        <a href="https://github.com/DevMoath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
+                           role="button">
+                            <i class="fab fa-github icon"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/moath-alhajri/"
+                           class="btn btn-outline-primary btn-lg rounded-pill mx-2" role="button">
+                            <i class="fab fa-linkedin icon"></i>
                         </a>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 my-2" data-aos="zoom-in-up" data-aos-duration="1300">
-                <div class="card bg-dark text-light border-light">
-                    <img src="image/three.png" class="card-img-top border-bottom" alt="Project Preview">
-                    <div class="card-body">
-                        <h5 class="card-title text-info">Mini-CRM</h5>
-                        <p class="card-text">Simple system to manage companies and their employees.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-dark border-light">
-                            <b class="text-info">App Function: <br></b>
-                            <ul class="mt-2">
-                                <li>Add company</li>
-                                <li>Update company info</li>
-                                <li>Delete company</li>
-                                <li>Add employee</li>
-                                <li>Update employee info</li>
-                                <li>Delete employee</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-dark border-light">
-                            <b class="text-info">Technologies used:<br></b>
-                            <ul class="mt-2">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Bootstrap 4</li>
-                                <li>JavaScript</li>
-                                <li>Laravel Framework</li>
-                                <li>MySQL</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="card-footer d-flex justify-content-between border-top">
-                        <a href="https://github.com/DevMoath/Mini-CRM" class="btn btn-secondary my-1 ml-auto">
-                            <i class="fas fa-code fa-fw"></i> Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            </footer>
         </div>
-
-        <div class="col-auto my-4 mx-auto">
-            <a href="https://github.com/DevMoath" target="_blank"
-               class="btn btn-primary btn-lg rounded-pill px-4 action-button shadow-lg animate">
-                More Projects
-                <i class="fas fa-long-arrow-alt-up fa-fw ml-1" style="transform: scale(1.1) rotate(40deg)"></i>
-            </a>
-        </div>
-
-    </section>
-
-    <footer class="row py-4 bg-dark" data-aos="fade-up" data-aos-duration="1300">
-
-        <div class="col-md-6 my-4">
-            <h4 class="text-uppercase text-center text-white font-weight-normal">Don't forget to follow me</h4>
-        </div>
-
-        <div class="col-md-6 d-flex my-auto">
-            <div class="mx-auto">
-                <a href="https://twitter.com/Dev_Moath" class="btn btn-outline-primary btn-lg rounded-pill mx-2"
-                   role="button">
-                    <i class="fab fa-twitter icon"></i>
-                </a>
-                <a href="https://github.com/DevMoath" class="btn btn-outline-light btn-lg rounded-pill mx-2"
-                   role="button">
-                    <i class="fab fa-github icon"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/moath-alhajri/"
-                   class="btn btn-outline-primary btn-lg rounded-pill mx-2" role="button">
-                    <i class="fab fa-linkedin icon"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<script src="js/particles.min.js"></script>
-<script src="js/aos.js"></script>
-<script>
-    particlesJS.load('particles-js', 'js/particles.json');
-    AOS.init();
-</script>
-</body>
+        <script src="js/particles.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script>
+            particlesJS.load("particles-js", "js/particles.json");
+            AOS.init();
+        </script>
+    </body>
 </html>
