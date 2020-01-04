@@ -4,13 +4,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <title>Moath Alhajri</title>
-        <link rel="apple-touch-icon" sizes="128x128" href="image/icon-apple.png">
-        <meta name="description" content="B.S. in Information Systems - Software Developer at Tamkeen Technologies.">
-        <meta property="og:title" content="Moath Alhajri"/>
-        <meta property="og:url" content="https://devmoath.github.io/"/>
-        <meta property="og:description"
-              content="B.S. in Information Systems - Software Developer at Tamkeen Technologies.">
-        <meta property="og:image" content="https://devmoath.github.io/image/icon-link.png">
+        <meta name="description" content="B.S. in Information Systems from @_KSU, Front-End, Back-End,
+        Laravel Framework, Software Developer at @TamkeenTech">
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="Moath Alhajri">
+        <meta itemprop="description" content="B.S. in Information Systems from @_KSU, Front-End, Back-End,
+        Laravel Framework, Software Developer at @TamkeenTech">
+        <meta itemprop="image" content="https://devmoath.github.io/image/logo.png">
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://devmoath.github.io">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Moath Alhajri">
+        <meta property="og:description" content="B.S. in Information Systems from @_KSU, Front-End, Back-End,
+        Laravel Framework, Software Developer at @TamkeenTech">
+        <meta property="og:image" content="https://devmoath.github.io/image/logo.png">
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@Dev-Moath">
+        <meta name="twitter:title" content="Moath Alhajri">
+        <meta name="twitter:description" content="B.S. in Information Systems from @_KSU, Front-End, Back-End,
+        Laravel Framework, Software Developer at @TamkeenTech">
+        <meta name="twitter:image" content="https://devmoath.github.io/image/logo.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="image/logo.jpg">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
         <script>
@@ -26,7 +41,7 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="css/all.min.css">
-        <link rel="icon" href="image/icon-link.png">
+        <link rel="icon" href="image/logo.jpg">
     </head>
     <body>
         <div class="container-fluid">
@@ -57,7 +72,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="position-fixed more">
+                    <div class="position-fixed more" style="z-index: 1111">
                         <a href="#more" id="link"
                            class="btn btn-primary btn-lg rounded-pill px-4 py-2">
                             <i class="fas fa-angle-double-down fa-fw"></i>
@@ -393,17 +408,29 @@
                             </div>
                         </div>
                     </section>
+                    <section class="pt-2 pb-4 text-white text-center text-uppercase">
+                        © <span id="year"></span> Moath Alhajri.
+                    </section>
                 </div>
             </div>
         </div>
         <script>
-            $("a[href^=\"#\"]").on("click", function (event) {
+            document.querySelector("#year").innerText = new Date().getFullYear();
+            $("a[href^='#']").on("click", function (event) {
                 let target = $(this.getAttribute("href"));
                 if (target.length) {
                     event.preventDefault();
                     $("html, body").stop().animate({
                         scrollTop: target.offset().top
                     }, 1000);
+                }
+            });
+            window.addEventListener("scroll", () => {
+                let link = document.querySelector("#link");
+                if (window.scrollY < 30) {
+                    link.classList.remove("d-none");
+                } else {
+                    link.classList.add("d-none");
                 }
             });
             document.addEventListener("gesturestart", function (e) {
