@@ -1,101 +1,40 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
-.overflow-x-hidden {
-    overflow-x: hidden!important;
+.more {
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.overflow-y-hidden {
-    overflow-y: hidden!important;
-}
-.row {
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-@media (max-width: 800px) {
-    .header {
-        font-size: 33px;
+@media (min-width: 992px) {
+    .right-side {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    .more {
+        display: none;
     }
 }
 .icon {
     font-size: 26px;
     margin: 5px;
 }
-.link-hide {
-    opacity: 0;
+.links a {
+    color: #A2A2A2;
 }
-.vh-95 {
-    height:95vh!important;
+.links a:nth-child(1):hover, .links a:nth-child(3):hover {
+    color: #007bff;
+}
+.links a:nth-child(2):hover {
+    color: #343a40;
 }
 #link i {
     animation-name: animate;
-    animation-duration: 1.8s;
+    animation-duration: 1.3s;
     animation-iteration-count: infinite;
 }
 @keyframes animate {
     0% {opacity: 1;}
     50% {opacity: 0;}
     100% {opacity: 1;}
-}
-.divider {
-    border-top: 2px solid #555;
-    width: auto;
-}
-.bg-costume-dark {
-    background: #2F363D;
-}
-.bg-costume-darker {
-    background: #24292E;
-}
-.card-img-overlay {
-    display: none;
-    transition: all 0.3s ease-in-out;
-}
-.card:hover .card-img-overlay {
-    display: block;
-    animation: card-animation 0.5s ease-in-out;
-}
-.card:hover .card-img {
-    opacity: 0;
-}
-@keyframes card-animation {
-    from {
-        margin-top: 100px;
-        opacity: 0;
-    }
-    to {
-        margin-top: 0;
-        opacity: 1;
-    }
-}
-.animate {
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-}
-.action-button {
-    position: relative;
-    float: left;
-}
-.action-button:active {
-    transform: translate(0,5px);
-    -webkit-transform: translate(0,5px);
-    border-bottom: 1px solid;
-}
-footer {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5) inset;
-}
-/* width */
-::-webkit-scrollbar {
-    width: 5px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }
