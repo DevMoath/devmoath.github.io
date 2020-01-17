@@ -1,0 +1,28 @@
+{
+    "name": "devmoath",
+    "version": "1.0.0",
+    "description": "My personal website",
+    "scripts": {
+        "bulid": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DevMoath/DevMoath.github.io.git"
+    },
+    "author": "Moath Alhajri",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/DevMoath/DevMoath.github.io/issues"
+    },
+    "homepage": "https://github.com/DevMoath/DevMoath.github.io#readme",
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0",
+        "bootstrap": "^4.4.1",
+        "css-loader": "^3.4.2",
+        "jquery": "^3.4.1",
+        "popper.js": "^1.16.0",
+        "style-loader": "^1.1.2",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    }
+}
