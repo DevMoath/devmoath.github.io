@@ -1,12 +1,12 @@
 # My Website
-My personal website that contains general information about me and my projects I worked on it
+My personal website that contains general information about me, and my projects I worked on it
 
 ## Technologies Used
-* HTML5
-* CSS3
+* HTML
+* CSS
 * [Bootstrap 4](https://getbootstrap.com/)
 * [Font Awesome 5](https://fontawesome.com/)
-* [AOS Library](https://michalsnik.github.io/aos/)
-* Vanilla JavaScript
-* [Typed.js](https://mattboldt.com/demos/typed-js/)
-* [Particles.js](https://vincentgarreau.com/particles.js/)
+* [jQuery 3](https://jquery.com/)
+* JavaScript
+* [Moment.js](https://momentjs.com/)
+* [NPM](https://www.npmjs.com/)
