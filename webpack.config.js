@@ -2,6 +2,7 @@ require("webpack");
 const config   = {
     mode: "production",
     entry: "./src/index.js",
+    watch: true,
     output: {
         path: __dirname + "/src",
         filename: "bundle.js"

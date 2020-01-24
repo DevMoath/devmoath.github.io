@@ -15,12 +15,27 @@
         display: none;
     }
 }
+.h-8 {
+    height: 8% !important;
+}
+.h-92 {
+    height: 92% !important;
+}
+.h-10 {
+    height: 10% !important;
+}
+.h-90 {
+    height: 90% !important;
+}
 .icon {
     font-size: 26px;
     margin: 5px;
 }
 .font-20 {
-    font-size: 20px;
+    font-size: 20px !important;
+}
+.font-18 {
+    font-size: 18px !important;
 }
 .links a {
     color: #A2A2A2;
@@ -72,15 +87,15 @@
 }
 .arrows path.a1 {
     animation-delay: -1s;
-    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+    -webkit-animation-delay: -1s; /* Safari Chrome */
 }
 .arrows path.a2 {
     animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+    -webkit-animation-delay: -0.5s; /* Safari Chrome */
 }
 .arrows path.a3 {
     animation-delay: 0s;
-    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+    -webkit-animation-delay: 0s; /* Safari Chrome */
 }
 .animate:active {
     transform: translate(0, 5px) !important;

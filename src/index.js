@@ -1,9 +1,12 @@
-window.$ = require("jquery");
+window.$      = require("jquery");
+window.moment = require("moment");
 require("bootstrap/dist/css/bootstrap.min.css");
 require("@fortawesome/fontawesome-free/js/all");
 require("./custom.css");
 window.onload = e => {
-    document.querySelector("#year").innerText = new Date().getFullYear();
+    document.querySelector("#year").innerText         = moment().format("YYYY");
+    document.querySelector("#full_time").innerText    = moment("20191006", "YYYYMMDD").fromNow(true);
+    document.querySelector("#current_time").innerText = moment("20200106", "YYYYMMDD").fromNow(true);
     $("a[href^='#']").on("click", function (e) {
         let target = $(this.getAttribute("href"));
         if (target.length) {
