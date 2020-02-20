@@ -2,11 +2,6 @@
 * {
     font-family: 'Nunito', Helvetica, sans-serif;
 }
-.more {
-    bottom: 1%;
-    left: 50%;
-    transform: translateX(-50%);
-}
 @media (min-width: 992px) {
     .right-side {
         max-height: 100vh;
@@ -34,15 +29,4 @@
 }
 .links a:nth-child(2):hover {
     color: #343a40;
-}
-#link i {
-    background-color: black !important;
-    animation-name: animate;
-    animation-duration: 1.3s;
-    animation-iteration-count: infinite;
-}
-@keyframes animate {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
 }
