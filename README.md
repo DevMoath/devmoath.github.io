@@ -10,3 +10,4 @@ My personal website that contains general information about me, and my projects 
 * [moment](https://momentjs.com/)
 * [npm](https://www.npmjs.com/)
 * [webpack](https://webpack.js.org/)
+* [GitHub APIs v3](https://developer.github.com/v3/)
