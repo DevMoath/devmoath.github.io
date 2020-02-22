@@ -2,9 +2,54 @@ window.moment = require("moment");
 require("bootstrap/dist/css/bootstrap.min.css");
 require("@fortawesome/fontawesome-free/js/fontawesome.min");
 require("@fortawesome/fontawesome-free/js/brands.min");
+require("@fortawesome/fontawesome-free/js/solid.min");
 require("./custom.css");
 window.onload = e => {
     document.querySelector("#year").innerText      = moment().format("YYYY");
     document.querySelector("#full_time").innerText = document.querySelector("#current_time").innerText = moment("20191006", "YYYYMMDD").fromNow(true);
     document.addEventListener("gesturestart", e => e.preventDefault());
+    fetch("https://api.github.com/users/devmoath/repos?sort=updated")
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+            let projects = document.querySelector("#projects");
+            for (let i = 0; i < json.length; i++) {
+                let {name, html_url, description, created_at, updated_at, language} = json[i];
+
+                let html = `<div class="d-flex mx-auto py-0">
+                                <div class="col-auto mr-0 pr-0 flex-column d-flex">
+                                    <h4 class="mx-2 my-0">
+                                        <span class="badge badge-pill bg-light border">&nbsp;</span>
+                                    </h4>
+                                    <div class="row h-100">
+                                        <div class="col border-right">&nbsp;</div>
+                                        <div class="col">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="col-auto ml-0 pl-0 flex-fill">
+                                    <div class="col-md-8 p-4 bg-white shadow-sm rounded mb-3 mx-1">
+                                        <div class="mb-2">
+                                            <img src="image/repository.svg" alt="repository" width="30" height="30">
+                                            <a href="https://github.com/DevMoath">DevMoath</a> / <a href="${html_url}">
+                                                ${name}
+                                            </a>
+                                            <span class="float-right text-muted">${moment(created_at).format("MMM D, YYYY")}</span>
+                                        </div>
+                                        <p class="mb-3 ml-1">${description}</p>
+                                        <div class="ml-1">
+                                            <i class="fas fa-circle ${language} fa-fw mr-1"></i>
+                                            ${language}
+                                            <span class="float-right text-muted">Updated ${moment(updated_at).fromNow()}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+                if (i == (json.length - 1)) {
+                    projects.innerHTML += html.replace("border-right", "");
+                } else {
+                    projects.innerHTML += html;
+                }
+            }
+        })
+        .catch(error => console.error(error));
 };
