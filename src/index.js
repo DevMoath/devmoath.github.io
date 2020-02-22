@@ -16,9 +16,9 @@ window.onload = e => {
                 let {name, html_url, description, created_at, updated_at, language} = json[i];
 
                 let html = `<div class="d-flex mx-auto py-0">
-                                <div class="col-auto mr-0 pr-0 flex-column d-flex">
-                                    <h4 class="mx-2 my-0">
-                                        <span class="badge badge-pill bg-light border">&nbsp;</span>
+                                <div class="col-auto mx-0 px-0 flex-column d-flex">
+                                    <h4 class="my-0">
+                                        <span class="badge badge-pill bg-light border">${i + 1}</span>
                                     </h4>
                                     <div class="row h-100">
                                         <div class="col border-right">&nbsp;</div>
@@ -29,6 +29,11 @@ window.onload = e => {
                                     <div class="col-md-8 p-4 bg-white shadow-sm rounded mb-3 mx-1">
                                         <div class="mb-2">
                                             <img src="image/repository.svg" alt="repository" width="30" height="30">
+                                            <span class="d-none d-md-inline">
+                                                <a href="https://github.com/DevMoath">
+                                                    DevMoath
+                                                </a> /
+                                            </span>
                                             <a href="${html_url}">
                                                 ${name}
                                             </a>
@@ -36,8 +41,7 @@ window.onload = e => {
                                         </div>
                                         <p class="mb-3 ml-1">${description}</p>
                                         <div class="ml-1">
-                                            <i class="fas fa-circle ${language} fa-fw mr-1"></i>
-                                            ${language}
+                                            <i class="fas fa-circle ${language} fa-fw mr-1"></i>${language === "JavaScript" ? "JS" : language}
                                             <span class="float-right text-muted">Updated ${moment(updated_at).fromNow()}</span>
                                         </div>
                                     </div>
