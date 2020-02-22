@@ -11,7 +11,6 @@ window.onload = e => {
     fetch("https://api.github.com/users/devmoath/repos?sort=updated")
         .then(response => response.json())
         .then(json => {
-            console.log(json);
             let projects = document.querySelector("#projects");
             for (let i = 0; i < json.length; i++) {
                 let {name, html_url, description, created_at, updated_at, language} = json[i];
@@ -30,7 +29,7 @@ window.onload = e => {
                                     <div class="col-md-8 p-4 bg-white shadow-sm rounded mb-3 mx-1">
                                         <div class="mb-2">
                                             <img src="image/repository.svg" alt="repository" width="30" height="30">
-                                            <a href="https://github.com/DevMoath">DevMoath</a> / <a href="${html_url}">
+                                            <a href="${html_url}">
                                                 ${name}
                                             </a>
                                             <span class="float-right text-muted">${moment(created_at).format("MMM D, YYYY")}</span>
