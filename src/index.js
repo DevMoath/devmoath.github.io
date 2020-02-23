@@ -26,7 +26,7 @@ window.onload = e => {
                                     </div>
                                 </div>
                                 <div class="col-auto ml-0 pl-0 flex-fill">
-                                    <div class="col-md-8 p-4 bg-white shadow-sm rounded mb-3 mx-1">
+                                    <div class="col-md-8 py-3 px-3 bg-white shadow-sm rounded mb-3 ml-1">
                                         <div class="mb-2">
                                             <img src="image/repository.svg" alt="repository" width="30" height="30">
                                             <span class="d-none d-md-inline">
