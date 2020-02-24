@@ -8,7 +8,8 @@ window.onload = e => {
     document.querySelector("#year").innerText      = moment().format("YYYY");
     document.querySelector("#full_time").innerText = document.querySelector("#current_time").innerText = moment("20191006", "YYYYMMDD").fromNow(true);
     document.addEventListener("gesturestart", e => e.preventDefault());
-    fetch("https://api.github.com/users/devmoath/repos?sort=updated")
+    let base = "https://api.github.com/";
+    fetch(`${base}users/devmoath/repos?sort=updated`)
         .then(response => response.json())
         .then(json => {
             let projects = document.querySelector("#projects");
@@ -53,6 +54,7 @@ window.onload = e => {
                     projects.innerHTML += html;
                 }
             }
+            document.querySelector("#spinner").remove();
         })
         .catch(error => console.error(error));
 };
