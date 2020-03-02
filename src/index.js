@@ -18,27 +18,29 @@ window.onload = e => {
 
                 let html = `<div class="d-flex mx-auto py-0">
                                 <div class="col-auto mx-0 px-0 flex-column d-flex">
-                                    <h4 class="my-0">
-                                        <span class="badge badge-pill bg-light border">${i + 1}</span>
+                                    <h4 class="m-0">
+                                        <span class="badge badge-pill py-2 bg-light border">${i + 1}</span>
                                     </h4>
                                     <div class="row h-100">
                                         <div class="col border-right">&nbsp;</div>
                                         <div class="col">&nbsp;</div>
                                     </div>
                                 </div>
-                                <div class="col-auto ml-0 pl-0 flex-fill">
-                                    <div class="col-md-8 py-3 px-3 bg-white shadow-sm rounded mb-3 ml-1">
-                                        <div class="mb-2">
-                                            <img src="image/repository.svg" alt="repository" width="30" height="30">
-                                            <span class="d-none d-md-inline">
-                                                <a href="https://github.com/DevMoath">
-                                                    DevMoath
-                                                </a> /
-                                            </span>
-                                            <a href="${html_url}">
-                                                ${name}
-                                            </a>
-                                            <span class="float-right text-muted">${moment(created_at).format("MMM D, YYYY")}</span>
+                                <div class="col-auto mx-0 px-0 flex-fill">
+                                    <div class="col-md-8 card-size py-3 px-3 bg-white shadow-sm rounded mb-3 ml-1">
+                                        <div class="mb-2 d-flex">
+                                            <div class="ellipsis">
+                                                <img src="image/repository.svg" alt="repository" width="30" height="30">
+                                                <span class="d-none d-md-inline">
+                                                    <a href="https://github.com/DevMoath">
+                                                        DevMoath
+                                                    </a> /
+                                                </span>
+                                                <a href="${html_url}">
+                                                    ${name}
+                                                </a>
+                                            </div>
+                                            <span class="ml-auto text-muted created_at">${moment(created_at).format("MMM D, YYYY")}</span>
                                         </div>
                                         <p class="mb-3 ml-1">${description}</p>
                                         <div class="ml-1">

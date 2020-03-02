@@ -2,13 +2,25 @@
 * {
     font-family: 'Nunito', Helvetica, sans-serif;
 }
+@media (max-width: 800px) {
+    .ellipsis {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .created_at {
+        white-space: nowrap;
+    }
+    .card-size {
+        width: 80vw !important;
+        max-width: 80vw !important;
+    }
+}
 @media (min-width: 992px) {
     .right-side {
         max-height: 100vh;
         overflow-y: auto;
-    }
-    .more {
-        display: none;
     }
 }
 .icon {
