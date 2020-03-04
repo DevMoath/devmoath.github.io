@@ -7,16 +7,38 @@ require("./custom.css");
 window.onload = e => {
     document.querySelector("#year").innerText      = moment().format("YYYY");
     document.querySelector("#full_time").innerText = moment("20191006", "YYYYMMDD").fromNow(true);
-    document.addEventListener("gesturestart", e => e.preventDefault());
-    let base = "https://api.github.com/";
-    fetch(`${base}users/devmoath/repos?sort=updated`)
-        .then(response => response.json())
-        .then(json => {
-            let projects = document.querySelector("#projects");
-            for (let i = 0; i < json.length; i++) {
-                let {name, html_url, description, created_at, updated_at, language} = json[i];
 
-                let html = `<div class="d-flex mx-auto py-0">
+    document.addEventListener("gesturestart", e => e.preventDefault());
+
+    let isProjectsFetched = false;
+
+    window.onscroll = e => {
+        let windowHeight = document.body.scrollHeight - document.body.offsetHeight,
+            windowScroll = window.scrollY;
+        if ((windowHeight - 150) <= windowScroll) {
+            fetchProjects();
+        }
+    };
+
+    document.querySelector(".right-side").onscroll = e => {
+        let height = e.target.scrollHeight - e.target.offsetHeight;
+        let scroll = e.path[0].scrollTop;
+        if ((height - 150) <= scroll) {
+            fetchProjects();
+        }
+    };
+
+    function fetchProjects() {
+        if (!isProjectsFetched) {
+            let base = "https://api.github.com/";
+            fetch(`${base}users/devmoath/repos?sort=updated`)
+                .then(response => response.json())
+                .then(json => {
+                    let projects = document.querySelector("#projects");
+                    for (let i = 0; i < json.length; i++) {
+                        let {name, html_url, description, created_at, updated_at, language} = json[i];
+
+                        let html = `<div class="d-flex mx-auto py-0">
                                 <div class="col-auto mx-0 px-0 flex-column d-flex">
                                     <h4 class="m-0">
                                         <span class="badge badge-pill py-2 bg-light border">${i + 1}</span>
@@ -50,13 +72,16 @@ window.onload = e => {
                                     </div>
                                 </div>
                             </div>`;
-                if (i == (json.length - 1)) {
-                    projects.innerHTML += html.replace("border-right", "");
-                } else {
-                    projects.innerHTML += html;
-                }
-            }
-            document.querySelector("#spinner").remove();
-        })
-        .catch(error => console.error(error));
+                        if (i == (json.length - 1)) {
+                            projects.innerHTML += html.replace("border-right", "");
+                        } else {
+                            projects.innerHTML += html;
+                        }
+                    }
+                    document.querySelector("#spinner").remove();
+                })
+                .catch(error => console.error(error));
+            isProjectsFetched = true;
+        }
+    }
 };
