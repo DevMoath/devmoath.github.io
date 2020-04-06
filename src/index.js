@@ -38,10 +38,15 @@ window.onload = e => {
                     for (let i = 0; i < json.length; i++) {
                         let {name, html_url, description, created_at, updated_at, language} = json[i];
 
+                        let index = i + 1;
+                        if (index < 10) {
+                            index = `0${index}`;
+                        }
+
                         let html = `<div class="d-flex mx-auto py-0">
                                 <div class="col-auto mx-0 px-0 flex-column d-flex">
                                     <h4 class="m-0">
-                                        <span class="badge badge-pill py-2 bg-light border">${i + 1}</span>
+                                        <span class="badge badge-pill py-2 bg-light border">${index}</span>
                                     </h4>
                                     <div class="row h-100">
                                         <div class="col border-right">&nbsp;</div>
