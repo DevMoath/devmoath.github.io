@@ -42,6 +42,14 @@
 .links a:nth-child(2):hover {
     color: #343a40;
 }
+.links a:nth-child(4):hover {
+    color: #FF0200;
+}
+.blockquote {
+    padding: 10px 20px;
+    font-size: 17px;
+    border-left: 5px solid #6C757D;
+}
 .PHP {
     color: #4F5D95;
 }
