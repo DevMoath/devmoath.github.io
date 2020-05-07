@@ -1,5 +1,6 @@
 require("webpack");
-const config   = {
+
+const config = {
     mode: "production",
     entry: "./src/index.js",
     watch: true,
@@ -16,4 +17,5 @@ const config   = {
         ]
     }
 };
+
 module.exports = config;
