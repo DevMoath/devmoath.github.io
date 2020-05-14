@@ -46,9 +46,11 @@ const fetchProjects = () => {
                                             <span class="ml-auto text-muted created_at">${moment(created_at).format("MMM D, YYYY")}</span>
                                         </div>
                                         <p class="mb-3 ml-1">${description}</p>
-                                        <div class="ml-1">
-                                            <i class="fas fa-circle ${language} fa-fw mr-1"></i>${language === "JavaScript" ? "JS" : language}
-                                            <span class="float-right text-muted">Updated ${moment(updated_at).fromNow()}</span>
+                                        <div class="ml-1 d-flex">
+                                            <span class="text-truncate">
+                                                <i class="fas fa-circle ${language} fa-fw mr-1"></i>${language}
+                                            </span>
+                                            <span class="text-truncate text-muted ml-auto">Updated ${moment(updated_at).fromNow()}</span>
                                         </div>
                                     </div>
                                 </div>
