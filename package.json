@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "My personal website",
     "scripts": {
-        "bulid": "webpack"
+        "build": "webpack"
     },
     "repository": {
         "type": "git",
