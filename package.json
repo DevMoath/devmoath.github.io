@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "My personal website",
     "scripts": {
-        "build": "webpack"
+        "build:prod": "webpack --env=production",
+        "build:dev": "webpack --env=development"
     },
     "repository": {
         "type": "git",

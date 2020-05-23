@@ -1,5 +1,7 @@
 window.moment = require("moment");
+window.$      = require("jquery");
 require("bootstrap/dist/css/bootstrap.min.css");
+require("bootstrap/dist/js/bootstrap.bundle.min");
 require("@fortawesome/fontawesome-free/js/fontawesome.min");
 require("@fortawesome/fontawesome-free/js/brands.min");
 require("@fortawesome/fontawesome-free/js/solid.min");
@@ -69,6 +71,15 @@ const fetchProjects = () => {
 };
 
 window.onload = e => {
+
+    $(function () {
+        $("[data-toggle='popover']").popover({
+            html: true,
+            trigger: "manual",
+            container: "body",
+            template: "<div class='popover shadow' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>",
+        }).popover("show");
+    });
 
     document.addEventListener("gesturestart", e => e.preventDefault());
 
