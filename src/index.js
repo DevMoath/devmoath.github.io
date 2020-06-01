@@ -15,8 +15,10 @@ const fetchProjects = () => {
         fetch(`${base}users/devmoath/repos?sort=updated`)
             .then(response => response.json())
             .then(json => {
-                json         = json.slice(0, 9);
+                json = json.filter(item => !item.fork).slice(0, 9);
+
                 let projects = document.querySelector("#projects");
+
                 for (let i = 0; i < json.length; i++) {
 
                     let {name, html_url, description, created_at, updated_at, language} = json[i];
@@ -77,7 +79,7 @@ window.onload = e => {
             html: true,
             trigger: "manual",
             container: "body",
-            template: "<div class='popover shadow' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>",
+            template: "<div class='popover shadow' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>"
         }).popover("show");
     });
 
