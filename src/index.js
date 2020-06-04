@@ -93,6 +93,10 @@ window.onload = e => {
         document.querySelector("#full_time").innerText = moment("20191006", "YYYYMMDD").fromNow(true);
     }
 
+    if (document.querySelector("#blog_created")) {
+        document.querySelector("#blog_created").innerText = moment("20200115", "YYYYMMDD").fromNow();
+    }
+
     window.onscroll = e => {
         let windowHeight = document.body.scrollHeight - document.body.offsetHeight,
             windowScroll = window.scrollY;
