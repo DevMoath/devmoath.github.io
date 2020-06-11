@@ -1,6 +1,7 @@
 import React from "react";
 import repository from "../image/repository.svg";
 import moment from "moment";
+import {v4 as uuid} from "uuid";
 
 const Projects = ({projects}) => {
     return (
@@ -11,12 +12,12 @@ const Projects = ({projects}) => {
                     projects ?
                         projects.map((project, index, projects) => {
 
-                            const {name, html_url, description, created_at, updated_at, language} = project;
+                            const {name, html_url, description, created_at, updated_at, language, homepage} = project;
 
                             const isLast = projects.length === index + 1;
 
                             return (
-                                <div className="d-flex mx-auto py-0">
+                                <div className="d-flex mx-auto py-0" key={uuid()}>
                                     <div className="col-auto mx-0 px-0 flex-column d-flex">
                                         <h4 className="m-0">
                                             <span className="badge badge-pill py-2 bg-light border">{index + 1}</span>
@@ -43,7 +44,9 @@ const Projects = ({projects}) => {
                                                     {moment(created_at).format("MMM D, YYYY")}
                                                 </span>
                                             </div>
-                                            <p className="mb-3 ml-1">{description}</p>
+                                            <p className="ml-1 mb-2">{description}</p>
+                                            {homepage ?
+                                                <p className="ml-2 mb-2"><a href={homepage}>visit website</a></p> : ""}
                                             <div className="ml-1 d-flex">
                                                 <span className="text-truncate">
                                                     <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
