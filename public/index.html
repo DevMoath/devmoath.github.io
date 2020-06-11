@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <title>Moath Alhajri</title>
+        <meta content="%REACT_APP_DESCRIPTION%" name="description">
+        <!-- Google / Search Engine Tags -->
+        <meta content="Moath Alhajri" itemprop="name">
+        <meta content="%REACT_APP_DESCRIPTION%" itemprop="description">
+        <meta content="%PUBLIC_URL%/logo.jpg" itemprop="image">
+        <!-- Facebook Meta Tags -->
+        <meta content="%PUBLIC_URL%" property="og:url">
+        <meta content="website" property="og:type">
+        <meta content="Moath Alhajri" property="og:title">
+        <meta content="%REACT_APP_DESCRIPTION%" property="og:description">
+        <meta content="%PUBLIC_URL%/logo.jpg" property="og:image">
+        <!-- Twitter Meta Tags -->
+        <meta content="summary_large_image" name="twitter:card">
+        <meta content="@Dev_Moath" name="twitter:creator">
+        <meta content="@Dev_Moath" name="twitter:site">
+        <meta content="Moath Alhajri" name="twitter:title">
+        <meta content="%REACT_APP_DESCRIPTION%" name="twitter:description">
+        <meta content="%PUBLIC_URL%/logo.jpg" name="twitter:image">
+        <!-- Favicon -->
+        <link href="%PUBLIC_URL%/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="%PUBLIC_URL%/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="%PUBLIC_URL%/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+        <link href="%PUBLIC_URL%/site.webmanifest" rel="manifest">
+        <link color="#5bbad5" href="%PUBLIC_URL%/safari-pinned-tab.svg" rel="mask-icon">
+        <meta content="#da532c" name="msapplication-TileColor">
+        <meta content="#ffffff" name="theme-color">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
+        <script>
+            document.addEventListener("gesturestart", e => e.preventDefault());
+            if ("%NODE_ENV%" !== "development") {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {dataLayer.push(arguments);}
+
+                gtag("js", new Date());
+                gtag("config", "UA-142122097-1");
+            }
+        </script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root">
+            <div class="row d-flex justify-content-center align-content-center vh-100">
+                <div id="loader"></div>
+            </div>
+        </div>
+    </body>
+</html>
