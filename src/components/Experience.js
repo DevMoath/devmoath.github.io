@@ -27,14 +27,14 @@ const Experience = () => {
                         <div className="col">&nbsp;</div>
                     </div>
                 </div>
-                <div className="col-auto ml-0 pl-0 flex-fill">
+                <div className="col-auto ml-0 px-0 flex-fill">
                     <div className="card border-0 bg-transparent">
-                        <div className="card-body pl-2">
+                        <div className="card-body pl-2 pr-1">
                             <h4 className="card-title text-primary text-capitalize">
                                 Software Developer & Analyst <br/>
                                 <small className="text-muted">Full Time Job</small>
                             </h4>
-                            <blockquote className="blockquote text-light rounded">
+                            <blockquote className="blockquote text-light rounded pr-0">
                                 <ul className="list-unstyled text-light">
                                     <li className="mb-2">Full-Stack Developer</li>
                                     <li className="mb-2">Laravel Developer</li>
@@ -43,7 +43,7 @@ const Experience = () => {
                                 </ul>
                                 <hr className="border-light"/>
                                 I have collaborate in:
-                                <ul className="pl-4 mb-0">
+                                <ul className="mb-0">
                                     <li className="my-2">
                                         Jira Integration REST APIs for Complaints (e.g. Musaned, eTawtheeq etc.)
                                     </li>

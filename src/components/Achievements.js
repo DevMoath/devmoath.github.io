@@ -30,8 +30,8 @@ const Achievements = () => {
                 </div>
                 <div className="col-auto ml-0 pl-0 flex-fill">
                     <div className="card border-0 bg-transparent">
-                        <div className="card-body pl-2">
-                            <blockquote className="blockquote text-light rounded">
+                        <div className="card-body pl-2 pr-0">
+                            <blockquote className="blockquote text-light rounded pr-0">
                                 <p className="my-auto">
                                     Blog for information systems students (King Saud University) contains plan study,
                                     courses description, advices, tips, resources and anything could help the students

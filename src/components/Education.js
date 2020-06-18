@@ -26,14 +26,14 @@ const Education = () => {
                         <div className="col">&nbsp;</div>
                     </div>
                 </div>
-                <div className="col-auto flex-fill pl-0">
+                <div className="col-auto flex-fill px-0">
                     <div className="card border-0 bg-transparent rounded">
                         <div className="card-body pl-2">
                             <h4 className="card-title text-primary text-capitalize">
                                 Bachelor Degree <br/>
                                 <small className="text-muted">Information Systems</small>
                             </h4>
-                            <blockquote className="blockquote text-light rounded">
+                            <blockquote className="blockquote text-light rounded pr-0">
                                 <p>
                                     The <b>graduation project</b> is a website that will provide people with
                                     historical knowledge in visual manner, and allow them to interactive
