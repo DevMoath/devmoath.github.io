@@ -6,7 +6,9 @@ const Education = () => {
         <section className="py-4">
             <h1 className="text-center text-light">Education</h1>
             <div className="row mt-5 ml-1">
-                <img alt="King Saud University Logo" className="rounded float-left img-60" src={school}/>
+                <img alt="King Saud University Logo"
+                     className="rounded float-left img-60"
+                     src={school}/>
                 <h4 className="ml-3 text-light my-auto text-capitalize">
                     King Saud University <br/>
                     <small className="text-muted">2015 - 2019</small>
@@ -53,7 +55,7 @@ const Education = () => {
             </div>
             <div className="d-flex justify-content-center my-4">
                 <a className="btn btn-primary btn-lg rounded-pill px-5 py-2"
-                   href="https://drive.google.com/file/d/1lndD62dAaS4DrPxEdl_f2iSkDtOZriSP/view">
+                   href="https://drive.google.com/file/d/1TfOkyxj-bdQT8JglZsFWVMA_4LCUv86h/view?usp=sharing">
                     Get my CV
                     <em className="fas fa-external-link-alt fa-fw ml-2"/>
                 </a>
