@@ -28,10 +28,12 @@ class Home extends Component {
         return (
             <Container fluid>
                 <Row className="vh-100">
-                    <Col lg="4" className="bg-light text-dark d-flex align-items-center h-100">
+                    <Col lg="4"
+                         className="bg-light text-dark d-flex align-items-center h-100">
                         <Preview/>
                     </Col>
-                    <Col lg="8" className="bg-dark right-side">
+                    <Col lg="8"
+                         className="bg-dark right-side">
                         <Education/>
                         <hr className="border-light"/>
                         <Experience/>

@@ -7,10 +7,13 @@ const Achievements = () => {
         <section className="py-4">
             <h1 className="text-center text-light">Achievements</h1>
             <div className="row mt-5 ml-1">
-                <img alt="Information Systems Blog Logo" className="rounded float-left bg-white img-60" src={icon}/>
+                <img alt="Information Systems Blog Logo"
+                     className="rounded float-left bg-white img-60"
+                     src={icon}/>
                 <h4 className="ml-3 text-light my-auto text-capitalize">
                     Information Systems Blog<br/>
-                    <small className="text-muted" id="blog_created">{moment("20200115", "YYYYMMDD").fromNow()}</small>
+                    <small className="text-muted"
+                           id="blog_created">{moment("20200115", "YYYYMMDD").fromNow()}</small>
                     <small className="text-muted"> - present</small>
                 </h4>
             </div>
@@ -38,7 +41,8 @@ const Achievements = () => {
                                 </p>
                                 <footer className="blockquote-footer mt-2">
                                     <a href="https://infosystems.blog/">
-                                        <cite className="font-weight-bolder" title="visit the blog">
+                                        <cite className="font-weight-bolder"
+                                              title="visit the blog">
                                             Visit the blog
                                         </cite>
                                     </a>

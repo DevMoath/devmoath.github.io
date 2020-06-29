@@ -14,7 +14,9 @@ const Skills = () => {
             <h1 className="text-center text-light">Skills</h1>
             <div className="col-lg-11 mx-auto px-0 skills">
                 <div>
-                    {skills.map(skill => <Badge variant="light" key={uuid()} pill>{skill}</Badge>)}
+                    {skills.map(skill => <Badge variant="light"
+                                                key={uuid()}
+                                                pill>{skill}</Badge>)}
                 </div>
             </div>
         </section>

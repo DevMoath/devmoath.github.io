@@ -17,7 +17,8 @@ const Projects = ({projects}) => {
                             const isLast = projects.length === index + 1;
 
                             return (
-                                <div className="d-flex mx-auto py-0" key={uuid()}>
+                                <div className="d-flex mx-auto py-0"
+                                     key={uuid()}>
                                     <div className="col-auto mx-0 px-0 flex-column d-flex">
                                         <h4 className="m-0">
                                             <span className="badge badge-pill py-2 bg-light border">{index + 1}</span>
@@ -32,7 +33,10 @@ const Projects = ({projects}) => {
                                             className="col-md-8 card-size py-3 px-3 bg-white shadow-sm rounded mb-3 ml-1">
                                             <div className="mb-2 d-flex">
                                                 <div className="ellipsis">
-                                                    <img src={repository} alt="repository" width="30" height="30"/>
+                                                    <img src={repository}
+                                                         alt="repository"
+                                                         width="30"
+                                                         height="30"/>
                                                     <span className="d-none d-md-inline">
                                                         <a href="https://github.com/DevMoath">
                                                             DevMoath
@@ -61,7 +65,8 @@ const Projects = ({projects}) => {
                                 </div>
                             );
                         }) :
-                        <div className="d-flex flex-column my-5 w-100" id="spinner">
+                        <div className="d-flex flex-column my-5 w-100"
+                             id="spinner">
                             <div id="loader"/>
                             <h5 className="text-light text-center my-auto ml-3">
                                 Loading Projects from GitHub API
@@ -70,7 +75,8 @@ const Projects = ({projects}) => {
                 }
             </div>
             <div className="d-flex justify-content-center my-4">
-                <a href="https://github.com/DevMoath" className="btn btn-primary btn-lg rounded-pill px-5 py-2">
+                <a href="https://github.com/DevMoath"
+                   className="btn btn-primary btn-lg rounded-pill px-5 py-2">
                     More Projects
                     <em className="fas fa-external-link-alt fa-fw ml-2"/>
                 </a>

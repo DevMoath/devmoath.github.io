@@ -7,7 +7,9 @@ const Experience = () => {
         <section className="py-4">
             <h1 className="text-center text-light">Experience</h1>
             <div className="row mt-5 ml-1">
-                <img alt="Tamkeen Technologies Logo" className="rounded float-left img-60" src={company}/>
+                <img alt="Tamkeen Technologies Logo"
+                     className="rounded float-left img-60"
+                     src={company}/>
                 <h4 className="ml-3 text-light my-auto text-capitalize">
                     Tamkeen Technologies <br/>
                     <small className="text-muted">{moment("20191006", "YYYYMMDD").fromNow(true)}</small>
