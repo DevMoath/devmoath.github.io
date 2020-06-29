@@ -19,7 +19,7 @@ class Home extends Component {
 
     componentDidMount() {
         axios.get("https://api.github.com/users/devmoath/repos?sort=updated").then(response => {
-            const projects = response.data.filter(item => !item.fork).slice(0, 9);
+            const projects = response.data.filter(item => !item.fork).slice(0, 5);
             this.setState({projects: projects});
         }).catch(e => console.error(e));
     }
