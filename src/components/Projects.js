@@ -29,7 +29,7 @@ const Projects = ({projects, failed}) => {
                         </Alert> : projects
                         ? projects.map((project, index, projects) => {
 
-                            const {name, html_url, description, created_at, updated_at, language, homepage} = project;
+                            const {name, html_url, description, created_at, updated_at, language, homepage, archived} = project;
 
                             const isLast = projects.length === index + 1;
 
@@ -67,15 +67,22 @@ const Projects = ({projects, failed}) => {
                                             </div>
                                             <p className="ml-1 mb-2">{description}</p>
                                             {homepage ?
-                                                <p className="ml-2 mb-2"><a href={homepage}>visit website</a>
+                                                <p className="ml-2 mb-2">
+                                                    <a href={homepage}>visit website</a>
                                                 </p> : ""}
-                                            <div className="ml-1 d-flex">
+                                            <div className="ml-1 d-flex mt-3">
                                                 <span className="text-truncate">
                                                     <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
                                                     {language}
                                                 </span>
                                                 <span className="text-truncate text-muted ml-auto">
-                                                    Updated {moment(updated_at).fromNow()}
+                                                    {
+                                                        archived ?
+                                                            <kbd className="rounded-pill bg-secondary">
+                                                                Archived
+                                                            </kbd>
+                                                            : `Updated ${moment(updated_at).fromNow()}`
+                                                    }
                                                 </span>
                                             </div>
                                         </div>
