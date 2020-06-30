@@ -2,15 +2,32 @@ import React from "react";
 import repository from "../image/repository.svg";
 import moment from "moment";
 import {v4 as uuid} from "uuid";
+import {Alert} from "@material-ui/lab";
+import {makeStyles} from "@material-ui/core/styles";
 
-const Projects = ({projects}) => {
+const useStyles = makeStyles(() => ({
+    root: {
+        maxWidth: 400,
+        margin: "auto",
+        fontSize: "large"
+    }
+}));
+
+const Projects = ({projects, failed}) => {
+
+    const classes = useStyles();
+
     return (
         <section className="py-4">
             <h1 className="text-center text-light">Open Source Projects</h1>
             <div className="mt-4">
                 {
-                    projects ?
-                        projects.map((project, index, projects) => {
+                    failed ?
+                        <Alert severity="error"
+                               className={classes.root}>
+                            Failed fetching projects from GitHub
+                        </Alert> : projects
+                        ? projects.map((project, index, projects) => {
 
                             const {name, html_url, description, created_at, updated_at, language, homepage} = project;
 
@@ -50,7 +67,8 @@ const Projects = ({projects}) => {
                                             </div>
                                             <p className="ml-1 mb-2">{description}</p>
                                             {homepage ?
-                                                <p className="ml-2 mb-2"><a href={homepage}>visit website</a></p> : ""}
+                                                <p className="ml-2 mb-2"><a href={homepage}>visit website</a>
+                                                </p> : ""}
                                             <div className="ml-1 d-flex">
                                                 <span className="text-truncate">
                                                     <i className={`fas fa-circle ${language} fa-fw mr-1`}/>

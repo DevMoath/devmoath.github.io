@@ -14,17 +14,24 @@ import axios from "axios";
 class Home extends Component {
 
     state = {
-        projects: null
+        projects: null,
+        failed: false
     };
 
     componentDidMount() {
         axios.get("https://api.github.com/users/devmoath/repos?sort=updated").then(response => {
-            const projects = response.data.filter(item => !item.fork && !item.archived).slice(0, 5);
+            const projects = response.data.filter(item => !item.fork && !item.archived).slice(0, 6);
             this.setState({projects: projects});
-        }).catch(e => console.error(e));
+        }).catch(e => {
+            this.setState({failed: true});
+            console.error(e);
+        });
     }
 
     render() {
+
+        const {projects, failed} = this.state;
+
         return (
             <Container fluid>
                 <Row className="vh-100">
@@ -42,7 +49,8 @@ class Home extends Component {
                         <hr className="border-light"/>
                         <Achievements/>
                         <hr className="border-light"/>
-                        <Projects projects={this.state.projects}/>
+                        <Projects projects={projects}
+                                  failed={failed}/>
                         <Footer/>
                     </Col>
                 </Row>
