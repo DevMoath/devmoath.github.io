@@ -4,9 +4,9 @@
 > Personal website
 
 ## Technologies Used
-* [Bootstrap](https://getbootstrap.com/)
+* [React Bootstrap](https://react-bootstrap.netlify.app/)
 * [Font Awesome](https://fontawesome.com/)
 * [React js](https://reactjs.org/)
-* [moment](https://momentjs.com/)
-* [GitHub APIs v3](https://developer.github.com/v3/)
+* [Moment js](https://momentjs.com/)
+* [GitHub APIs](https://developer.github.com/v3/)
 * [Netlify](https://www.netlify.com/)
