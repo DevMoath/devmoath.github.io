@@ -5,6 +5,7 @@
 
 ## Technologies Used
 * [React Bootstrap](https://react-bootstrap.netlify.app/)
+* [Material Ui](https://material-ui.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [React js](https://reactjs.org/)
 * [Moment js](https://momentjs.com/)
