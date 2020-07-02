@@ -1,17 +1,10 @@
 {
     "name": "moath",
     "version": "1.0.0",
-    "description": "My personal website",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/DevMoath/DevMoath.github.io.git"
-    },
-    "private": false,
+    "description": "Personal website",
+    "private": true,
     "author": "Moath Alhajri",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/DevMoath/DevMoath.github.io/issues"
-    },
     "homepage": "https://moath.dev/",
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.12.1",
