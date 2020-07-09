@@ -1,5 +1,4 @@
 import React from "react";
-import icon from "../image/icon.jpg";
 import {OverlayTrigger, Popover} from "react-bootstrap";
 
 const Preview = () => {
@@ -16,9 +15,6 @@ const Preview = () => {
     
     return (
         <div className="px-3 z-index-1">
-            <img alt="Moath Alhajri Logo"
-                 className="rounded icon-200"
-                 src={icon}/>
             <h1 className="my-4">Moath Alhajri</h1>
             <p className="my-4 text-left font-18">
                 B.S. in Information Systems from <a href="https://twitter.com/_KSU">@_KSU</a>,
