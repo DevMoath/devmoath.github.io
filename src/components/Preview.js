@@ -15,12 +15,12 @@ const Preview = () => {
     );
     
     return (
-        <div className="mx-1">
+        <div className="px-3 z-index-1">
             <img alt="Moath Alhajri Logo"
                  className="rounded icon-200"
                  src={icon}/>
             <h1 className="my-4">Moath Alhajri</h1>
-            <p className="my-4 text-left">
+            <p className="my-4 text-left font-18">
                 B.S. in Information Systems from <a href="https://twitter.com/_KSU">@_KSU</a>,
                 Full-Stack Developer, Clean Code Enthusiast, Software Developer & Analyst at
                 <a href="https://twitter.com/TamkeenTech"

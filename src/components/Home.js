@@ -10,6 +10,8 @@ import Achievements from "./Achievements";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import axios from "axios";
+import Particles from "react-particles-js";
+import particles from "./config/particles.json";
 
 class Home extends Component {
     
@@ -31,12 +33,13 @@ class Home extends Component {
     render() {
         
         const {projects, failed} = this.state;
-        
         return (
             <Container fluid>
                 <Row className="vh-100">
                     <Col lg="4"
-                         className="bg-light text-dark d-flex align-items-center h-100">
+                         className="bg-transparent text-dark d-flex align-items-center h-100 position-relative px-0">
+                        <Particles className="position-absolute bg-secondary w-100 h-100 particles bg-transparent"
+                                   params={particles}/>
                         <Preview/>
                     </Col>
                     <Col lg="8"
