@@ -14,9 +14,9 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Projects = ({projects, failed}) => {
-
+    
     const classes = useStyles();
-
+    
     return (
         <section className="py-4">
             <h1 className="text-center text-light">Open Source Projects</h1>
@@ -28,11 +28,11 @@ const Projects = ({projects, failed}) => {
                             Failed fetching projects from GitHub
                         </Alert> : projects
                         ? projects.map((project, index, projects) => {
-
+                            
                             const {name, html_url, description, created_at, updated_at, language, homepage, archived} = project;
-
+                            
                             const isLast = projects.length === index + 1;
-
+                            
                             return (
                                 <div className="d-flex mx-auto py-0"
                                      key={uuid()}>

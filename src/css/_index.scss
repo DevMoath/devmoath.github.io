@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
 * {
-    font-family: 'Nunito', Helvetica, sans-serif;
+    font-family: "Nunito", Helvetica, sans-serif;
 }
+
 @media (max-width: 800px) {
     .ellipsis {
         flex: 1;
@@ -9,75 +11,95 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    
     .created_at {
         white-space: nowrap;
     }
+    
     .card-size {
         width: 80vw !important;
         max-width: 80vw !important;
     }
 }
+
 @media (min-width: 992px) {
     .right-side {
         max-height: 100vh;
         overflow-y: auto;
     }
 }
+
 .icon {
     font-size: 26px;
     margin: 5px;
 }
+
 .font-20 {
     font-size: 20px !important;
 }
+
 .font-18 {
     font-size: 18px !important;
 }
+
 .links a {
-    color: #A2A2A2;
+    color: #a2a2a2;
 }
+
 .links a:nth-child(1):hover, .links a:nth-child(3):hover {
     color: #007bff;
 }
+
 .links a:nth-child(2):hover {
     color: #343a40;
 }
+
 .links a:nth-child(4):hover {
-    color: #FF0200;
+    color: #ff0200;
 }
+
 .blockquote {
     padding: 10px 20px;
     font-size: 17px;
-    border-left: 5px solid #6C757D;
+    border-left: 5px solid #6c757d;
 }
+
 .PHP {
-    color: #4F5D95;
+    color: #4f5d95;
 }
+
 .HTML {
-    color: #E34D27;
+    color: #e34d27;
 }
+
 .JavaScript {
-    color: #F1E05A;
+    color: #f1e05a;
 }
+
 .Python {
-    color: #3672A5;
+    color: #3672a5;
 }
+
 .Java {
-    color: #B07219;
+    color: #b07219;
 }
+
 .icon-200 {
     width: 200px;
     height: 200px;
 }
+
 .img-60 {
     width: 60px;
     height: 60px;
 }
+
 .skills .badge {
     margin-top: 1rem !important;
     margin-right: 0.5rem !important;
     font-size: 18px !important;
 }
+
 /* Spinner */
 #loader {
     border: 13px solid #f3f3f3;
@@ -89,11 +111,21 @@
     -webkit-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 }
+
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
+
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

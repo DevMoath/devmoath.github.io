@@ -12,12 +12,12 @@ import Footer from "./Footer";
 import axios from "axios";
 
 class Home extends Component {
-
+    
     state = {
         projects: null,
         failed: false
     };
-
+    
     componentDidMount() {
         axios.get("https://api.github.com/users/devmoath/repos?sort=created").then(response => {
             const projects = response.data.filter(item => !item.fork).slice(0, 5);
@@ -27,11 +27,11 @@ class Home extends Component {
             console.error(e);
         });
     }
-
+    
     render() {
-
+        
         const {projects, failed} = this.state;
-
+        
         return (
             <Container fluid>
                 <Row className="vh-100">

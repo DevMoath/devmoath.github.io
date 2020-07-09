@@ -3,7 +3,7 @@ import icon from "../image/icon.jpg";
 import {OverlayTrigger, Popover} from "react-bootstrap";
 
 const Preview = () => {
-
+    
     const popover = (
         <Popover className="shadow"
                  id="popover-basic">
@@ -13,7 +13,7 @@ const Preview = () => {
             </Popover.Content>
         </Popover>
     );
-
+    
     return (
         <div className="mx-1">
             <img alt="Moath Alhajri Logo"
