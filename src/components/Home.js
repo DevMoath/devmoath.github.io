@@ -1,14 +1,13 @@
 import React, {Component} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import "bootstrap";
-import "../css/all.scss";
+import "../scss/all.scss";
 import Education from "./Education";
 import Experience from "./Experience";
 import Preview from "./Preview";
 import Skills from "./Skills";
 import Achievements from "./Achievements";
 import Projects from "./Projects";
-import Footer from "./Footer";
 import axios from "axios";
 import Particles from "react-particles-js";
 import particles from "./config/particles.json";
@@ -33,11 +32,12 @@ class Home extends Component {
     render() {
         
         const {projects, failed} = this.state;
+        
         return (
             <Container fluid>
                 <Row className="vh-100">
-                    <Col lg="4"
-                         className="bg-transparent text-dark d-flex align-items-center h-100 position-relative px-0">
+                    <Col className="h-100 position-relative px-0"
+                         lg="4">
                         <Particles className="position-absolute bg-secondary w-100 h-100 particles bg-transparent"
                                    params={particles}/>
                         <Preview/>
@@ -54,7 +54,6 @@ class Home extends Component {
                         <hr className="border-light"/>
                         <Projects projects={projects}
                                   failed={failed}/>
-                        <Footer/>
                     </Col>
                 </Row>
             </Container>

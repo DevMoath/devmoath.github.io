@@ -3,7 +3,7 @@
 .notfound {
     box-sizing: border-box;
     height: 100vh;
-    background-color: #000000;
+    background-color: $black;
     background-image: radial-gradient(#11581e, #041607), url("../image/bg-404.gif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +53,7 @@
     }
     
     @keyframes scan {
-        0% {
+        from {
             background-position: 0 -100vh;
         }
         35%, 100% {
@@ -81,19 +81,15 @@
     }
     
     a {
-        color: #ffffff;
+        color: $white;
         text-decoration: none;
-    }
-    
-    a::before {
-        content: "[";
-    }
-    
-    a::after {
-        content: "]";
+        
+        &::before, &::after {
+            content: "[";
+        }
     }
     
     .code {
-        color: white;
+        color: $white;
     }
 }

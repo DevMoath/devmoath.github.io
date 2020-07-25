@@ -1,0 +1,80 @@
+.preview {
+    z-index: 1;
+    background: rgba(214, 214, 214, .4);
+    
+    p {
+        line-height: 1.75;
+        font-size: 1.2rem;
+    }
+}
+
+.links {
+    a {
+        color: #a2a2a2;
+        margin: 0 1rem;
+        
+        em {
+            font-size: 1.625rem;
+            margin: .313rem;
+        }
+        
+        &:nth-child(1):hover, &:nth-child(3):hover {
+            color: #007bff;
+        }
+        
+        &:nth-child(2):hover {
+            color: #343a40;
+        }
+        
+        &:nth-child(4):hover {
+            color: #ff0200;
+        }
+    }
+}
+
+.PHP {
+    color: #4f5d95;
+}
+
+.HTML {
+    color: #e34d27;
+}
+
+.JavaScript {
+    color: #f1e05a;
+}
+
+.Python {
+    color: #3672a5;
+}
+
+.Java {
+    color: #b07219;
+}
+
+.CSS {
+    color: #563d7c;
+}
+
+.img-60 {
+    width: 60px;
+    height: 60px;
+}
+
+.rounded-custom {
+    border-radius: 12px !important;
+}
+
+@media (min-width: map_get($grid-breakpoints, lg)) {
+    .right-side {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: map_get($grid-breakpoints, lg)) {
+    .card-size {
+        width: 80vw !important;
+        max-width: 80vw !important;
+    }
+}
