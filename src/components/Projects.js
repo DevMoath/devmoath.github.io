@@ -39,6 +39,7 @@ const Projects = ({projects, failed}) => {
                             return (
                                 <TimeLine isLast={isLast}
                                           index={index}
+                                          key={Math.random()}
                                           project>
                                     <div className="col-md-8 card-size py-3 px-3 bg-white shadow-sm rounded-custom mb-3 ml-1">
                                         <div className="mb-2 d-flex">

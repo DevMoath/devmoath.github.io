@@ -4,6 +4,10 @@ import Typography from "@material-ui/core/Typography";
 import Popper from "@material-ui/core/Popper";
 import Fade from "@material-ui/core/Fade";
 import Paper from "@material-ui/core/Paper";
+import {CopyToClipboard} from "react-copy-to-clipboard";
+import IconButton from "@material-ui/core/IconButton";
+import CheckCircleOutlineRoundedIcon from "@material-ui/icons/CheckCircleOutlineRounded";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const Preview = () => {
     
@@ -11,7 +15,15 @@ const Preview = () => {
     
     const [open, setOpen] = useState(false);
     
+    const [email]             = useState("Moath.Alhajrii@gmail.com");
+    const [copied, setCopied] = useState(false);
+    
     useEffect(() => setOpen(true), []);
+    
+    const onCopy = () => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 5000);
+    };
     
     return (
         <div className="px-3 preview h-100 d-flex align-items-center">
@@ -46,7 +58,21 @@ const Preview = () => {
                             ({TransitionProps}) => (
                                 <Fade {...TransitionProps}>
                                     <Paper className="shadow rounded-custom mt-2">
-                                        <Typography className="p-3">Moath.Alhajrii@gmail.com</Typography>
+                                        <Typography className="px-3 py-2">
+                                            {email}
+                                            <Tooltip title="Copy">
+                                                <CopyToClipboard onCopy={onCopy}
+                                                                 text={email}>
+                                                    <IconButton color="primary">
+                                                        {
+                                                            copied
+                                                                ? <CheckCircleOutlineRoundedIcon color="secondary"/>
+                                                                : <i className="far fa-clone"/>
+                                                        }
+                                                    </IconButton>
+                                                </CopyToClipboard>
+                                            </Tooltip>
+                                        </Typography>
                                     </Paper>
                                 </Fade>
                             )

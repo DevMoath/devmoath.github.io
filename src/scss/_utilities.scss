@@ -59,13 +59,13 @@
     color: #563d7c;
 }
 
-.img-60 {
-    width: 60px;
-    height: 60px;
-}
-
 .rounded-custom {
     border-radius: 12px !important;
+}
+
+.MuiIconButton-root {
+    outline: none !important;
+    margin-left: .25rem !important;
 }
 
 @media (min-width: map_get($grid-breakpoints, lg)) {
