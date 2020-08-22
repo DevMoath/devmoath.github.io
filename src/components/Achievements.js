@@ -1,6 +1,5 @@
 import React from "react";
 import icon from "../image/blog-icon.png";
-import moment from "moment";
 import {Row} from "react-bootstrap";
 import TimeLine from "./layouts/TimeLine";
 
@@ -16,9 +15,7 @@ const Achievements = () => (
                  src={icon}/>
             <h4 className="ml-2 text-light my-auto text-capitalize">
                 Information Systems Blog <br/>
-                <small className="text-muted">
-                    {moment("20200115", "YYYYMMDD").fromNow()} - present
-                </small>
+                <small className="text-muted">Jan 2020 - present</small>
             </h4>
         </Row>
         <TimeLine variant="dark">

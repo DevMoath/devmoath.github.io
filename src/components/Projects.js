@@ -10,8 +10,8 @@ const useStyles = makeStyles(() => ({
     root: {
         maxWidth: 400,
         margin: "auto",
-        fontSize: "large"
-    }
+        fontSize: "large",
+    },
 }));
 
 const Projects = ({projects, failed}) => {
@@ -31,7 +31,7 @@ const Projects = ({projects, failed}) => {
                         ? projects.map((project, index, list) => {
                             
                             const {
-                                      name, html_url, description, created_at, updated_at, language, homepage, archived
+                                      name, html_url, description, created_at, updated_at, language, homepage, archived,
                                   } = project;
                             
                             const isLast = list.length === index + 1;
@@ -61,10 +61,18 @@ const Projects = ({projects, failed}) => {
                                             </span>
                                         </div>
                                         <p className="ml-1 mb-2">{description}</p>
-                                        {homepage ?
-                                            <p className="ml-2 mb-2">
-                                                <a href={homepage}>visit website</a>
-                                            </p> : ""}
+                                        {
+                                            homepage ?
+                                                <p className="mb-2">
+                                                    <Button variant="outlined"
+                                                            color="primary"
+                                                            size="small"
+                                                            className="rounded-custom"
+                                                            href={homepage}>
+                                                        Visit website
+                                                    </Button>
+                                                </p> : null
+                                        }
                                         <div className="ml-1 d-flex mt-3">
                                             <span className="text-truncate">
                                                 <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
