@@ -8,6 +8,5 @@
 * [Material Ui](https://material-ui.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [React js](https://reactjs.org/)
-* [Moment js](https://momentjs.com/)
 * [GitHub APIs](https://developer.github.com/v3/)
 * [Netlify](https://www.netlify.com/)

@@ -1,6 +1,5 @@
 import React from "react";
 import repository from "../image/repository.svg";
-import moment from "moment";
 import {Alert} from "@material-ui/lab";
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -30,11 +29,13 @@ const Projects = ({projects, failed}) => {
                         </Alert> : projects
                         ? projects.map((project, index, list) => {
                             
-                            const {
-                                      name, html_url, description, created_at, updated_at, language, homepage, archived,
-                                  } = project;
+                            const {name, html_url, description, created_at, language, homepage, archived} = project;
                             
                             const isLast = list.length === index + 1;
+                            
+                            let options = {year: "numeric", month: "short", day: "numeric"};
+                            
+                            let created_at_formatted = new Date(created_at).toLocaleDateString("en-US", options);
                             
                             return (
                                 <TimeLine isLast={isLast}
@@ -57,7 +58,7 @@ const Projects = ({projects, failed}) => {
                                                 <a href={html_url}> {name}</a>
                                             </div>
                                             <span className="ml-auto text-muted text-truncate">
-                                                {moment(created_at).format("MMM D, YYYY")}
+                                                {created_at_formatted}
                                             </span>
                                         </div>
                                         <p className="ml-1 mb-2">{description}</p>
@@ -79,13 +80,8 @@ const Projects = ({projects, failed}) => {
                                                 {language}
                                             </span>
                                             <span className="text-truncate text-muted ml-auto">
-                                                {
-                                                    archived ?
-                                                        <kbd className="rounded-pill bg-secondary">
-                                                            Archived
-                                                        </kbd>
-                                                        : `Updated ${moment(updated_at).fromNow()}`
-                                                }
+                                                {archived ?
+                                                    <kbd className="rounded-pill bg-secondary">Archived</kbd> : null}
                                             </span>
                                         </div>
                                     </div>
