@@ -2,72 +2,84 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-              name="viewport">
-        <title>Moath Alhajri</title>
-        <meta content="%REACT_APP_DESCRIPTION%"
-              name="description">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>%REACT_APP_NAME%</title>
+        <meta name="title"
+              content="%REACT_APP_NAME%">
+        <meta name="description"
+              content="%REACT_APP_DESCRIPTION%">
+        <meta name="description"
+              content="%REACT_APP_DESCRIPTION%">
         <!-- Google / Search Engine Tags -->
-        <meta content="Moath Alhajri"
-              itemprop="name">
-        <meta content="%REACT_APP_DESCRIPTION%"
-              itemprop="description">
-        <meta content="%PUBLIC_URL%/header.jpg"
-              itemprop="image">
-        <!-- Facebook Meta Tags -->
-        <meta content="%PUBLIC_URL%"
-              property="og:url">
-        <meta content="website"
-              property="og:type">
-        <meta content="Moath Alhajri"
-              property="og:title">
-        <meta content="%REACT_APP_DESCRIPTION%"
-              property="og:description">
-        <meta content="%PUBLIC_URL%/header.jpg"
-              property="og:image">
+        <meta itemprop="name"
+              content="%REACT_APP_NAME%">
+        <meta itemprop="description"
+              content="%REACT_APP_DESCRIPTION%">
+        <meta itemprop="image"
+              content="%REACT_APP_URL%/header.jpg">
+        <!-- Open Graph / Facebook Meta Tags -->
+        <meta property="og:type"
+              content="website">
+        <meta property="og:url"
+              content="%REACT_APP_URL%">
+        <meta property="og:title"
+              content="%REACT_APP_NAME%">
+        <meta property="og:description"
+              content="%REACT_APP_DESCRIPTION%">
+        <meta property="og:image"
+              content="%REACT_APP_URL%/header.jpg">
         <!-- Twitter Meta Tags -->
-        <meta content="summary_large_image"
-              name="twitter:card">
-        <meta content="@Dev_Moath"
-              name="twitter:creator">
-        <meta content="@Dev_Moath"
-              name="twitter:site">
-        <meta content="Moath Alhajri"
-              name="twitter:title">
-        <meta content="%REACT_APP_DESCRIPTION%"
-              name="twitter:description">
-        <meta content="%PUBLIC_URL%/header.jpg"
-              name="twitter:image">
+        <meta name="twitter:card"
+              content="summary_large_image">
+        <meta property="twitter:url"
+              content="%REACT_APP_URL%">
+        <meta name="twitter:creator"
+              content="@Dev_Moath">
+        <meta name="twitter:site"
+              content="@Dev_Moath">
+        <meta name="twitter:title"
+              content="%REACT_APP_NAME%">
+        <meta name="twitter:description"
+              content="%REACT_APP_DESCRIPTION%">
+        <meta name="twitter:image"
+              content="%REACT_APP_URL%/header.jpg">
         <!-- Favicon -->
-        <link rel="apple-touch-icon"
-              sizes="180x180"
-              href="/apple-touch-icon.png">
-        <link rel="icon"
-              type="image/png"
+        <link href="/apple-touch-icon.png"
+              rel="apple-touch-icon"
+              sizes="180x180">
+        <link href="/favicon-32x32.png"
+              rel="icon"
               sizes="32x32"
-              href="/favicon-32x32.png">
-        <link rel="icon"
-              type="image/png"
+              type="image/png">
+        <link href="/favicon-16x16.png"
+              rel="icon"
               sizes="16x16"
-              href="/favicon-16x16.png">
-        <link rel="manifest"
-              href="/site.webmanifest">
-        <link rel="mask-icon"
+              type="image/png">
+        <link href="/site.webmanifest"
+              rel="manifest">
+        <link color="#5bbad5"
               href="/safari-pinned-tab.svg"
-              color="#5bbad5">
+              rel="mask-icon">
         <meta name="msapplication-TileColor"
               content="#da532c">
         <meta name="theme-color"
               content="#ffffff">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-1"></script>
         <script>
             document.addEventListener("gesturestart", e => e.preventDefault());
             if ("%NODE_ENV%" !== "development") {
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                let script   = document.createElement("script");
+                script.type  = "text/javascript";
+                script.async = true;
+                script.src   = "https://www.googletagmanager.com/gtag/js?id=UA-142122097-1";
+                
+                document.documentElement.firstChild.appendChild(script);
+                
                 window.dataLayer = window.dataLayer || [];
-
+                
                 function gtag() {dataLayer.push(arguments);}
-
+                
                 gtag("js", new Date());
                 gtag("config", "UA-142122097-1");
             }

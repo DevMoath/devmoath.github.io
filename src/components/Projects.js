@@ -76,8 +76,13 @@ const Projects = ({projects, failed}) => {
                                         }
                                         <div className="ml-1 d-flex mt-3">
                                             <span className="text-truncate">
-                                                <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
-                                                {language}
+                                                {
+                                                    language ?
+                                                        <>
+                                                            <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
+                                                            {language}
+                                                        </> : null
+                                                }
                                             </span>
                                             <span className="text-truncate text-muted ml-auto">
                                                 {archived ?
