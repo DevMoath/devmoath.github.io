@@ -53,6 +53,8 @@ const Preview = () => {
                     <Popper open={open}
                             anchorEl={elRef.current}
                             placement="bottom"
+                            disablePortal={true}
+                            modifiers={{flip: {enabled: false}}}
                             transition>
                         {
                             ({TransitionProps}) => (
