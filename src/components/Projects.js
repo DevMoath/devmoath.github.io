@@ -4,6 +4,7 @@ import {Alert} from "@material-ui/lab";
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TimeLine from "./layouts/TimeLine";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -14,9 +15,9 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Projects = ({projects, failed}) => {
-    
+
     const classes = useStyles();
-    
+
     return (
         <div className="py-4">
             <h1 className="text-center text-light">Open Source Projects</h1>
@@ -28,15 +29,15 @@ const Projects = ({projects, failed}) => {
                             Failed fetching projects from GitHub
                         </Alert> : projects
                         ? projects.map((project, index, list) => {
-                            
+
                             const {name, html_url, description, created_at, language, homepage, archived} = project;
-                            
+
                             const isLast = list.length === index + 1;
-                            
+
                             let options = {year: "numeric", month: "short", day: "numeric"};
-                            
+
                             let created_at_formatted = new Date(created_at).toLocaleDateString("en-US", options);
-                            
+
                             return (
                                 <TimeLine isLast={isLast}
                                           index={index}
@@ -94,7 +95,9 @@ const Projects = ({projects, failed}) => {
                             );
                         }) :
                         <div className="d-flex flex-column my-5 w-100">
-                            <div id="loader"/>
+                            <div className="mx-5 mb-3">
+                                <LinearProgress/>
+                            </div>
                             <h5 className="text-light text-center my-auto ml-3">
                                 Loading Projects from GitHub API
                             </h5>

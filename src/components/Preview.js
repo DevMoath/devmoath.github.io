@@ -10,21 +10,21 @@ import CheckCircleOutlineRoundedIcon from "@material-ui/icons/CheckCircleOutline
 import Tooltip from "@material-ui/core/Tooltip";
 
 const Preview = () => {
-    
+
     const elRef = useRef(null);
-    
+
     const [open, setOpen] = useState(false);
-    
+
     const [email]             = useState("Moath.Alhajrii@gmail.com");
     const [copied, setCopied] = useState(false);
-    
+
     useEffect(() => setOpen(true), []);
-    
+
     const onCopy = () => {
         setCopied(true);
         setTimeout(() => setCopied(false), 5000);
     };
-    
+
     return (
         <div className="px-3 preview h-100 d-flex align-items-center">
             <div>

@@ -5,8 +5,8 @@ import {blue, green} from "@material-ui/core/colors";
 const theme = createMuiTheme({
     palette: {
         primary: blue,
-        secondary: green
-    }
+        secondary: green,
+    },
 });
 
 const Theme = props => {
