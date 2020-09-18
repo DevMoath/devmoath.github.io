@@ -75,21 +75,24 @@ const Projects = ({projects, failed}) => {
                                                     </Button>
                                                 </p> : null
                                         }
-                                        <div className="ml-1 d-flex mt-3">
-                                            <span className="text-truncate">
-                                                {
-                                                    language ?
-                                                        <>
-                                                            <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
-                                                            {language}
-                                                        </> : null
-                                                }
-                                            </span>
-                                            <span className="text-truncate text-muted ml-auto">
-                                                {archived ?
-                                                    <kbd className="rounded-pill bg-secondary">Archived</kbd> : null}
-                                            </span>
-                                        </div>
+                                        {
+                                            language || archived ?
+                                                <div className="ml-1 d-flex mt-3">
+                                                    <span className="text-truncate">
+                                                        {
+                                                            language ?
+                                                                <>
+                                                                    <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
+                                                                    {language}
+                                                                </> : null
+                                                        }
+                                                    </span>
+                                                    <span className="text-truncate text-muted ml-auto">
+                                                        {archived ?
+                                                            <kbd className="rounded-pill bg-secondary">Archived</kbd> : null}
+                                                    </span>
+                                                </div> : null
+                                        }
                                     </div>
                                 </TimeLine>
                             );
