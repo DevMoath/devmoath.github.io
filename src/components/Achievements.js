@@ -2,6 +2,7 @@ import React from "react";
 import icon from "../image/blog-icon.png";
 import {Row} from "react-bootstrap";
 import TimeLine from "./layouts/TimeLine";
+import Button from "@material-ui/core/Button";
 
 const Achievements = () => (
     <div className="py-4">
@@ -24,13 +25,14 @@ const Achievements = () => (
                     Blog for information systems students (King Saud University) contains plan study, courses
                     description, advices, tips, resources and anything could help the students
                 </p>
-                <footer className="blockquote-footer mt-2">
-                    <a href="https://infosystems.blog/">
-                        <cite className="font-weight-bolder"
-                              title="visit the blog">
-                            Visit the blog
-                        </cite>
-                    </a>
+                <footer className="mt-4">
+                    <Button variant="contained"
+                            color="primary"
+                            size="large"
+                            className="rounded-custom btn-visit"
+                            href="https://infosystems.blog/">
+                        Visit the blog
+                    </Button>
                 </footer>
             </blockquote>
         </TimeLine>

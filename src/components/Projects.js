@@ -66,10 +66,9 @@ const Projects = ({projects, failed}) => {
                                         {
                                             homepage ?
                                                 <p className="mb-2">
-                                                    <Button variant="outlined"
+                                                    <Button variant="contained"
                                                             color="primary"
-                                                            size="small"
-                                                            className="rounded-custom"
+                                                            className="rounded-custom btn-visit"
                                                             href={homepage}>
                                                         Visit website
                                                     </Button>
@@ -111,7 +110,7 @@ const Projects = ({projects, failed}) => {
                 <Button variant="contained"
                         color="primary"
                         size="large"
-                        className="rounded-custom"
+                        className="rounded-custom btn-visit"
                         href="https://github.com/DevMoath">
                     More Projects
                 </Button>

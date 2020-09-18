@@ -84,7 +84,7 @@ const Preview = () => {
                             ref={elRef}
                             color="primary"
                             size="large"
-                            className="rounded-custom"
+                            className="rounded-custom btn-visit"
                             href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello">
                         Say Hello
                     </Button>

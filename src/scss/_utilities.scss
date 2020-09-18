@@ -85,3 +85,9 @@
         max-width: 80vw !important;
     }
 }
+
+@media (max-width: map_get($grid-breakpoints, sm)) {
+    .btn-visit {
+        width: 100%;
+    }
+}

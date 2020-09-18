@@ -42,7 +42,7 @@ const Education = () => (
             <Button variant="contained"
                     color="primary"
                     size="large"
-                    className="rounded-custom"
+                    className="rounded-custom btn-visit"
                     href="https://drive.google.com/file/d/1TfOkyxj-bdQT8JglZsFWVMA_4LCUv86h/view?usp=sharing">
                 Get my CV
             </Button>
