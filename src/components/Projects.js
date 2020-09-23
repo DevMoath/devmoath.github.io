@@ -62,7 +62,11 @@ const Projects = ({projects, failed}) => {
                                                 {created_at_formatted}
                                             </span>
                                         </div>
-                                        <p className="ml-1 mb-2">{description}</p>
+                                        <p className="ml-1 mb-2">
+                                            <blockquote className="rounded pl-3 pr-0 mt-3 bg-light">
+                                                {description}
+                                            </blockquote>
+                                        </p>
                                         {
                                             homepage ?
                                                 <p className="mb-2">
