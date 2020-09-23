@@ -1,6 +1,5 @@
 import React from "react";
 import Chip from "@material-ui/core/Chip";
-import {Container} from "react-bootstrap";
 
 const Skills = () => {
 
@@ -12,12 +11,19 @@ const Skills = () => {
     return (
         <div className="py-4">
             <h1 className="text-center text-light">Skills</h1>
-            <Container>
-                {skills.map(skill => <Chip label={skill}
-                                           key={Math.random()}
-                                           className="my-2 mr-1 text-light"
-                                           color="primary"/>)}
-            </Container>
+            <div className="mx-3 mx-xl-5 mx-lg-4">
+                <div className="mx-auto">
+                    {
+                        skills.map(skill => {
+                            return (
+                                <Chip label={skill}
+                                      key={Math.random()}
+                                      className="my-2 mr-1 bg-main"/>
+                            );
+                        })
+                    }
+                </div>
+            </div>
         </div>
     );
 };

@@ -35,6 +35,10 @@
     }
 }
 
+.bg-main {
+    background: #d6d6d6 !important;
+}
+
 .PHP {
     color: #4f5d95;
 }
@@ -69,6 +73,10 @@
 
 .rounded-custom {
     border-radius: 12px !important;
+}
+
+.MuiChip-label {
+    font-size: 1rem;
 }
 
 .MuiIconButton-root {
