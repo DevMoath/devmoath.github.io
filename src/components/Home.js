@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import "../scss/all.scss";
+import "../scss/moath.scss";
 import Education from "./Education";
 import Experience from "./Experience";
 import Preview from "./Preview";
