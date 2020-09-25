@@ -98,14 +98,14 @@ const Projects = ({projects, failed}) => {
                                 </TimeLine>
                             );
                         }) :
-                <div className="d-flex flex-column my-5 w-100">
-                    <div className="mx-5 mb-3">
-                        <LinearProgress/>
-                    </div>
-                    <h5 className="text-light text-center my-auto ml-3">
-                        Loading Projects from GitHub API
-                    </h5>
-                </div>
+                        <div className="d-flex flex-column my-5 w-100">
+                            <div className="mx-5 mb-3">
+                                <LinearProgress/>
+                            </div>
+                            <h5 className="text-light text-center my-auto ml-3">
+                                Loading Projects from GitHub API
+                            </h5>
+                        </div>
                 }
             </div>
             <div className="d-flex justify-content-center my-4">

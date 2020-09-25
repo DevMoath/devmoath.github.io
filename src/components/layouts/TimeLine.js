@@ -10,7 +10,7 @@ const TimeLine = props => (
                         <span className="badge badge-pill py-2 bg-light border">{props.index + 1}</span>
                     </h4>
                     <div className="row h-100">
-                        <div className={`col ${!props.isLast ? "border-right" : ""}`}>&nbsp;</div>
+                        <div className={`col ${props.isLast ? "" : "border-right"}`}>&nbsp;</div>
                         <div className="col">&nbsp;</div>
                     </div>
                 </div> :
