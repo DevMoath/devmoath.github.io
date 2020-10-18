@@ -1,6 +1,5 @@
 import React from "react";
 import school from "../image/school.jpg";
-import Button from "@material-ui/core/Button";
 import {Row} from "react-bootstrap";
 import TimeLine from "./layouts/TimeLine";
 
