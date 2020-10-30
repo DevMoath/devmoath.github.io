@@ -5,6 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TimeLine from "./layouts/TimeLine";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import Chip from "@material-ui/core/Chip";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -30,7 +31,7 @@ const Projects = ({projects, failed}) => {
                         </Alert> : projects
                         ? projects.map((project, index, list) => {
 
-                            const {name, html_url, description, created_at, language, homepage, archived} = project;
+                            const {name, html_url, description, created_at, language, homepage, archived, stargazers_count} = project;
 
                             const isLast = list.length === index + 1;
 
@@ -94,6 +95,24 @@ const Projects = ({projects, failed}) => {
                                                     </span>
                                                 </div> : null
                                         }
+                                        <div className="mt-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 className="icon icon-tabler icon-tabler-star my-auto mr-1"
+                                                 width="22"
+                                                 height="22"
+                                                 viewBox="0 0 24 24"
+                                                 strokeWidth="1.5"
+                                                 stroke="#2c3e50"
+                                                 fill="none"
+                                                 strokeLinecap="round"
+                                                 strokeLinejoin="round">
+                                                <path stroke="none"
+                                                      d="M0 0h24v24H0z"
+                                                      fill="none"/>
+                                                <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/>
+                                            </svg>
+                                            <Chip label={stargazers_count} size="small"/>
+                                        </div>
                                     </div>
                                 </TimeLine>
                             );
