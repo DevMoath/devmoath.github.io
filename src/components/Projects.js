@@ -31,7 +31,7 @@ const Projects = ({projects, failed}) => {
                         </Alert> : projects
                         ? projects.map((project, index, list) => {
 
-                            const {name, html_url, description, created_at, language, homepage, archived, stargazers_count} = project;
+                            const {name, html_url, description, created_at, language, homepage, archived, stargazers_count, forks_count} = project;
 
                             const isLast = list.length === index + 1;
 
@@ -111,7 +111,38 @@ const Projects = ({projects, failed}) => {
                                                       fill="none"/>
                                                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/>
                                             </svg>
-                                            <Chip label={stargazers_count} size="small"/>
+                                            <Chip label={stargazers_count}
+                                                  size="small"/>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 className="icon icon-tabler icon-tabler-git-fork mx-1"
+                                                 width="22"
+                                                 height="22"
+                                                 viewBox="0 0 24 24"
+                                                 strokeWidth="1.5"
+                                                 stroke="#2c3e50"
+                                                 fill="none"
+                                                 strokeLinecap="round"
+                                                 strokeLinejoin="round">
+                                                <path stroke="none"
+                                                      d="M0 0h24v24H0z"
+                                                      fill="none"/>
+                                                <circle cx="12"
+                                                        cy="18"
+                                                        r="2"/>
+                                                <circle cx="7"
+                                                        cy="6"
+                                                        r="2"/>
+                                                <circle cx="17"
+                                                        cy="6"
+                                                        r="2"/>
+                                                <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"/>
+                                                <line x1="12"
+                                                      y1="12"
+                                                      x2="12"
+                                                      y2="16"/>
+                                            </svg>
+                                            <Chip label={forks_count}
+                                                  size="small"/>
                                         </div>
                                     </div>
                                 </TimeLine>
