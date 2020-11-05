@@ -19,7 +19,7 @@ class Home extends Component {
     };
 
     componentDidMount() {
-        axios.get("https://api.github.com/users/devmoath/repos?sort=created").then(response => {
+        axios.get("https://api.github.com/users/devmoath/repos?sort=updated").then(response => {
             const projects = response.data.slice(0, 5);
             this.setState({projects: projects});
         }).catch(e => {
