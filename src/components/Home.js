@@ -20,8 +20,7 @@ class Home extends Component {
 
     componentDidMount() {
         axios.get("https://api.github.com/users/devmoath/repos?sort=updated").then(response => {
-            const projects = response.data.slice(0, 5);
-            this.setState({projects: projects});
+            this.setState({projects: response.data.slice(0, 5)});
         }).catch(e => {
             this.setState({failed: true});
             console.error(e);

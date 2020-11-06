@@ -29,7 +29,7 @@ const TimeLine = props => (
                     </Row>
                 </div>
         }
-        <div className="col-auto flex-fill px-0">
+        <div className="col-auto flex-fill px-0 pb-4">
             <div className="card border-0 bg-transparent rounded">
                 <Card className="bg-transparent border-0"
                       body>
