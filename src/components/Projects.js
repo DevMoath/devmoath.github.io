@@ -1,22 +1,22 @@
-import React from "react";
-import repository from "../image/repository.svg";
-import {Alert} from "@material-ui/lab";
-import {makeStyles} from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import TimeLine from "./layouts/TimeLine";
-import LinearProgress from "@material-ui/core/LinearProgress";
+import React from 'react'
+import repository from '../image/repository.svg'
+import { Alert } from '@material-ui/lab'
+import { makeStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import TimeLine from './layouts/TimeLine'
+import LinearProgress from '@material-ui/core/LinearProgress'
 
 const useStyles = makeStyles(() => ({
     root: {
         maxWidth: 400,
-        margin: "auto",
-        fontSize: "large",
-    },
-}));
+        margin: 'auto',
+        fontSize: 'large'
+    }
+}))
 
-const Projects = ({projects, failed}) => {
+const Projects = ({ projects, failed }) => {
 
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <div className="py-4">
@@ -30,11 +30,11 @@ const Projects = ({projects, failed}) => {
                         </Alert> : projects
                         ? projects.map((project, index) => {
 
-                            const {name, html_url, description, created_at, language, homepage, archived, stargazers_count, forks_count} = project;
+                            const { name, html_url, description, created_at, language, homepage, archived, stargazers_count, forks_count } = project
 
-                            let options = {year: "numeric", month: "short", day: "numeric"};
+                            let options = { year: 'numeric', month: 'short', day: 'numeric' }
 
-                            let created_at_formatted = new Date(created_at).toLocaleDateString("en-US", options);
+                            let created_at_formatted = new Date(created_at).toLocaleDateString('en-US', options).replace(', ' + new Date().getFullYear(), '')
 
                             return (
                                 <TimeLine isLast={false}
@@ -99,7 +99,7 @@ const Projects = ({projects, failed}) => {
                                         </div>
                                     </div>
                                 </TimeLine>
-                            );
+                            )
                         }) :
                         <div className="d-flex flex-column my-5 w-100">
                             <div className="mx-5 mb-3">
@@ -121,7 +121,7 @@ const Projects = ({projects, failed}) => {
                 </Button>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Projects;
+export default Projects
