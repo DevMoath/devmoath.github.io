@@ -2,18 +2,17 @@ import React from 'react'
 import { Row } from 'react-bootstrap'
 import TimeLine from './layouts/TimeLine'
 import Button from '@material-ui/core/Button'
-import Image from 'next/image'
 
 const Achievements = () => (
     <div className="py-4">
         <h1 className="text-center text-light">Achievements</h1>
         <Row className="mt-5 ml-1">
-            <Image alt="Information Systems Blog Logo"
-                   className="rounded-custom float-left bg-white"
-                   loading="lazy"
-                   width="60"
-                   height="60"
-                   src='/image/blog-icon.png'/>
+            <img alt="Information Systems Blog Logo"
+                 className="rounded-custom float-left bg-white"
+                 loading="lazy"
+                 width="60"
+                 height="60"
+                 src='/image/blog-icon.png'/>
             <h4 className="ml-2 text-light my-auto text-capitalize">
                 Information Systems Blog <br/>
                 <small className="text-muted">Jan 2020 - present</small>

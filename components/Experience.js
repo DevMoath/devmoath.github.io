@@ -1,18 +1,17 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
 import TimeLine from './layouts/TimeLine'
-import Image from 'next/image'
 
 const Experience = () => (
     <div className="py-4">
         <h1 className="text-center text-light">Experience</h1>
         <Row className="mt-5 ml-1">
-            <Image alt="Tamkeen Technologies Logo"
-                   className="rounded-custom float-left"
-                   loading="lazy"
-                   width="60"
-                   height="60"
-                   src='/image/company.jpeg'/>
+            <img alt="Tamkeen Technologies Logo"
+                 className="rounded-custom float-left"
+                 loading="lazy"
+                 width="60"
+                 height="60"
+                 src='/image/company.jpeg'/>
             <h4 className="ml-3 text-light my-auto text-capitalize">
                 Tamkeen Technologies <br/>
                 <small className="text-muted">Oct 2019 – Present</small>
