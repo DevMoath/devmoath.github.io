@@ -1,7 +1,7 @@
-import React from "react";
-import school from "../image/school.jpg";
-import {Row} from "react-bootstrap";
-import TimeLine from "./layouts/TimeLine";
+import React from 'react'
+import school from '../image/school.jpg'
+import { Row } from 'react-bootstrap'
+import TimeLine from './layouts/TimeLine'
 
 const Education = () => (
     <div className="py-4">
@@ -38,6 +38,6 @@ const Education = () => (
             </blockquote>
         </TimeLine>
     </div>
-);
+)
 
-export default Education;
+export default Education

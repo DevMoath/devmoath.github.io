@@ -2,48 +2,48 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+              name="viewport">
         <title>%REACT_APP_NAME%</title>
-        <meta name="title"
-              content="%REACT_APP_NAME%">
-        <meta name="description"
-              content="%REACT_APP_DESCRIPTION%">
-        <meta name="description"
-              content="%REACT_APP_DESCRIPTION%">
+        <meta content="%REACT_APP_NAME%"
+              name="title">
+        <meta content="%REACT_APP_DESCRIPTION%"
+              name="description">
+        <meta content="%REACT_APP_DESCRIPTION%"
+              name="description">
         <!-- Google / Search Engine Tags -->
-        <meta itemprop="name"
-              content="%REACT_APP_NAME%">
-        <meta itemprop="description"
-              content="%REACT_APP_DESCRIPTION%">
-        <meta itemprop="image"
-              content="%REACT_APP_URL%/header.jpg">
+        <meta content="%REACT_APP_NAME%"
+              itemprop="name">
+        <meta content="%REACT_APP_DESCRIPTION%"
+              itemprop="description">
+        <meta content="%REACT_APP_URL%/header.jpg"
+              itemprop="image">
         <!-- Open Graph / Facebook Meta Tags -->
-        <meta property="og:type"
-              content="website">
-        <meta property="og:url"
-              content="%REACT_APP_URL%">
-        <meta property="og:title"
-              content="%REACT_APP_NAME%">
-        <meta property="og:description"
-              content="%REACT_APP_DESCRIPTION%">
-        <meta property="og:image"
-              content="%REACT_APP_URL%/header.jpg">
+        <meta content="website"
+              property="og:type">
+        <meta content="%REACT_APP_URL%"
+              property="og:url">
+        <meta content="%REACT_APP_NAME%"
+              property="og:title">
+        <meta content="%REACT_APP_DESCRIPTION%"
+              property="og:description">
+        <meta content="%REACT_APP_URL%/header.jpg"
+              property="og:image">
         <!-- Twitter Meta Tags -->
-        <meta name="twitter:card"
-              content="summary_large_image">
-        <meta property="twitter:url"
-              content="%REACT_APP_URL%">
-        <meta name="twitter:creator"
-              content="@Dev_Moath">
-        <meta name="twitter:site"
-              content="@Dev_Moath">
-        <meta name="twitter:title"
-              content="%REACT_APP_NAME%">
-        <meta name="twitter:description"
-              content="%REACT_APP_DESCRIPTION%">
-        <meta name="twitter:image"
-              content="%REACT_APP_URL%/header.jpg">
+        <meta content="summary_large_image"
+              name="twitter:card">
+        <meta content="%REACT_APP_URL%"
+              property="twitter:url">
+        <meta content="@Dev_Moath"
+              name="twitter:creator">
+        <meta content="@Dev_Moath"
+              name="twitter:site">
+        <meta content="%REACT_APP_NAME%"
+              name="twitter:title">
+        <meta content="%REACT_APP_DESCRIPTION%"
+              name="twitter:description">
+        <meta content="%REACT_APP_URL%/header.jpg"
+              name="twitter:image">
         <!-- Favicon -->
         <link href="/apple-touch-icon.png"
               rel="apple-touch-icon"
@@ -61,27 +61,27 @@
         <link color="#5bbad5"
               href="/safari-pinned-tab.svg"
               rel="mask-icon">
-        <meta name="msapplication-TileColor"
-              content="#da532c">
-        <meta name="theme-color"
-              content="#ffffff">
+        <meta content="#da532c"
+              name="msapplication-TileColor">
+        <meta content="#ffffff"
+              name="theme-color">
         <script>
-            document.addEventListener("gesturestart", e => e.preventDefault());
-            if ("%NODE_ENV%" !== "development") {
+            document.addEventListener('gesturestart', e => e.preventDefault())
+            if ('%NODE_ENV%' !== 'development') {
                 <!-- Global site tag (gtag.js) - Google Analytics -->
-                let script   = document.createElement("script");
-                script.type  = "text/javascript";
-                script.async = true;
-                script.src   = "https://www.googletagmanager.com/gtag/js?id=UA-142122097-1";
+                let script = document.createElement('script')
+                script.type = 'text/javascript'
+                script.async = true
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-142122097-1'
 
-                document.documentElement.firstChild.appendChild(script);
+                document.documentElement.firstChild.appendChild(script)
 
-                window.dataLayer = window.dataLayer || [];
+                window.dataLayer = window.dataLayer || []
 
-                function gtag() {dataLayer.push(arguments);}
+                function gtag() {dataLayer.push(arguments)}
 
-                gtag("js", new Date());
-                gtag("config", "UA-142122097-1");
+                gtag('js', new Date())
+                gtag('config', 'UA-142122097-1')
             }
         </script>
         <style>
@@ -93,7 +93,6 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
             }
-
             .hex-brick {
                 background: #3498db;
                 width: 30px;
@@ -107,17 +106,14 @@
                 -webkit-animation-duration: 2s;
                 -webkit-animation-iteration-count: infinite;
             }
-
             .h2 {
                 transform: rotate(60deg);
                 -webkit-transform: rotate(60deg);
             }
-
             .h3 {
                 transform: rotate(-60deg);
                 -webkit-transform: rotate(-60deg);
             }
-
             .gel {
                 height: 30px;
                 width: 30px;
@@ -127,11 +123,9 @@
                 top: 50%;
                 left: 50%;
             }
-
             .center-gel {
                 margin-left: -15px;
                 margin-top: -15px;
-
                 animation-name: pulse;
                 animation-duration: 2s;
                 animation-iteration-count: infinite;
@@ -139,187 +133,150 @@
                 -webkit-animation-duration: 2s;
                 -webkit-animation-iteration-count: infinite;
             }
-
             .c1 {
                 margin-left: -47px;
                 margin-top: -15px;
             }
-
             .c2 {
                 margin-left: -31px;
                 margin-top: -43px;
             }
-
             .c3 {
                 margin-left: 1px;
                 margin-top: -43px;
             }
-
             .c4 {
                 margin-left: 17px;
                 margin-top: -15px;
             }
-
             .c5 {
                 margin-left: -31px;
                 margin-top: 13px;
             }
-
             .c6 {
                 margin-left: 1px;
                 margin-top: 13px;
             }
-
             .c7 {
                 margin-left: -63px;
                 margin-top: -43px;
             }
-
             .c8 {
                 margin-left: 33px;
                 margin-top: -43px;
             }
-
             .c9 {
                 margin-left: -15px;
                 margin-top: 41px;
             }
-
             .c10 {
                 margin-left: -63px;
                 margin-top: 13px;
             }
-
             .c11 {
                 margin-left: 33px;
                 margin-top: 13px;
             }
-
             .c12 {
                 margin-left: -15px;
                 margin-top: -71px;
             }
-
             .c13 {
                 margin-left: -47px;
                 margin-top: -71px;
             }
-
             .c14 {
                 margin-left: 17px;
                 margin-top: -71px;
             }
-
             .c15 {
                 margin-left: -47px;
                 margin-top: 41px;
             }
-
             .c16 {
                 margin-left: 17px;
                 margin-top: 41px;
             }
-
             .c17 {
                 margin-left: -79px;
                 margin-top: -15px;
             }
-
             .c18 {
                 margin-left: 49px;
                 margin-top: -15px;
             }
-
             .c19 {
                 margin-left: -63px;
                 margin-top: -99px;
             }
-
             .c20 {
                 margin-left: 33px;
                 margin-top: -99px;
             }
-
             .c21 {
                 margin-left: 1px;
                 margin-top: -99px;
             }
-
             .c22 {
                 margin-left: -31px;
                 margin-top: -99px;
             }
-
             .c23 {
                 margin-left: -63px;
                 margin-top: 69px;
             }
-
             .c24 {
                 margin-left: 33px;
                 margin-top: 69px;
             }
-
             .c25 {
                 margin-left: 1px;
                 margin-top: 69px;
             }
-
             .c26 {
                 margin-left: -31px;
                 margin-top: 69px;
             }
-
             .c28 {
                 margin-left: -95px;
                 margin-top: -43px;
             }
-
             .c29 {
                 margin-left: -95px;
                 margin-top: 13px;
             }
-
             .c30 {
                 margin-left: 49px;
                 margin-top: 41px;
             }
-
             .c31 {
                 margin-left: -79px;
                 margin-top: -71px;
             }
-
             .c32 {
                 margin-left: -111px;
                 margin-top: -15px;
             }
-
             .c33 {
                 margin-left: 65px;
                 margin-top: -43px;
             }
-
             .c34 {
                 margin-left: 65px;
                 margin-top: 13px;
             }
-
             .c35 {
                 margin-left: -79px;
                 margin-top: 41px;
             }
-
             .c36 {
                 margin-left: 49px;
                 margin-top: -71px;
             }
-
             .c37 {
                 margin-left: 81px;
                 margin-top: -15px;
             }
-
             .r1 {
                 animation-name: pulse;
                 animation-duration: 2s;
@@ -330,7 +287,6 @@
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-delay: .2s;
             }
-
             .r2 {
                 animation-name: pulse;
                 animation-duration: 2s;
@@ -341,7 +297,6 @@
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-delay: .4s;
             }
-
             .r3 {
                 animation-name: pulse;
                 animation-duration: 2s;
@@ -352,7 +307,6 @@
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-delay: .6s;
             }
-
             .r1 > .hex-brick {
                 animation-name: fade;
                 animation-duration: 2s;
@@ -363,7 +317,6 @@
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-delay: .2s;
             }
-
             .r2 > .hex-brick {
                 animation-name: fade;
                 animation-duration: 2s;
@@ -374,7 +327,6 @@
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-delay: .4s;
             }
-
             .r3 > .hex-brick {
                 animation-name: fade;
                 animation-duration: 2s;
@@ -385,49 +337,40 @@
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-delay: .6s;
             }
-
             @keyframes pulse {
                 0% {
                     -webkit-transform: scale(1);
                     transform: scale(1);
                 }
-
                 50% {
                     -webkit-transform: scale(0.01);
                     transform: scale(0.01);
                 }
-
                 100% {
                     -webkit-transform: scale(1);
                     transform: scale(1);
                 }
             }
-
             @keyframes fade {
                 0% {
                     background: #3498db;
                 }
-
                 50% {
                     background: #3498db;
                 }
-
                 100% {
                     background: #3498db;
                 }
             }
-
             @-webkit-keyframes pulse {
                 0% {
                     -webkit-transform: scale(1);
                     transform: scale(1);
                 }
-
                 50% {
                     -webkit-transform: scale(0.01);
                     transform: scale(0.01);
                 }
-
                 100% {
                     -webkit-transform: scale(1);
                     transform: scale(1);

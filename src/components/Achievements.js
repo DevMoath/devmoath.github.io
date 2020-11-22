@@ -1,8 +1,8 @@
-import React from "react";
-import icon from "../image/blog-icon.png";
-import {Row} from "react-bootstrap";
-import TimeLine from "./layouts/TimeLine";
-import Button from "@material-ui/core/Button";
+import React from 'react'
+import icon from '../image/blog-icon.png'
+import { Row } from 'react-bootstrap'
+import TimeLine from './layouts/TimeLine'
+import Button from '@material-ui/core/Button'
 
 const Achievements = () => (
     <div className="py-4">
@@ -37,6 +37,6 @@ const Achievements = () => (
             </blockquote>
         </TimeLine>
     </div>
-);
+)
 
-export default Achievements;
+export default Achievements

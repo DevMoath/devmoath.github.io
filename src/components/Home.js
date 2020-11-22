@@ -1,35 +1,35 @@
-import React, {Component} from "react";
-import {Col, Container, Row} from "react-bootstrap";
-import "../scss/moath.scss";
-import Education from "./Education";
-import Experience from "./Experience";
-import Preview from "./Preview";
-import Skills from "./Skills";
-import Achievements from "./Achievements";
-import Projects from "./Projects";
-import axios from "axios";
-import Particles from "react-particles-js";
-import particles from "./config/particles.json";
+import React, { Component } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import '../scss/moath.scss'
+import Education from './Education'
+import Experience from './Experience'
+import Preview from './Preview'
+import Skills from './Skills'
+import Achievements from './Achievements'
+import Projects from './Projects'
+import axios from 'axios'
+import Particles from 'react-particles-js'
+import particles from './config/particles.json'
 
 class Home extends Component {
 
     state = {
         projects: null,
-        failed: false,
-    };
+        failed: false
+    }
 
     componentDidMount() {
-        axios.get("https://api.github.com/users/devmoath/repos?sort=updated").then(response => {
-            this.setState({projects: response.data.slice(0, 5)});
+        axios.get('https://api.github.com/users/devmoath/repos?sort=updated').then(response => {
+            this.setState({ projects: response.data.slice(0, 5) })
         }).catch(e => {
-            this.setState({failed: true});
-            console.error(e);
-        });
+            this.setState({ failed: true })
+            console.error(e)
+        })
     }
 
     render() {
 
-        const {projects, failed} = this.state;
+        const { projects, failed } = this.state
 
         return (
             <Container fluid>
@@ -55,8 +55,8 @@ class Home extends Component {
                     </Col>
                 </Row>
             </Container>
-        );
+        )
     }
 }
 
-export default Home;
+export default Home

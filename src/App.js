@@ -1,9 +1,9 @@
-import React from "react";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Home from "./components/Home";
-import NotFound from "./components/NotFound";
-import Theme from "./components/layouts/Theme";
-import BpmAdvise from "./components/bpm-advise/BpmAdvise";
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Home from './components/Home'
+import NotFound from './components/NotFound'
+import Theme from './components/layouts/Theme'
+import BpmAdvise from './components/bpm-advise/BpmAdvise'
 
 function App() {
     return (
@@ -21,7 +21,7 @@ function App() {
                 </Switch>
             </Theme>
         </BrowserRouter>
-    );
+    )
 }
 
-export default App;
+export default App

@@ -1,29 +1,29 @@
-import React, {useEffect, useRef, useState} from "react";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import Popper from "@material-ui/core/Popper";
-import Fade from "@material-ui/core/Fade";
-import Paper from "@material-ui/core/Paper";
-import {CopyToClipboard} from "react-copy-to-clipboard";
-import IconButton from "@material-ui/core/IconButton";
-import CheckCircleOutlineRoundedIcon from "@material-ui/icons/CheckCircleOutlineRounded";
-import Tooltip from "@material-ui/core/Tooltip";
+import React, { useEffect, useRef, useState } from 'react'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import Popper from '@material-ui/core/Popper'
+import Fade from '@material-ui/core/Fade'
+import Paper from '@material-ui/core/Paper'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import IconButton from '@material-ui/core/IconButton'
+import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded'
+import Tooltip from '@material-ui/core/Tooltip'
 
 const Preview = () => {
 
-    const elRef = useRef(null);
+    const elRef = useRef(null)
 
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false)
 
-    const [email]             = useState("Moath.Alhajrii@gmail.com");
-    const [copied, setCopied] = useState(false);
+    const [email] = useState('Moath.Alhajrii@gmail.com')
+    const [copied, setCopied] = useState(false)
 
-    useEffect(() => setOpen(true), []);
+    useEffect(() => setOpen(true), [])
 
     const onCopy = () => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 5000);
-    };
+        setCopied(true)
+        setTimeout(() => setCopied(false), 5000)
+    }
 
     return (
         <div className="px-3 preview h-100 d-flex align-items-center">
@@ -54,10 +54,10 @@ const Preview = () => {
                             anchorEl={elRef.current}
                             placement="bottom"
                             disablePortal={true}
-                            modifiers={{flip: {enabled: false}}}
+                            modifiers={{ flip: { enabled: false } }}
                             transition>
                         {
-                            ({TransitionProps}) => (
+                            ({ TransitionProps }) => (
                                 <Fade {...TransitionProps}>
                                     <Paper className="shadow rounded-custom mt-2">
                                         <Typography className="px-3 py-2">
@@ -91,7 +91,7 @@ const Preview = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Preview;
+export default Preview

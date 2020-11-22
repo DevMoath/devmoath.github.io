@@ -1,11 +1,11 @@
-import React from "react";
-import first from "./audio/1.mp3";
-import second from "./audio/2.mp3";
-import third from "./audio/3.mp3";
-import fourth from "./audio/4.mp3";
-import sixth from "./audio/6.mp3";
-import seventh from "./audio/7.mp3";
-import eighth from "./audio/8.mp3";
+import React from 'react'
+import first from './audio/1.mp3'
+import second from './audio/2.mp3'
+import third from './audio/3.mp3'
+import fourth from './audio/4.mp3'
+import sixth from './audio/6.mp3'
+import seventh from './audio/7.mp3'
+import eighth from './audio/8.mp3'
 
 const BpmAdvise = () => {
     return (
@@ -103,7 +103,7 @@ const BpmAdvise = () => {
                 </audio>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default BpmAdvise;
+export default BpmAdvise

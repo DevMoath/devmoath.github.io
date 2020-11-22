@@ -11,7 +11,7 @@
     font-size: 1.5rem;
     color: rgba(128, 255, 128, 0.8);
     text-shadow: 0 0 1ex rgba(51, 255, 51, 1), 0 0 2px rgba(255, 255, 255, 0.8);
-    
+
     .noise {
         pointer-events: none;
         position: absolute;
@@ -23,7 +23,7 @@
         z-index: -1;
         opacity: .02;
     }
-    
+
     .overlay {
         pointer-events: none;
         position: absolute;
@@ -34,7 +34,7 @@
         background-size: auto 4px;
         z-index: 1;
     }
-    
+
     .overlay::before {
         content: "";
         pointer-events: none;
@@ -51,7 +51,7 @@
         background-repeat: no-repeat;
         animation: scan 7.5s linear 0s infinite;
     }
-    
+
     @keyframes scan {
         from {
             background-position: 0 -100vh;
@@ -60,7 +60,7 @@
             background-position: 0 100vh;
         }
     }
-    
+
     .terminal {
         box-sizing: inherit;
         position: absolute;
@@ -70,25 +70,25 @@
         padding: 4rem;
         text-transform: uppercase;
     }
-    
+
     .output {
         color: rgba(128, 255, 128, 0.8);
         text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
     }
-    
+
     .output::before {
         content: "> ";
     }
-    
+
     a {
         color: $white;
         text-decoration: none;
-        
+
         &::before, &::after {
             content: "[";
         }
     }
-    
+
     .code {
         color: $white;
     }

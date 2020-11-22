@@ -1,5 +1,5 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NotFound = () => (
     <div className="notfound">
@@ -13,6 +13,6 @@ const NotFound = () => (
             <p className="output">Good luck.</p>
         </div>
     </div>
-);
+)
 
-export default NotFound;
+export default NotFound

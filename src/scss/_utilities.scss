@@ -1,9 +1,9 @@
 .preview {
     background: rgba(214, 214, 214, .4);
-    
+
     & > div {
         z-index: 1 !important;
-        
+
         p {
             line-height: 1.75;
             font-size: 1.2rem;
@@ -15,20 +15,20 @@
     a {
         color: #a2a2a2;
         margin: 0 1rem;
-        
+
         em {
             font-size: 1.625rem;
             margin: .313rem;
         }
-        
+
         &:nth-child(1):hover, &:nth-child(3):hover {
             color: #007bff;
         }
-        
+
         &:nth-child(2):hover {
             color: #343a40;
         }
-        
+
         &:nth-child(4):hover {
             color: #ff0200;
         }

@@ -1,5 +1,5 @@
-import React from "react";
-import {Badge, Card, Col, Row} from "react-bootstrap";
+import React from 'react'
+import { Badge, Card, Col, Row } from 'react-bootstrap'
 
 const TimeLine = props => (
     <div className="d-flex mx-auto py-0">
@@ -10,7 +10,7 @@ const TimeLine = props => (
                         <span className="badge badge-pill py-2 bg-light border">{props.index + 1}</span>
                     </h4>
                     <div className="row h-100">
-                        <div className={`col ${props.isLast ? "" : "border-right"}`}>&nbsp;</div>
+                        <div className={`col ${props.isLast ? '' : 'border-right'}`}>&nbsp;</div>
                         <div className="col">&nbsp;</div>
                     </div>
                 </div> :
@@ -20,7 +20,7 @@ const TimeLine = props => (
                         <Col>&nbsp;</Col>
                     </Row>
                     <h4 className="mx-2 my-0">
-                        <Badge variant={props.variant ?? "light"}
+                        <Badge variant={props.variant ?? 'light'}
                                pill>&nbsp;</Badge>
                     </h4>
                     <Row>
@@ -38,6 +38,6 @@ const TimeLine = props => (
             </div>
         </div>
     </div>
-);
+)
 
-export default TimeLine;
+export default TimeLine

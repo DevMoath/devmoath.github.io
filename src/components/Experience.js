@@ -1,7 +1,7 @@
-import React from "react";
-import company from "../image/company.jpeg";
-import {Row} from "react-bootstrap";
-import TimeLine from "./layouts/TimeLine";
+import React from 'react'
+import company from '../image/company.jpeg'
+import { Row } from 'react-bootstrap'
+import TimeLine from './layouts/TimeLine'
 
 const Experience = () => (
     <div className="py-4">
@@ -41,6 +41,6 @@ const Experience = () => (
             </blockquote>
         </TimeLine>
     </div>
-);
+)
 
-export default Experience;
+export default Experience
