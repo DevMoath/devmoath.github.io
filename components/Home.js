@@ -14,7 +14,9 @@ class Home extends Component {
 
     state = {
         projects: null,
-        failed: false
+        failed: false,
+        stars: null,
+        starsFailed: false
     }
 
     componentDidMount() {
@@ -24,11 +26,18 @@ class Home extends Component {
             this.setState({ failed: true })
             console.error(e)
         })
+
+        axios.get('https://api.github.com/users/devmoath/starred').then(response => {
+            this.setState({ stars: response.data.slice(0, 5) })
+        }).catch(e => {
+            this.setState({ starsFailed: true })
+            console.error(e)
+        })
     }
 
     render() {
 
-        const { projects, failed } = this.state
+        const { projects, failed, stars, starsFailed } = this.state
 
         return (
             <Container fluid>
@@ -49,8 +58,15 @@ class Home extends Component {
                         <hr className="border-light"/>
                         <Achievements/>
                         <hr className="border-light"/>
-                        <Projects projects={projects}
+                        <Projects title="Open Source Projects"
+                                  more="https://github.com/DevMoath"
+                                  projects={projects}
                                   failed={failed}/>
+                        <hr className="border-light"/>
+                        <Projects title="Open Source Projects I Liked"
+                                  more="https://github.com/DevMoath?tab=stars"
+                                  projects={stars}
+                                  failed={starsFailed}/>
                     </Col>
                 </Row>
             </Container>

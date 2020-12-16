@@ -13,13 +13,13 @@ const useStyles = makeStyles(() => ({
     }
 }))
 
-const Projects = ({ projects, failed }) => {
+const Projects = ({ projects, failed, title, more }) => {
 
     const classes = useStyles()
 
     return (
         <div className="py-4">
-            <h1 className="text-center text-light">Open Source Projects</h1>
+            <h1 className="text-center text-light">{title}</h1>
             <div className="mt-4">
                 {
                     failed ?
@@ -29,7 +29,18 @@ const Projects = ({ projects, failed }) => {
                         </Alert> : projects
                         ? projects.map((project, index) => {
 
-                            const { name, html_url, description, created_at, language, homepage, archived, stargazers_count, forks_count } = project
+                            const {
+                                name,
+                                html_url,
+                                description,
+                                created_at,
+                                language,
+                                homepage,
+                                archived,
+                                stargazers_count,
+                                forks_count,
+                                owner: { login }
+                            } = project
 
                             let options = { year: 'numeric', month: 'short', day: 'numeric' }
 
@@ -50,8 +61,8 @@ const Projects = ({ projects, failed }) => {
                                                      width="30"
                                                      height="30"/>
                                                 <span className="d-none d-md-inline">
-                                                    <a href="https://github.com/DevMoath">
-                                                        DevMoath
+                                                    <a href={`https://github.com/${login}`}>
+                                                        {login}
                                                     </a> /
                                                 </span>
                                                 <a href={html_url}
@@ -116,7 +127,7 @@ const Projects = ({ projects, failed }) => {
                         color="primary"
                         size="large"
                         className="rounded-custom btn-visit"
-                        href="https://github.com/DevMoath">
+                        href={more}>
                     More Projects
                 </Button>
             </div>
