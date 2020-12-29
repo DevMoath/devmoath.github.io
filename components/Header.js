@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import React from 'react'
 
 const Header = () => (
     <Head>
@@ -65,6 +66,9 @@ const Header = () => (
         <script type='text/javascript'
                 src='https://www.googletagmanager.com/gtag/js?id=UA-142122097-1'
                 async/>
+        <script async
+                src="https://platform.twitter.com/widgets.js"
+                charSet="utf-8"/>
         <script
             dangerouslySetInnerHTML={{
                 __html: `
@@ -74,7 +78,7 @@ const Header = () => (
                 
                     gtag('js', new Date())
                     gtag('config', 'UA-142122097-1')
-                  `
+                  `,
             }}
         />
     </Head>
