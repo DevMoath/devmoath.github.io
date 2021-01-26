@@ -19,23 +19,15 @@ const Experience = () => (
         </Row>
         <TimeLine>
             <h4 className="card-title text-primary text-capitalize mt-3">
-                Software Developer & Analyst <br/>
+                Software Developer <br/>
                 <small className="text-muted">Full Time Job</small>
             </h4>
             <blockquote className="text-light rounded pr-0">
                 <ul className="list-unstyled text-light">
-                    <li className="mb-2">Full-Stack Developer</li>
+                    <li className="mb-2">Full-Stack Web Developer</li>
                     <li className="mb-2">Laravel Developer</li>
                     <li className="mb-2">React Developer</li>
                     <li className="mb-2">APIs Developer</li>
-                </ul>
-                <hr className="border-light"/>
-                I have collaborate in:
-                <ul className="mb-0">
-                    <li className="my-2">
-                        Jira Integration REST APIs for Complaints and Support (e.g. Musaned, Ajeer etc.)
-                    </li>
-                    <li>Strategy & Performance Management System</li>
                 </ul>
             </blockquote>
         </TimeLine>
