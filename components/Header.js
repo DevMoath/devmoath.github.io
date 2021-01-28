@@ -3,9 +3,6 @@ import React from 'react'
 
 const Header = () => (
     <Head>
-        <meta charSet="UTF-8"/>
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-              name="viewport"/>
         <title>{process.env.NEXT_PUBLIC_NAME}</title>
         <meta content={process.env.NEXT_PUBLIC_NAME}
               name="title"/>
@@ -63,24 +60,6 @@ const Header = () => (
               name="msapplication-TileColor"/>
         <meta content="#ffffff"
               name="theme-color"/>
-        <script type='text/javascript'
-                src='https://www.googletagmanager.com/gtag/js?id=UA-142122097-1'
-                async/>
-        <script async
-                src="https://platform.twitter.com/widgets.js"
-                charSet="utf-8"/>
-        <script
-            dangerouslySetInnerHTML={{
-                __html: `
-                    window.dataLayer = window.dataLayer || []
-
-                    function gtag() {dataLayer.push(arguments)}
-                
-                    gtag('js', new Date())
-                    gtag('config', 'UA-142122097-1')
-                  `,
-            }}
-        />
     </Head>
 )
 

@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import TimeLine from './layouts/TimeLine'
 import LinearProgress from '@material-ui/core/LinearProgress'
+import Image from 'next/image'
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -44,7 +45,8 @@ const Projects = ({ projects, failed, title, more }) => {
 
                             let options = { year: 'numeric', month: 'short', day: 'numeric' }
 
-                            let created_at_formatted = new Date(created_at).toLocaleDateString('en-US', options).replace(', ' + new Date().getFullYear(), '')
+                            let created_at_formatted = new Date(created_at).toLocaleDateString('en-US', options)
+                                                                           .replace(', ' + new Date().getFullYear(), '')
 
                             return (
                                 <TimeLine isLast={false}
@@ -55,11 +57,11 @@ const Projects = ({ projects, failed, title, more }) => {
                                         className="col-md-8 card-size py-3 px-3 bg-white shadow-sm rounded-custom mb-3 ml-1">
                                         <div className="mb-2 d-flex">
                                             <div className="d-flex align-items-center text-truncate">
-                                                <img src='/image/repository.svg'
-                                                     alt="repository"
-                                                     loading="lazy"
-                                                     width="30"
-                                                     height="30"/>
+                                                <Image src='/image/repository.svg'
+                                                       alt="repository"
+                                                       loading="lazy"
+                                                       width="30"
+                                                       height="30"/>
                                                 <span className="d-none d-md-inline">
                                                     <a href={`https://github.com/${login}`}>
                                                         {login}

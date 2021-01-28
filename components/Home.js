@@ -20,19 +20,19 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://api.github.com/users/devmoath/repos?sort=updated').then(response => {
-            this.setState({ projects: response.data.slice(0, 5) })
-        }).catch(e => {
-            this.setState({ failed: true })
-            console.error(e)
-        })
+        axios.get('https://api.github.com/users/devmoath/repos?sort=updated&per_page=5')
+             .then(response => this.setState({ projects: response.data }))
+             .catch(e => {
+                 this.setState({ failed: true })
+                 console.error(e)
+             })
 
-        axios.get('https://api.github.com/users/devmoath/starred').then(response => {
-            this.setState({ stars: response.data.slice(0, 5) })
-        }).catch(e => {
-            this.setState({ starsFailed: true })
-            console.error(e)
-        })
+        axios.get('https://api.github.com/users/devmoath/starred?per_page=5')
+             .then(response => this.setState({ stars: response.data }))
+             .catch(e => {
+                 this.setState({ starsFailed: true })
+                 console.error(e)
+             })
     }
 
     render() {
