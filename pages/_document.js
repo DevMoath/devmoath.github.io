@@ -5,10 +5,10 @@ export default class Document extends NextDocument {
         return (
             <Html>
                 <Head>
-                    <script data-domain="moath.dev"
-                            src="https://plausible.io/js/plausible.js"
-                            async
-                            defer/>
+                    <script async
+                            defer
+                            data-domain="moath.dev"
+                            src="https://plausible.moath.dev/js/index.js"/>
                 </Head>
                 <body>
                     <Main/>
