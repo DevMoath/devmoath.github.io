@@ -23,14 +23,6 @@ const Experience = () => (
                 Software Developer <br/>
                 <small className="text-muted">Full Time Job</small>
             </h4>
-            <blockquote className="text-light rounded pr-0">
-                <ul className="list-unstyled text-light">
-                    <li className="mb-2">Full-Stack Web Developer</li>
-                    <li className="mb-2">Laravel Developer</li>
-                    <li className="mb-2">React Developer</li>
-                    <li className="mb-2">APIs Developer</li>
-                </ul>
-            </blockquote>
         </TimeLine>
     </div>
 )

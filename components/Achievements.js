@@ -25,23 +25,21 @@ const Achievements = () => (
                     Blog for information systems students (King Saud University) contains plan study, courses
                     description, advices, tips, resources and anything could help the students
                 </p>
-                <footer className="mt-4">
-                    <Button variant="contained"
-                            color="primary"
-                            size="large"
-                            className="rounded-custom btn-visit mx-sm-2 my-2"
-                            href="https://infosystems.blog/">
-                        Visit the blog
-                    </Button>
-                    <Button variant="contained"
-                            color="primary"
-                            size="large"
-                            className="rounded-custom btn-visit mx-sm-2 my-2"
-                            href="https://twitter.com/i/events/1343637900743860224">
-                        Tweets about the blog
-                    </Button>
-                </footer>
             </blockquote>
+            <Button variant="contained"
+                    color="primary"
+                    size="large"
+                    className="rounded-custom btn-visit mx-sm-2 my-2"
+                    href="https://infosystems.blog/">
+                Visit the blog
+            </Button>
+            <Button variant="contained"
+                    color="primary"
+                    size="large"
+                    className="rounded-custom btn-visit mx-sm-2 my-2"
+                    href="https://twitter.com/i/events/1343637900743860224">
+                Tweets about the blog
+            </Button>
         </TimeLine>
     </div>
 )
