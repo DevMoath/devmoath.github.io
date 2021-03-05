@@ -1,5 +1,5 @@
 .preview {
-    background: rgba(214, 214, 214, .4);
+    background: rgba(214, 214, 214, 0.4);
 
     & > div {
         z-index: 1 !important;
@@ -18,10 +18,11 @@
 
         em {
             font-size: 1.625rem;
-            margin: .313rem;
+            margin: 0.313rem;
         }
 
-        &:nth-child(1):hover, &:nth-child(3):hover {
+        &:nth-child(1):hover,
+        &:nth-child(3):hover {
             color: #007bff;
         }
 
@@ -53,7 +54,7 @@
 
 .MuiIconButton-root {
     outline: none !important;
-    margin-left: .25rem !important;
+    margin-left: 0.25rem !important;
 }
 
 @media (min-width: map_get($grid-breakpoints, lg)) {

@@ -1,30 +1,32 @@
-import React from 'react'
-import { Row } from 'react-bootstrap'
-import TimeLine from './layouts/TimeLine'
-import Image from 'next/image'
+import React from 'react';
+import { Row } from 'react-bootstrap';
+import TimeLine from './layouts/TimeLine';
+import Image from 'next/image';
 
 const Experience = () => (
     <div className="py-4">
         <h1 className="text-center text-light">Experience</h1>
         <Row className="mt-5 ml-1">
-            <Image alt="Tamkeen Technologies Logo"
-                   className="rounded-custom float-left"
-                   loading="lazy"
-                   width="60"
-                   height="60"
-                   src='/image/company.jpeg'/>
+            <Image
+                alt="Tamkeen Technologies Logo"
+                className="rounded-custom float-left"
+                loading="lazy"
+                width="60"
+                height="60"
+                src="/image/company.jpeg"
+            />
             <h4 className="ml-3 text-light my-auto text-capitalize">
-                Tamkeen Technologies <br/>
+                Tamkeen Technologies <br />
                 <small className="text-muted">Oct 2019 – Present</small>
             </h4>
         </Row>
         <TimeLine>
             <h4 className="card-title text-primary text-capitalize mt-3">
-                Software Developer <br/>
+                Software Developer <br />
                 <small className="text-muted">Full Time Job</small>
             </h4>
         </TimeLine>
     </div>
-)
+);
 
-export default Experience
+export default Experience;

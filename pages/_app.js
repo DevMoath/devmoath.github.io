@@ -1,5 +1,5 @@
-import '../scss/moath.scss'
+import '../scss/moath.scss';
 
-const App = ({ Component, pageProps }) => <Component {...pageProps}/>
+const App = ({ Component, pageProps }) => <Component {...pageProps} />;
 
-export default App
+export default App;

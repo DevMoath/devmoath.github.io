@@ -1,140 +1,134 @@
-import React from 'react'
-import { Alert } from '@material-ui/lab'
-import { makeStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import TimeLine from './layouts/TimeLine'
-import LinearProgress from '@material-ui/core/LinearProgress'
-import Image from 'next/image'
+import React from 'react';
+import { Alert } from '@material-ui/lab';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import TimeLine from './layouts/TimeLine';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Image from 'next/image';
 
 const useStyles = makeStyles(() => ({
     root: {
         maxWidth: 400,
         margin: 'auto',
-        fontSize: 'large'
-    }
-}))
+        fontSize: 'large',
+    },
+}));
 
 const Projects = ({ projects, failed, title, more }) => {
-
-    const classes = useStyles()
+    const classes = useStyles();
 
     return (
         <div className="py-4">
             <h1 className="text-center text-light">{title}</h1>
             <div className="mt-4">
-                {
-                    failed ?
-                        <Alert severity="error"
-                               className={classes.root}>
-                            Failed fetching projects from GitHub
-                        </Alert> : projects
-                        ? projects.map((project, index) => {
+                {failed ? (
+                    <Alert severity="error" className={classes.root}>
+                        Failed fetching projects from GitHub
+                    </Alert>
+                ) : projects ? (
+                    projects.map((project, index) => {
+                        const {
+                            name,
+                            html_url,
+                            description,
+                            created_at,
+                            language,
+                            homepage,
+                            archived,
+                            stargazers_count,
+                            forks_count,
+                            owner: { login },
+                        } = project;
 
-                            const {
-                                name,
-                                html_url,
-                                description,
-                                created_at,
-                                language,
-                                homepage,
-                                archived,
-                                stargazers_count,
-                                forks_count,
-                                owner: { login }
-                            } = project
+                        let options = { year: 'numeric', month: 'short', day: 'numeric' };
 
-                            let options = { year: 'numeric', month: 'short', day: 'numeric' }
+                        let created_at_formatted = new Date(created_at)
+                            .toLocaleDateString('en-US', options)
+                            .replace(', ' + new Date().getFullYear(), '');
 
-                            let created_at_formatted = new Date(created_at).toLocaleDateString('en-US', options)
-                                                                           .replace(', ' + new Date().getFullYear(), '')
-
-                            return (
-                                <TimeLine isLast={false}
-                                          index={index}
-                                          key={Math.random()}
-                                          project>
-                                    <div
-                                        className="col-md-8 card-size py-3 px-3 bg-white shadow-sm rounded-custom mb-3 ml-1">
-                                        <div className="mb-2 d-flex">
-                                            <div className="d-flex align-items-center text-truncate">
-                                                <Image src='/image/repository.svg'
-                                                       alt="repository"
-                                                       loading="lazy"
-                                                       width="30"
-                                                       height="30"/>
-                                                <span className="d-none d-md-inline">
-                                                    <a href={`https://github.com/${login}`}>
-                                                        {login}
-                                                    </a> /
-                                                </span>
-                                                <a href={html_url}
-                                                   className="ml-1">{name}</a>
-                                            </div>
-                                            <span className="ml-auto text-muted text-truncate">
-                                                {created_at_formatted}
+                        return (
+                            <TimeLine isLast={false} index={index} key={Math.random()} project>
+                                <div className="col-md-8 card-size py-3 px-3 bg-white shadow-sm rounded-custom mb-3 ml-1">
+                                    <div className="mb-2 d-flex">
+                                        <div className="d-flex align-items-center text-truncate">
+                                            <Image
+                                                src="/image/repository.svg"
+                                                alt="repository"
+                                                loading="lazy"
+                                                width="30"
+                                                height="30"
+                                            />
+                                            <span className="d-none d-md-inline">
+                                                <a href={`https://github.com/${login}`}>{login}</a> /
                                             </span>
+                                            <a href={html_url} className="ml-1">
+                                                {name}
+                                            </a>
                                         </div>
-                                        <blockquote className="rounded pl-3 pr-0 mt-3 bg-light ml-1 mb-2">
-                                            {description}
-                                        </blockquote>
-                                        {
-                                            homepage ?
-                                                <p className="mb-2">
-                                                    <Button variant="contained"
-                                                            color="primary"
-                                                            className="rounded-custom btn-visit"
-                                                            href={homepage}>
-                                                        Visit website
-                                                    </Button>
-                                                </p> : null
-                                        }
-                                        <div className="ml-1 d-flex mt-3">
-                                            <span className="text-truncate">
-                                                {
-                                                    language &&
-                                                    <>
-                                                        <i className={`fas fa-circle ${language} fa-fw mr-1`}/>
-                                                        {language}
-                                                    </>
-                                                }
-                                            </span>
-                                            <div className="mx-2">
-                                                <i className="far fa-star mr-1"/>
-                                                <span>{stargazers_count}</span>
-                                            </div>
-                                            <div className="mx-2">
-                                                <i className="fas fa-code-branch mr-1"/>
-                                                <span>{forks_count}</span>
-                                            </div>
-                                            <span className="text-truncate text-muted ml-auto">
-                                                {archived && <kbd className="rounded-pill bg-secondary">Archived</kbd>}
-                                            </span>
-                                        </div>
+                                        <span className="ml-auto text-muted text-truncate">{created_at_formatted}</span>
                                     </div>
-                                </TimeLine>
-                            )
-                        }) :
-                        <div className="d-flex flex-column my-5 w-100">
-                            <div className="mx-5 mb-3">
-                                <LinearProgress/>
-                            </div>
-                            <h5 className="text-light text-center my-auto ml-3">
-                                Loading Projects from GitHub API
-                            </h5>
+                                    <blockquote className="rounded pl-3 pr-0 mt-3 bg-light ml-1 mb-2">
+                                        {description}
+                                    </blockquote>
+                                    {homepage ? (
+                                        <p className="mb-2">
+                                            <Button
+                                                variant="contained"
+                                                color="primary"
+                                                className="rounded-custom btn-visit"
+                                                href={homepage}
+                                            >
+                                                Visit website
+                                            </Button>
+                                        </p>
+                                    ) : null}
+                                    <div className="ml-1 d-flex mt-3">
+                                        <span className="text-truncate">
+                                            {language && (
+                                                <>
+                                                    <i className={`fas fa-circle ${language} fa-fw mr-1`} />
+                                                    {language}
+                                                </>
+                                            )}
+                                        </span>
+                                        <div className="mx-2">
+                                            <i className="far fa-star mr-1" />
+                                            <span>{stargazers_count}</span>
+                                        </div>
+                                        <div className="mx-2">
+                                            <i className="fas fa-code-branch mr-1" />
+                                            <span>{forks_count}</span>
+                                        </div>
+                                        <span className="text-truncate text-muted ml-auto">
+                                            {archived && <kbd className="rounded-pill bg-secondary">Archived</kbd>}
+                                        </span>
+                                    </div>
+                                </div>
+                            </TimeLine>
+                        );
+                    })
+                ) : (
+                    <div className="d-flex flex-column my-5 w-100">
+                        <div className="mx-5 mb-3">
+                            <LinearProgress />
                         </div>
-                }
+                        <h5 className="text-light text-center my-auto ml-3">Loading Projects from GitHub API</h5>
+                    </div>
+                )}
             </div>
             <div className="d-flex justify-content-start">
-                <Button variant="contained"
-                        color="primary"
-                        size="large"
-                        className="rounded-custom btn-visit"
-                        href={more}>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    className="rounded-custom btn-visit"
+                    href={more}
+                >
                     More Projects
                 </Button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;

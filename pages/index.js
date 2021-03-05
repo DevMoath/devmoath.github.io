@@ -1,12 +1,12 @@
-import Header from '../components/Header'
-import Home from '../components/Home'
-import Theme from '../components/layouts/Theme'
+import Header from '../components/Header';
+import Home from '../components/Home';
+import Theme from '../components/layouts/Theme';
 
 const Index = () => (
     <Theme>
-        <Header/>
-        <Home/>
+        <Header />
+        <Home />
     </Theme>
-)
+);
 
-export default Index
+export default Index;

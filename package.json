@@ -18,9 +18,15 @@
         "react-particles-js": "^3.4.1",
         "sass": "^1.32.2"
     },
+    "devDependencies": {
+        "prettier": "^2.2.1",
+        "webpack-bundle-analyzer": "^4.4.0"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "analyse": "node analyse.js",
+        "fixer": "npx prettier --write components pages scss"
     }
 }
