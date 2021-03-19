@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import TimeLine from './layouts/TimeLine';
+import TimeLine from './TimeLine';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Image from 'next/image';
 import Alert from 'react-bootstrap/Alert';

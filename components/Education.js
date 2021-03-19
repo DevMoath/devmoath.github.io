@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import TimeLine from './layouts/TimeLine';
+import TimeLine from './TimeLine';
 import Image from 'next/image';
 
 const Education = () => (
