@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { blue, green } from '@material-ui/core/colors';
 import { Component } from 'react';
@@ -51,7 +50,6 @@ class Index extends Component {
 
         return (
             <ThemeProvider theme={theme}>
-                <Header />
                 <Container fluid>
                     <Row className="vh-100">
                         <Col className="h-100 position-relative px-0" lg="4">
