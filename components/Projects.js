@@ -1,30 +1,19 @@
 import React from 'react';
-import { Alert } from '@material-ui/lab';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TimeLine from './layouts/TimeLine';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Image from 'next/image';
-
-const useStyles = makeStyles(() => ({
-    root: {
-        maxWidth: 400,
-        margin: 'auto',
-        fontSize: 'large',
-    },
-}));
+import Alert from 'react-bootstrap/Alert';
 
 const Projects = ({ projects, failed, title, more }) => {
-    const classes = useStyles();
-
     return (
         <div className="py-4">
             <h1 className="text-center text-light">{title}</h1>
             <div className="mt-4">
                 {failed ? (
-                    <Alert severity="error" className={classes.root}>
-                        Failed fetching projects from GitHub
-                    </Alert>
+                    <div className="d-flex justify-content-center">
+                        <Alert variant="danger">Failed fetching projects from GitHub</Alert>
+                    </div>
                 ) : projects ? (
                     projects.map((project, index) => {
                         const {

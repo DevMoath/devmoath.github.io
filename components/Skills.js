@@ -24,7 +24,7 @@ const Skills = () => {
             <div className="mx-3 mx-xl-5 mx-lg-4">
                 <div className="mx-auto">
                     {skills.map((skill) => {
-                        return <Chip label={skill} key={Math.random()} className="my-2 mr-1 bg-main" />;
+                        return <Chip label={skill} key={Math.random()} className="my-2 mr-1" />;
                     })}
                 </div>
             </div>
