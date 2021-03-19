@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
 import TimeLine from './TimeLine';
 import Button from '@material-ui/core/Button';
 import Image from 'next/image';

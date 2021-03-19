@@ -1,5 +1,8 @@
 import React from 'react';
-import { Badge, Card, Col, Row } from 'react-bootstrap';
+import Badge from 'react-bootstrap/Badge';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const TimeLine = (props) => (
     <div className="d-flex mx-auto py-0">
