@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Header() {
     const name = 'Moath Alhajri',
-        url = 'https://moath.dev/',
+        url = 'https://moath.dev',
         twitter = '@Dev_Moath',
         description = 'Software Developer, Creator of infosystems.blog';
 
@@ -15,19 +15,19 @@ export default function Header() {
             <meta content={description} name="description" />
             <meta content={name} itemProp="name" />
             <meta content={description} itemProp="description" />
-            <meta content="/header.png" itemProp="image" />
+            <meta content={`${url}/header.png`} itemProp="image" />
             <meta content="website" property="og:type" />
             <meta content={url} property="og:url" />
             <meta content={name} property="og:title" />
             <meta content={description} property="og:description" />
-            <meta content="/header.png" property="og:image" />
+            <meta content={`${url}/header.png`} property="og:image" />
             <meta content="summary_large_image" name="twitter:card" />
             <meta content={url} property="twitter:url" />
             <meta content={twitter} name="twitter:creator" />
             <meta content={twitter} name="twitter:site" />
             <meta content={name} name="twitter:title" />
             <meta content={description} name="twitter:description" />
-            <meta content="/header.png" name="twitter:image" />
+            <meta content={`${url}/header.png`} name="twitter:image" />
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
