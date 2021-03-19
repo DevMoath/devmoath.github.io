@@ -2,7 +2,6 @@ import Header from '../components/Header';
 import Home from '../components/Home';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { blue, green } from '@material-ui/core/colors';
-import React from 'react';
 
 const theme = createMuiTheme({
     palette: {

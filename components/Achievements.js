@@ -1,4 +1,3 @@
-import React from 'react';
 import Row from 'react-bootstrap/Row';
 import TimeLine from './TimeLine';
 import Button from '@material-ui/core/Button';
