@@ -1,35 +1,42 @@
 import Head from 'next/head';
 import React from 'react';
 
-const Header = () => (
-    <Head>
-        <title>{process.env.NEXT_PUBLIC_NAME}</title>
-        <meta content={process.env.NEXT_PUBLIC_NAME} name="title" />
-        <meta content={process.env.NEXT_PUBLIC_DESCRIPTION} name="description" />
-        <meta content={process.env.NEXT_PUBLIC_DESCRIPTION} name="description" />
-        <meta content={process.env.NEXT_PUBLIC_NAME} itemProp="name" />
-        <meta content={process.env.NEXT_PUBLIC_DESCRIPTION} itemProp="description" />
-        <meta content="/header.jpg" itemProp="image" />
-        <meta content="website" property="og:type" />
-        <meta content={process.env.NEXT_PUBLIC_URL} property="og:url" />
-        <meta content={process.env.NEXT_PUBLIC_NAME} property="og:title" />
-        <meta content={process.env.NEXT_PUBLIC_DESCRIPTION} property="og:description" />
-        <meta content="/header.jpg" property="og:image" />
-        <meta content="summary_large_image" name="twitter:card" />
-        <meta content={process.env.NEXT_PUBLIC_URL} property="twitter:url" />
-        <meta content="@Dev_Moath" name="twitter:creator" />
-        <meta content="@Dev_Moath" name="twitter:site" />
-        <meta content={process.env.NEXT_PUBLIC_NAME} name="twitter:title" />
-        <meta content={process.env.NEXT_PUBLIC_DESCRIPTION} name="twitter:description" />
-        <meta content="/header.jpg" name="twitter:image" />
-        <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-        <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-        <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-        <link href="/site.webmanifest" rel="manifest" />
-        <link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon" />
-        <meta content="#da532c" name="msapplication-TileColor" />
-        <meta content="#ffffff" name="theme-color" />
-    </Head>
-);
+export default function Header() {
+    const name = 'Moath Alhajri',
+        url = 'https://moath.dev/',
+        twitter = '@Dev_Moath',
+        description = 'Software Developer, Creator of infosystems.blog';
 
-export default Header;
+    return (
+        <Head>
+            <title>{name}</title>
+            <meta content={name} name="title" />
+            <meta content={description} name="description" />
+            <meta content={description} name="description" />
+            <meta content={name} itemProp="name" />
+            <meta content={description} itemProp="description" />
+            <meta content="/header.png" itemProp="image" />
+            <meta content="website" property="og:type" />
+            <meta content={url} property="og:url" />
+            <meta content={name} property="og:title" />
+            <meta content={description} property="og:description" />
+            <meta content="/header.png" property="og:image" />
+            <meta content="summary_large_image" name="twitter:card" />
+            <meta content={url} property="twitter:url" />
+            <meta content={twitter} name="twitter:creator" />
+            <meta content={twitter} name="twitter:site" />
+            <meta content={name} name="twitter:title" />
+            <meta content={description} name="twitter:description" />
+            <meta content="/header.png" name="twitter:image" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+            <meta name="apple-mobile-web-app-title" content="Moath Alhajri" />
+            <meta name="application-name" content="Moath Alhajri" />
+            <meta name="msapplication-TileColor" content="#da532c" />
+            <meta name="theme-color" content="#ffffff" />
+        </Head>
+    );
+}

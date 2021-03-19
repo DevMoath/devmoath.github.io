@@ -7,8 +7,6 @@ import Skills from './Skills';
 import Achievements from './Achievements';
 import Projects from './Projects';
 import axios from 'axios';
-import Particles from 'react-particles-js';
-import particles from './config/particles.json';
 
 class Home extends Component {
     state = {
@@ -43,10 +41,6 @@ class Home extends Component {
             <Container fluid>
                 <Row className="vh-100">
                     <Col className="h-100 position-relative px-0" lg="4">
-                        <Particles
-                            className="position-absolute bg-secondary w-100 h-100 particles bg-transparent"
-                            params={particles}
-                        />
                         <Preview />
                     </Col>
                     <Col lg="8" className="bg-dark right-side">

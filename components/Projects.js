@@ -86,17 +86,61 @@ const Projects = ({ projects, failed, title, more }) => {
                                         <span className="text-truncate">
                                             {language && (
                                                 <>
-                                                    <i className={`fas fa-circle ${language} fa-fw mr-1`} />
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className={`icon icon-tabler icon-tabler-circle mr-1 ${language}`}
+                                                        width="20"
+                                                        height="20"
+                                                        viewBox="0 0 24 24"
+                                                        strokeWidth="1.5"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                    >
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <circle cx="12" cy="12" r="9" />
+                                                    </svg>
                                                     {language}
                                                 </>
                                             )}
                                         </span>
                                         <div className="mx-2">
-                                            <i className="far fa-star mr-1" />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="icon icon-tabler icon-tabler-star mr-1"
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 24 24"
+                                                strokeWidth="1.5"
+                                                stroke="#000000"
+                                                fill="none"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                            </svg>
                                             <span>{stargazers_count}</span>
                                         </div>
-                                        <div className="mx-2">
-                                            <i className="fas fa-code-branch mr-1" />
+                                        <div>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="icon icon-tabler icon-tabler-git-fork mr-1"
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 24 24"
+                                                strokeWidth="1.5"
+                                                stroke="#000000"
+                                                fill="none"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <circle cx="12" cy="18" r="2" />
+                                                <circle cx="7" cy="6" r="2" />
+                                                <circle cx="17" cy="6" r="2" />
+                                                <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2" />
+                                                <line x1="12" y1="12" x2="12" y2="16" />
+                                            </svg>
                                             <span>{forks_count}</span>
                                         </div>
                                         <span className="text-truncate text-muted ml-auto">
