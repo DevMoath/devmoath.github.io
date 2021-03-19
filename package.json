@@ -20,6 +20,6 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "fixer": "npx prettier --write components pages scss"
+        "fixer": "npx prettier --write . "
     }
 }
