@@ -52,7 +52,7 @@ class Index extends Component {
             <ThemeProvider theme={theme}>
                 <Container fluid>
                     <Row className="vh-100">
-                        <Col className="h-100 position-relative px-0" lg="4">
+                        <Col className="h-100 position-relative px-0 left-side" lg="4">
                             <Preview />
                         </Col>
                         <Col lg="8" className="bg-dark right-side">

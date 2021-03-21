@@ -60,6 +60,10 @@ html {
         width: 80vw !important;
         max-width: 80vw !important;
     }
+
+    .left-side {
+        height: 120vh !important;
+    }
 }
 
 @media (max-width: 576px) {

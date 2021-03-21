@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
+import Image from 'next/image';
 
 const Preview = () => {
     const elRef = useRef(null);
@@ -26,6 +27,7 @@ const Preview = () => {
     return (
         <div className="px-3 preview h-100 d-flex align-items-center">
             <div>
+                <Image src="/image/code_logo.svg" width={200} height={200} className="rounded-custom" />
                 <h1 className="my-4">Moath Alhajri</h1>
                 <p className="my-4">
                     B.S. in Information Systems from <a href="https://twitter.com/_KSU">@_KSU</a>, Full-Stack Developer,
