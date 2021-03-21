@@ -2,7 +2,7 @@ import Chip from '@material-ui/core/Chip';
 
 const Skills = () => {
     const skills = [
-        'Full-Stack Development',
+        'Full-Stack Web Development',
         'API Development',
         'Software Development Life Cycle',
         'Git',
