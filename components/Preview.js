@@ -1,28 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import Popper from '@material-ui/core/Popper';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
-import CopyToClipboard from 'react-copy-to-clipboard';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
 import Image from 'next/image';
 
 const Preview = () => {
     const elRef = useRef(null);
-
-    const [open, setOpen] = useState(false);
-
-    const [email] = useState('Moath.Alhajrii@gmail.com');
-    const [copied, setCopied] = useState(false);
-
-    useEffect(() => setOpen(true), []);
-
-    const onCopy = () => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 5000);
-    };
 
     return (
         <div className="px-3 preview h-100 d-flex align-items-center">
@@ -112,7 +96,7 @@ const Preview = () => {
                 </div>
                 <div className="d-flex justify-content-center">
                     <Popper
-                        open={open}
+                        open={true}
                         anchorEl={elRef.current}
                         placement="bottom"
                         disablePortal={true}
@@ -122,49 +106,7 @@ const Preview = () => {
                         {({ TransitionProps }) => (
                             <Fade {...TransitionProps}>
                                 <Paper className="shadow rounded-custom mt-2">
-                                    <Typography className="px-3 py-2">
-                                        {email}
-                                        <Tooltip title="Copy">
-                                            <CopyToClipboard onCopy={onCopy} text={email}>
-                                                <IconButton color="primary">
-                                                    {copied ? (
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            className="icon icon-tabler icon-tabler-check"
-                                                            width="35"
-                                                            height="35"
-                                                            viewBox="0 0 24 24"
-                                                            strokeWidth="1.5"
-                                                            stroke="#00abfb"
-                                                            fill="none"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        >
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                            <path d="M5 12l5 5l10 -10" />
-                                                        </svg>
-                                                    ) : (
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            className="icon icon-tabler icon-tabler-clipboard"
-                                                            width="35"
-                                                            height="35"
-                                                            viewBox="0 0 24 24"
-                                                            strokeWidth="1.5"
-                                                            stroke="#00abfb"
-                                                            fill="none"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        >
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                                            <rect x="9" y="3" width="6" height="4" rx="2" />
-                                                        </svg>
-                                                    )}
-                                                </IconButton>
-                                            </CopyToClipboard>
-                                        </Tooltip>
-                                    </Typography>
+                                    <p className="px-4 py-3">Moath.Alhajrii@gmail.com</p>
                                 </Paper>
                             </Fade>
                         )}
