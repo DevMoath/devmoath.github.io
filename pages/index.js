@@ -11,7 +11,7 @@ const Index = () => {
                 <div className="h-screen bg-[#EFEFEF]">
                     <Preview />
                 </div>
-                <div className="bg-gray-700 text-white h-screen lg:overflow-auto px-7">
+                <div className="bg-gray-700 text-white lg:h-screen lg:overflow-auto px-7">
                     <Education />
                     <hr />
                     <Experience />
