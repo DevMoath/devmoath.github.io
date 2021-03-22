@@ -1,5 +1,3 @@
-import Badge from 'react-bootstrap/Badge';
-
 const Skills = () => {
     const skills = [
         'Full-Stack Web Development',
@@ -24,9 +22,13 @@ const Skills = () => {
                 <div className="mx-auto">
                     {skills.map((skill) => {
                         return (
-                            <Badge key={Math.random()} variant="primary" className="my-2 mr-1 py-2 px-3" pill>
-                                <span style={{ fontSize: 'large' }}>{skill}</span>
-                            </Badge>
+                            <span
+                                key={Math.random()}
+                                className="my-2 mr-1 py-2 px-3 badge badge-primary badge-pill"
+                                style={{ fontSize: 'large' }}
+                            >
+                                {skill}
+                            </span>
                         );
                     })}
                 </div>

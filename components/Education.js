@@ -1,11 +1,10 @@
-import Row from 'react-bootstrap/Row';
 import TimeLine from './TimeLine';
 import Image from 'next/image';
 
 const Education = () => (
     <div className="py-4">
         <h1 className="text-center text-light">Education</h1>
-        <Row className="mt-5 ml-1">
+        <div className="row mt-5 ml-1">
             <Image
                 alt="King Saud University Logo"
                 className="rounded-custom float-left"
@@ -18,7 +17,7 @@ const Education = () => (
                 King Saud University <br />
                 <small className="text-muted">2015 - 2019</small>
             </h4>
-        </Row>
+        </div>
         <TimeLine>
             <h4 className="text-primary text-capitalize mt-3">
                 Bachelor Degree <br />

@@ -1,11 +1,10 @@
-import Row from 'react-bootstrap/Row';
 import TimeLine from './TimeLine';
 import Image from 'next/image';
 
 const Experience = () => (
     <div className="py-4">
         <h1 className="text-center text-light">Experience</h1>
-        <Row className="mt-5 ml-1">
+        <div className="row mt-5 ml-1">
             <Image
                 alt="Tamkeen Technologies Logo"
                 className="rounded-custom float-left"
@@ -18,7 +17,7 @@ const Experience = () => (
                 Tamkeen Technologies <br />
                 <small className="text-muted">Oct 2019 – Present</small>
             </h4>
-        </Row>
+        </div>
         <TimeLine>
             <h4 className="card-title text-primary text-capitalize mt-3">
                 Software Developer <br />

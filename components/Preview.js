@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import Image from 'next/image';
 
 const Preview = () => {
@@ -90,14 +89,12 @@ const Preview = () => {
                 </div>
                 <div>
                     <div className="d-flex justify-content-center">
-                        <Button
-                            variant="primary"
-                            className="rounded-custom btn-visit shadow"
-                            size="lg"
+                        <a
+                            className="btn btn-lg btn-primary rounded-custom btn-visit shadow"
                             href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello"
                         >
                             Say Hello
-                        </Button>
+                        </a>
                     </div>
                     <div className="shadow rounded-custom mt-2 w-50 w-md-100 mx-auto">
                         <p className="px-4 py-3 text-center">Moath.Alhajrii@gmail.com</p>
