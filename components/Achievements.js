@@ -9,8 +9,8 @@ const Achievements = () => (
                     alt="Information Systems Blog Logo"
                     className="rounded-lg"
                     loading="lazy"
-                    width="150"
-                    height="150"
+                    width="125"
+                    height="125"
                     src="/image/blog-icon.png"
                 />
             </div>
