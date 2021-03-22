@@ -7,7 +7,6 @@
         "next": "^10.0.2",
         "prettier": "^2.2.1",
         "react": "^17.0.1",
-        "react-bootstrap": "^1.4.0",
         "react-dom": "^17.0.1"
     },
     "scripts": {
@@ -17,6 +16,7 @@
         "fixer": "npx prettier --write . "
     },
     "devDependencies": {
+        "@tailwindcss/jit": "^0.1.6",
         "autoprefixer": "^10.2.5",
         "postcss": "^8.2.8",
         "tailwindcss": "^2.0.4"

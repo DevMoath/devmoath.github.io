@@ -6,18 +6,18 @@ import Achievements from '../components/Achievements';
 
 const Index = () => {
     return (
-        <div className="container-fluid">
-            <div className="row vh-100">
-                <div className="col col-lg-4 h-100 position-relative px-0 left-side">
+        <div className="font-sans">
+            <div className="lg:flex">
+                <div className="h-screen bg-[#EFEFEF]">
                     <Preview />
                 </div>
-                <div className="col col-lg-8 bg-dark right-side">
+                <div className="bg-gray-700 text-white h-screen md:overflow-auto px-7">
                     <Education />
-                    <hr className="border-light" />
+                    <hr />
                     <Experience />
-                    <hr className="border-light" />
+                    <hr />
                     <Skills />
-                    <hr className="border-light" />
+                    <hr />
                     <Achievements />
                 </div>
             </div>
