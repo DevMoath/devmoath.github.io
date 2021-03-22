@@ -1,25 +1,29 @@
-import { useRef } from 'react';
-import Button from '@material-ui/core/Button';
-import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
-import Paper from '@material-ui/core/Paper';
 import Image from 'next/image';
 
 const Preview = () => {
-    const elRef = useRef(null);
-
     return (
-        <div className="px-3 preview h-100 d-flex align-items-center">
+        <div className="mx-7 h-screen flex items-center">
             <div>
-                <Image src="/image/code_logo.svg" width={200} height={200} className="rounded-custom" />
-                <h1 className="my-4">Moath Alhajri</h1>
-                <p className="my-4">
-                    B.S. in Information Systems from <a href="https://twitter.com/_KSU">@_KSU</a>, Full-Stack Developer,
-                    Clean Code Enthusiast, Software Developer & Analyst at{' '}
-                    <a href="https://twitter.com/TamkeenTech">@TamkeenTech</a>, Creator of{' '}
-                    <a href="https://infosystems.blog">infosystems.blog</a>
+                <Image src="/image/code_logo.svg" width={200} height={200} className="rounded-lg" />
+                <h1 className="text-4xl my-5">Moath Alhajri</h1>
+                <p className="text-lg mb-5">
+                    B.S. in Information Systems from
+                    <a href="https://twitter.com/_KSU" className="text-blue-500 px-1 no-underline hover:underline">
+                        @_KSU
+                    </a>
+                    , Full-Stack Developer, Clean Code Enthusiast, Software Developer & Analyst at{' '}
+                    <a
+                        href="https://twitter.com/TamkeenTech"
+                        className="text-blue-500 px-1 no-underline hover:underline"
+                    >
+                        @TamkeenTech
+                    </a>
+                    , Creator of{' '}
+                    <a href="https://infosystems.blog" className="text-blue-500 px-1 no-underline hover:underline">
+                        infosystems.blog
+                    </a>
                 </p>
-                <div className="links d-flex justify-content-center my-4">
+                <div className="flex justify-center my-5">
                     <a href="https://twitter.com/Dev_Moath" className="mx-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -94,33 +98,18 @@ const Preview = () => {
                         </svg>
                     </a>
                 </div>
-                <div className="d-flex justify-content-center">
-                    <Popper
-                        open={true}
-                        anchorEl={elRef.current}
-                        placement="bottom"
-                        disablePortal={true}
-                        modifiers={{ flip: { enabled: false } }}
-                        transition
-                    >
-                        {({ TransitionProps }) => (
-                            <Fade {...TransitionProps}>
-                                <Paper className="shadow rounded-custom mt-2">
-                                    <p className="px-4 py-3">Moath.Alhajrii@gmail.com</p>
-                                </Paper>
-                            </Fade>
-                        )}
-                    </Popper>
-                    <Button
-                        variant="contained"
-                        ref={elRef}
-                        color="primary"
-                        size="large"
-                        className="rounded-custom btn-visit"
-                        href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello"
-                    >
-                        Say Hello
-                    </Button>
+                <div>
+                    <div className="flex justify-center">
+                        <a
+                            className="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                            href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello"
+                        >
+                            Say Hello
+                        </a>
+                    </div>
+                    <div className="shadow rounded-lg mt-4 mx-auto w-2/3 bg-white">
+                        <p className="px-4 py-3 text-center">Moath.Alhajrii@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>

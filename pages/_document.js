@@ -38,6 +38,10 @@ export default class Document extends NextDocument {
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
                     <script async defer data-domain="moath.dev" src="https://plausible.moath.dev/js/index.js" />
+                    <link
+                        rel="stylesheet"
+                        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+                    />
                 </Head>
                 <body>
                     <Main />

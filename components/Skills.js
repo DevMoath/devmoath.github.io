@@ -1,5 +1,3 @@
-import Chip from '@material-ui/core/Chip';
-
 const Skills = () => {
     const skills = [
         'Full-Stack Web Development',
@@ -18,14 +16,19 @@ const Skills = () => {
     ];
 
     return (
-        <div className="py-4">
-            <h1 className="text-center text-light">Skills</h1>
-            <div className="mx-3 mx-xl-5 mx-lg-4">
-                <div className="mx-auto">
-                    {skills.map((skill) => {
-                        return <Chip label={skill} key={Math.random()} className="my-2 mr-1" />;
-                    })}
-                </div>
+        <div className="my-16">
+            <h1 className="text-center text-4xl mb-10">Skills</h1>
+            <div className="flex flex-wrap">
+                {skills.map((skill) => {
+                    return (
+                        <span
+                            key={Math.random()}
+                            className="rounded-full px-4 m-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center"
+                        >
+                            {skill}
+                        </span>
+                    );
+                })}
             </div>
         </div>
     );

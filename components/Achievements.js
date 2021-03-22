@@ -1,51 +1,46 @@
-import Row from 'react-bootstrap/Row';
-import TimeLine from './TimeLine';
-import Button from '@material-ui/core/Button';
 import Image from 'next/image';
 
 const Achievements = () => (
-    <div className="py-4">
-        <h1 className="text-center text-light">Achievements</h1>
-        <Row className="mt-5 ml-1">
-            <Image
-                alt="Information Systems Blog Logo"
-                className="rounded-custom float-left bg-white"
-                loading="lazy"
-                width="60"
-                height="60"
-                src="/image/blog-icon.png"
-            />
-            <h4 className="ml-2 text-light my-auto text-capitalize">
-                Information Systems Blog <br />
-                <small className="text-muted">Jan 2020 - present</small>
-            </h4>
-        </Row>
-        <TimeLine variant="dark">
-            <blockquote className="text-light rounded pr-0 mt-3">
-                <p className="my-auto">
-                    Blog for information systems students (King Saud University) contains plan study, courses
-                    description, advices, tips, resources and anything could help the students
-                </p>
-            </blockquote>
-            <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                className="rounded-custom btn-visit mx-sm-2 my-2"
-                href="https://infosystems.blog/"
-            >
-                Visit the blog
-            </Button>
-            <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                className="rounded-custom btn-visit mx-sm-2 my-2"
-                href="https://twitter.com/i/events/1343637900743860224"
-            >
-                Tweets about the blog
-            </Button>
-        </TimeLine>
+    <div className="my-16">
+        <h1 className="text-center text-4xl mb-10">Achievements</h1>
+        <div className="flex">
+            <div>
+                <Image
+                    alt="Information Systems Blog Logo"
+                    className="rounded-lg"
+                    loading="lazy"
+                    width="125"
+                    height="125"
+                    src="/image/blog-icon.png"
+                />
+            </div>
+            <div className="ml-7">
+                <h2 className="text-2xl mb-2">
+                    Information Systems Blog | <small>Jan 2020 - present</small>
+                </h2>
+                <blockquote className="border-l-4 py-3 pl-4 mt-4">
+                    <p>
+                        Blog for information systems students (King Saud University) contains plan study, courses
+                        description, advices, tips, resources and anything could help the students
+                    </p>
+                </blockquote>
+
+                <div className="mt-5">
+                    <a
+                        className="focus:outline-none text-white text-sm py-2.5 px-5 mx-1 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                        href="https://infosystems.blog/"
+                    >
+                        Visit the blog
+                    </a>
+                    <a
+                        className="focus:outline-none text-white text-sm py-2.5 px-5 mx-1 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                        href="https://twitter.com/i/events/1343637900743860224"
+                    >
+                        Tweets about the blog
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 );
 
