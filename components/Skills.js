@@ -16,7 +16,7 @@ const Skills = () => {
     ];
 
     return (
-        <div className="my-16">
+        <div className="py-16">
             <h1 className="text-center text-4xl mb-10">Skills</h1>
             <div className="flex flex-wrap">
                 {skills.map((skill) => {

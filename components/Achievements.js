@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Achievements = () => (
-    <div className="my-16">
+    <div className="py-16 bg-gray-700">
         <h1 className="text-center text-4xl mb-10">Achievements</h1>
         <div className="flex">
             <div>

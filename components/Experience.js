@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Experience = () => (
-    <div className="my-16">
+    <div className="py-16">
         <h1 className="text-center text-4xl mb-10">Experience</h1>
         <div className="flex">
             <div>
