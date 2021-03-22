@@ -6,7 +6,7 @@ const Experience = () => (
         <div className="flex">
             <div>
                 <Image
-                    alt="King Saud University Logo"
+                    alt="Tamkeen Tech Logo"
                     className="rounded-lg"
                     loading="lazy"
                     width="75"
