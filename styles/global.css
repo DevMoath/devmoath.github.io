@@ -64,6 +64,10 @@ html {
     .left-side {
         height: 120vh !important;
     }
+
+    .w-md-100 {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 576px) {

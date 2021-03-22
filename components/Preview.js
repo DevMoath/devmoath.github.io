@@ -1,13 +1,8 @@
-import { useRef } from 'react';
 import Button from '@material-ui/core/Button';
-import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Image from 'next/image';
 
 const Preview = () => {
-    const elRef = useRef(null);
-
     return (
         <div className="px-3 preview h-100 d-flex align-items-center">
             <div>
@@ -94,33 +89,21 @@ const Preview = () => {
                         </svg>
                     </a>
                 </div>
-                <div className="d-flex justify-content-center">
-                    <Popper
-                        open={true}
-                        anchorEl={elRef.current}
-                        placement="bottom"
-                        disablePortal={true}
-                        modifiers={{ flip: { enabled: false } }}
-                        transition
-                    >
-                        {({ TransitionProps }) => (
-                            <Fade {...TransitionProps}>
-                                <Paper className="shadow rounded-custom mt-2">
-                                    <p className="px-4 py-3">Moath.Alhajrii@gmail.com</p>
-                                </Paper>
-                            </Fade>
-                        )}
-                    </Popper>
-                    <Button
-                        variant="contained"
-                        ref={elRef}
-                        color="primary"
-                        size="large"
-                        className="rounded-custom btn-visit"
-                        href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello"
-                    >
-                        Say Hello
-                    </Button>
+                <div>
+                    <div className="d-flex justify-content-center">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            className="rounded-custom btn-visit"
+                            href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello"
+                        >
+                            Say Hello
+                        </Button>
+                    </div>
+                    <Paper className="shadow rounded-custom mt-2 w-50 w-md-100 mx-auto">
+                        <p className="px-4 py-3 text-center">Moath.Alhajrii@gmail.com</p>
+                    </Paper>
                 </div>
             </div>
         </div>
