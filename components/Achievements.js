@@ -1,6 +1,6 @@
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 import TimeLine from './TimeLine';
-import Button from '@material-ui/core/Button';
 import Image from 'next/image';
 
 const Achievements = () => (
@@ -28,18 +28,14 @@ const Achievements = () => (
                 </p>
             </blockquote>
             <Button
-                variant="contained"
-                color="primary"
-                size="large"
+                variant="primary"
                 className="rounded-custom btn-visit mx-sm-2 my-2"
                 href="https://infosystems.blog/"
             >
                 Visit the blog
             </Button>
             <Button
-                variant="contained"
-                color="primary"
-                size="large"
+                variant="primary"
                 className="rounded-custom btn-visit mx-sm-2 my-2"
                 href="https://twitter.com/i/events/1343637900743860224"
             >

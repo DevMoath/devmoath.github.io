@@ -1,5 +1,4 @@
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import Button from 'react-bootstrap/Button';
 import Image from 'next/image';
 
 const Preview = () => {
@@ -92,18 +91,17 @@ const Preview = () => {
                 <div>
                     <div className="d-flex justify-content-center">
                         <Button
-                            variant="contained"
-                            color="primary"
-                            size="large"
-                            className="rounded-custom btn-visit"
+                            variant="primary"
+                            className="rounded-custom btn-visit shadow"
+                            size="lg"
                             href="mailto:Moath.alhajrii@gmail.com?subject=Website%20Inquiry&body=Hello"
                         >
                             Say Hello
                         </Button>
                     </div>
-                    <Paper className="shadow rounded-custom mt-2 w-50 w-md-100 mx-auto">
+                    <div className="shadow rounded-custom mt-2 w-50 w-md-100 mx-auto">
                         <p className="px-4 py-3 text-center">Moath.Alhajrii@gmail.com</p>
-                    </Paper>
+                    </div>
                 </div>
             </div>
         </div>
