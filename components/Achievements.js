@@ -27,13 +27,13 @@ const Achievements = () => (
 
                 <div className="mt-5">
                     <a
-                        className="focus:outline-none text-white text-sm py-2.5 px-5 mx-1 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                        className="focus:outline-none text-white lg:inline-block block py-2.5 px-5 mx-1 my-2 text-center rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
                         href="https://infosystems.blog/"
                     >
                         Visit the blog
                     </a>
                     <a
-                        className="focus:outline-none text-white text-sm py-2.5 px-5 mx-1 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                        className="focus:outline-none text-white lg:inline-block block py-2.5 px-5 mx-1 my-2 text-center rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
                         href="https://twitter.com/i/events/1343637900743860224"
                     >
                         Tweets about the blog
