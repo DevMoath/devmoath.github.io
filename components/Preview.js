@@ -4,7 +4,7 @@ const Preview = () => {
     return (
         <div className="mx-7 h-screen flex items-center">
             <div>
-                <Image src="/image/code_logo.svg" width={200} height={200} className="rounded-lg" />
+                <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-lg" />
                 <h1 className="text-4xl my-5">Moath Alhajri</h1>
                 <p className="text-lg mb-5">
                     B.S. in Information Systems from
