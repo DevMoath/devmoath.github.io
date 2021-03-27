@@ -25,8 +25,8 @@ const Achievements = () => (
             </div>
             <blockquote className="border-l-4 py-3 pl-4 mt-4">
                 <p>
-                    Blog for information systems students (King Saud University) contains plan study, courses
-                    description, advices, tips, resources and anything could help the students
+                    Blog for information systems students (King Saud University) contains plan study details, courses
+                    description, advices, tips, resources and may contains other things could help the students.
                 </p>
             </blockquote>
 

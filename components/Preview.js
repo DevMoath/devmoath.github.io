@@ -8,18 +8,18 @@ const Preview = () => {
                 <h1 className="text-4xl my-5">Moath Alhajri</h1>
                 <p className="text-lg mb-5">
                     B.S. in Information Systems from
-                    <a href="https://twitter.com/_KSU" className="text-blue-500 px-1 no-underline hover:underline">
+                    <a href="https://twitter.com/_KSU" className="text-blue-500 mx-1 no-underline hover:underline">
                         @_KSU
                     </a>
-                    , Full-Stack Developer, Clean Code Enthusiast, Software Developer & Analyst at{' '}
+                    , Full-Stack Web Developer, Clean Code Enthusiast, Software Developer at
                     <a
                         href="https://twitter.com/TamkeenTech"
-                        className="text-blue-500 px-1 no-underline hover:underline"
+                        className="text-blue-500 mx-1 no-underline hover:underline"
                     >
                         @TamkeenTech
                     </a>
-                    , Creator of{' '}
-                    <a href="https://infosystems.blog" className="text-blue-500 px-1 no-underline hover:underline">
+                    , Creator of
+                    <a href="https://infosystems.blog" className="text-blue-500 mx-1 no-underline hover:underline">
                         infosystems.blog
                     </a>
                 </p>
