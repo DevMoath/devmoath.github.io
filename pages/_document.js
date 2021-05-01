@@ -43,7 +43,7 @@ export default class Document extends NextDocument {
                         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
                     />
                 </Head>
-                <body>
+                <body className="bg-[#EFEFEF]">
                     <Main />
                     <NextScript />
                 </body>
