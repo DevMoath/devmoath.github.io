@@ -4,10 +4,21 @@ import { useEffect, useState } from 'react';
 const Preview = () => {
     const [state, setState] = useState('idle');
 
-    useEffect(() => {
+    useEffect(async () => {
         let current = true;
 
         if (state === 'copying') {
+            // const queryOpts = { name: 'clipboard-read', allowWithoutGesture: false };
+            // const permissionStatus = await navigator.permissions.query(queryOpts);
+            //
+            // // Will be 'granted', 'denied' or 'prompt':
+            // console.log(permissionStatus.state);
+            //
+            // // Listen for changes to the permission state
+            // permissionStatus.onchange = () => {
+            //     console.log(permissionStatus.state);
+            // };
+
             navigator.clipboard
                 .writeText('moath.alhajrii@gmail.com')
                 .then(() => {
@@ -138,6 +149,15 @@ const Preview = () => {
                     {state === 'copied' ? (
                         <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    ) : state === 'error' ? (
+                        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
                         </svg>
                     ) : (
                         <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>

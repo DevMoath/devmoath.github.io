@@ -8,7 +8,7 @@ const Index = () => {
     return (
         <div className="font-sans">
             <div className="lg:flex">
-                <div className="h-screen pt-8 mb-8">
+                <div className="h-screen py-8 lg:py-0">
                     <Preview />
                 </div>
                 <div className="bg-gray-700 text-white lg:h-screen lg:overflow-auto px-7">
