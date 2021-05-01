@@ -8,29 +8,26 @@ const Preview = () => {
         let current = true;
 
         if (state === 'copying') {
-            // const queryOpts = { name: 'clipboard-read', allowWithoutGesture: false };
-            // const permissionStatus = await navigator.permissions.query(queryOpts);
-            //
-            // // Will be 'granted', 'denied' or 'prompt':
-            // console.log(permissionStatus.state);
-            //
-            // // Listen for changes to the permission state
-            // permissionStatus.onchange = () => {
-            //     console.log(permissionStatus.state);
-            // };
+            const queryOpts = { name: 'clipboard-write' };
+            const permissionStatus = await navigator.permissions.query(queryOpts);
 
-            navigator.clipboard
-                .writeText('moath.alhajrii@gmail.com')
-                .then(() => {
-                    if (current) {
-                        setState('copied');
-                    }
-                })
-                .catch(() => {
-                    if (current) {
-                        setState('error');
-                    }
-                });
+            // Will be 'granted', 'denied' or 'prompt':
+            console.log(permissionStatus.state);
+
+            if (permissionStatus.state === 'granted') {
+                navigator.clipboard
+                    .writeText('moath.alhajrii@gmail.com')
+                    .then(() => {
+                        if (current) {
+                            setState('copied');
+                        }
+                    })
+                    .catch(() => {
+                        if (current) {
+                            setState('error');
+                        }
+                    });
+            }
         } else if (state === 'copied' || state === 'error') {
             window.setTimeout(() => {
                 if (current) {
