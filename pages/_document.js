@@ -11,6 +11,10 @@ export default class Document extends NextDocument {
             <Html>
                 <Head>
                     <title>{name}</title>
+                    <meta
+                        content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+                        name="viewport"
+                    />
                     <meta content={name} name="title" />
                     <meta content={description} name="description" />
                     <meta content={name} itemProp="name" />
