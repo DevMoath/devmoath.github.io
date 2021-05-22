@@ -8,10 +8,10 @@ const Index = () => {
     return (
         <div className="font-sans">
             <div className="lg:flex">
-                <div className="h-screen py-8 lg:py-0">
+                <div className="py-8 h-screen lg:py-0">
                     <Preview />
                 </div>
-                <div className="bg-gray-700 text-white lg:h-screen lg:overflow-auto px-7">
+                <div className="px-7 text-white bg-gray-700 lg:h-screen lg:overflow-auto">
                     <Education />
                     <hr />
                     <Experience />

@@ -17,13 +17,13 @@ const Skills = () => {
 
     return (
         <div className="py-16">
-            <h1 className="text-center text-4xl mb-10">Skills</h1>
+            <h1 className="mb-10 text-center text-4xl">Skills</h1>
             <div className="flex flex-wrap">
                 {skills.map((skill) => {
                     return (
                         <span
                             key={Math.random()}
-                            className="rounded-full px-4 m-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center"
+                            className="flex items-center m-2 p-2 px-4 text-white leading-none bg-blue-600 rounded rounded-full"
                         >
                             {skill}
                         </span>

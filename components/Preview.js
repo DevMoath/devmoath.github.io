@@ -32,24 +32,24 @@ const Preview = () => {
     }, [state]);
 
     return (
-        <div className="mx-4 h-screen flex items-center">
+        <div className="flex items-center mx-4 h-screen">
             <div>
                 <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-lg" />
-                <h1 className="text-4xl my-5">Moath Alhajri</h1>
-                <p className="text-lg mb-5">
+                <h1 className="my-5 text-4xl">Moath Alhajri</h1>
+                <p className="mb-5 text-lg">
                     B.S. in Information Systems from
-                    <a href="https://twitter.com/_KSU" className="text-blue-500 mx-1 no-underline hover:underline">
+                    <a href="https://twitter.com/_KSU" className="mx-1 text-blue-500 no-underline hover:underline">
                         @_KSU
                     </a>
                     , Full-Stack Web Developer, Clean Code Enthusiast, Software Developer at
                     <a
                         href="https://twitter.com/TamkeenTech"
-                        className="text-blue-500 mx-1 no-underline hover:underline"
+                        className="mx-1 text-blue-500 no-underline hover:underline"
                     >
                         @TamkeenTech
                     </a>
                     , Creator of
-                    <a href="https://infosystems.blog" className="text-blue-500 mx-1 no-underline hover:underline">
+                    <a href="https://infosystems.blog" className="mx-1 text-blue-500 no-underline hover:underline">
                         infosystems.blog
                     </a>
                 </p>
@@ -130,7 +130,7 @@ const Preview = () => {
                 </div>
                 <button
                     type="button"
-                    className="mx-auto shadow-lg w-full sm:w-auto flex-none bg-gray-50 text-gray-400 hover:text-gray-900 font-mono leading-6 py-3 sm:px-6 border border-gray-400 rounded-xl flex items-center justify-center space-x-2 sm:space-x-4 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-300 focus:outline-none transition-colors duration-200"
+                    className="flex flex-none items-center justify-center mx-auto py-3 w-full text-gray-400 hover:text-gray-900 font-mono leading-6 bg-gray-50 border border-gray-400 rounded-xl focus:outline-none shadow-lg space-x-2 transition-colors duration-200 focus:ring-gray-300 focus:ring-offset-white focus:ring-offset-2 focus:ring-2 sm:px-6 sm:w-auto sm:space-x-4"
                     onClick={() => setState('copying')}
                 >
                     <span className="text-gray-900">moath.alhajrii@gmail.com</span>

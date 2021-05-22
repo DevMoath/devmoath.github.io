@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Education = () => (
     <div className="py-16">
-        <h1 className="text-center text-4xl mb-10">Education</h1>
+        <h1 className="mb-10 text-center text-4xl">Education</h1>
         <div>
             <div className="flex gap-4">
                 <div className="flex-shrink">
@@ -17,13 +17,13 @@ const Education = () => (
                     />
                 </div>
                 <div>
-                    <h2 className="text-2xl mb-2">
+                    <h2 className="mb-2 text-2xl">
                         King Saud University | <small>2015 - 2019</small>
                     </h2>
                     <p className="text-lg">Bachelor Degree in Information Systems</p>
                 </div>
             </div>
-            <blockquote className="border-l-4 py-3 pl-4 mt-4">
+            <blockquote className="mt-4 pl-4 py-3 border-l-4">
                 <p>
                     The graduation project is a website that will provide people with historical knowledge in visual
                     manner, and allow them to interactive with it.
@@ -31,7 +31,7 @@ const Education = () => (
                 <footer className="mt-2">
                     <a
                         href="https://drive.google.com/file/d/1NyIVErtF2En3ggxuf6pTAlwgfDQyxsd5/view"
-                        className="text-blue-500 px-1 no-underline hover:underline"
+                        className="px-1 text-blue-500 no-underline hover:underline"
                     >
                         <cite title="Project Presentation">Project Presentation</cite>
                     </a>

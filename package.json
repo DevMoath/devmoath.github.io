@@ -9,6 +9,7 @@
         "next": "^10.0.2",
         "postcss": "^8.2.8",
         "prettier": "^2.2.1",
+        "prettier-plugin-tailwind": "^2.2.10",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "tailwindcss": "^2.0.4"

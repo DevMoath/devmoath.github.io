@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Achievements = () => (
     <div className="py-16">
-        <h1 className="text-center text-4xl mb-10">Achievements</h1>
+        <h1 className="mb-10 text-center text-4xl">Achievements</h1>
         <div>
             <div className="flex gap-4">
                 <div className="flex-shrink">
@@ -17,13 +17,13 @@ const Achievements = () => (
                     />
                 </div>
                 <div>
-                    <h2 className="text-2xl mb-2">
+                    <h2 className="mb-2 text-2xl">
                         Information Systems Blog | <small>Jan 2020 - present</small>
                     </h2>
                     <p className="text-lg">Bachelor Degree in Information Systems</p>
                 </div>
             </div>
-            <blockquote className="border-l-4 py-3 pl-4 mt-4">
+            <blockquote className="mt-4 pl-4 py-3 border-l-4">
                 <p>
                     Blog for information systems students (King Saud University) contains plan study details, courses
                     description, advices, tips, resources and may contains other things could help the students.
@@ -32,13 +32,13 @@ const Achievements = () => (
 
             <div className="mt-5">
                 <a
-                    className="focus:outline-none text-white lg:inline-block block py-2.5 px-5 mx-1 my-2 text-center rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                    className="block mx-1 my-2 px-5 py-2.5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md focus:outline-none hover:shadow-lg lg:inline-block"
                     href="https://infosystems.blog/"
                 >
                     Visit the blog
                 </a>
                 <a
-                    className="focus:outline-none text-white lg:inline-block block py-2.5 px-5 mx-1 my-2 text-center rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+                    className="block mx-1 my-2 px-5 py-2.5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md focus:outline-none hover:shadow-lg lg:inline-block"
                     href="https://twitter.com/i/events/1343637900743860224"
                 >
                     Tweets about the blog
