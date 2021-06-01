@@ -19,5 +19,5 @@ module.exports = {
         extend: {},
     },
 
-    plugins: [require('tailwindcss-question-mark')],
+    plugins: [],
 };
