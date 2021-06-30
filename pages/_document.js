@@ -1,20 +1,15 @@
-import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
+import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 
 export default class Document extends NextDocument {
-    render() {
+    render () {
         const name = 'Moath Alhajri',
             url = 'https://moath.dev',
             twitter = '@Dev_Moath',
-            description = 'Software Developer, Creator of infosystems.blog';
+            description = 'Software Developer, Creator of infosystems.blog'
 
         return (
             <Html>
                 <Head>
-                    <title>{name}</title>
-                    <meta
-                        content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
-                        name="viewport"
-                    />
                     <meta content={name} name="title" />
                     <meta content={description} name="description" />
                     <meta content={name} itemProp="name" />
@@ -51,6 +46,6 @@ export default class Document extends NextDocument {
                     <NextScript />
                 </body>
             </Html>
-        );
+        )
     }
 }
