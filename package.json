@@ -4,15 +4,15 @@
     "private": true,
     "author": "moath",
     "dependencies": {
-        "autoprefixer": "^10.2.6",
-        "next": "^10.0.2",
-        "postcss": "^8.3.0",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "tailwindcss": "^2.1.3"
+        "next": "^11.0.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "prettier": "^2.2.1"
+        "autoprefixer": "^10.2.6",
+        "postcss": "^8.3.0",
+        "prettier": "^2.2.1",
+        "tailwindcss": "^2.1.3"
     },
     "scripts": {
         "dev": "next dev",
