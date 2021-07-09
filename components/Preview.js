@@ -33,18 +33,21 @@ const Preview = () => {
 
     return (
         <div className="flex items-center mx-4 h-screen">
-            <div>
-                <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-3xl" />
-                <h1 className="my-5 text-4xl">Hi 👋</h1>
-                <p className="my-5 mx-3 text-lg">
+            <div className="mx-3">
+                <div className="mb-5">
+                    <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-3xl" />
+                </div>
+                <h1 className="text-4xl">Hi 👋</h1>
+                <p className="my-5 text-lg">
                     I'm Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from
-                    <a href="https://ksu.edu.sa/" className="btn btn-link">
+                    <a href="https://ksu.edu.sa/" className="link text-info mx-1 link-hover">
                         King Saud University
                     </a>
                     and I'm working now as Software Developer at
-                    <a href="https://tamkeentech.sa/" className="btn btn-link">
-                        Tamkeen Tech company
+                    <a href="https://tamkeentech.sa/" className="link text-info mx-1 link-hover">
+                        Tamkeen Tech
                     </a>
+                    company
                 </p>
                 <div className="flex justify-center my-5">
                     <a href="https://twitter.com/Dev_Moath" className="mx-3">
