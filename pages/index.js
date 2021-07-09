@@ -3,11 +3,11 @@ import Education from '@components/Education';
 import Experience from '@components/Experience';
 import Skills from '@components/Skills';
 import Achievements from '@components/Achievements';
-import Head from 'next/head'
+import Head from 'next/head';
 
-const Index = () => {
+export default function Index() {
     return (
-        <div className="font-sans">
+        <div>
             <Head>
                 <title>Moath Alhajri</title>
                 <meta
@@ -31,6 +31,4 @@ const Index = () => {
             </div>
         </div>
     );
-};
-
-export default Index;
+}

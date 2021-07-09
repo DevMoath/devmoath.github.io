@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
     mode: process.env.NODE_ENV ? 'jit' : undefined,
 
@@ -8,11 +6,7 @@ module.exports = {
     darkMode: false,
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-            },
-        },
+        extend: {},
     },
 
     variants: {
