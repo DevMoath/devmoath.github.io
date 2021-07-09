@@ -1,30 +1,30 @@
-import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
+import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
 
 export default class Document extends NextDocument {
-    render () {
-        const name = 'Moath Alhajri',
+    render() {
+        const title = 'Moath Alhajri',
             url = 'https://moath.dev',
-            twitter = '@Dev_Moath',
-            description = 'Software Developer, Creator of infosystems.blog'
+            username = '@Dev_Moath',
+            description = 'Software Developer';
 
         return (
             <Html>
                 <Head>
-                    <meta content={name} name="title" />
+                    <meta content={title} name="title" />
                     <meta content={description} name="description" />
-                    <meta content={name} itemProp="name" />
+                    <meta content={title} itemProp="name" />
                     <meta content={description} itemProp="description" />
                     <meta content={`${url}/header.png`} itemProp="image" />
                     <meta content="website" property="og:type" />
                     <meta content={url} property="og:url" />
-                    <meta content={name} property="og:title" />
+                    <meta content={title} property="og:title" />
                     <meta content={description} property="og:description" />
                     <meta content={`${url}/header.png`} property="og:image" />
                     <meta content="summary_large_image" name="twitter:card" />
                     <meta content={url} property="twitter:url" />
-                    <meta content={twitter} name="twitter:creator" />
-                    <meta content={twitter} name="twitter:site" />
-                    <meta content={name} name="twitter:title" />
+                    <meta content={username} name="twitter:creator" />
+                    <meta content={url} name="twitter:site" />
+                    <meta content={title} name="twitter:title" />
                     <meta content={description} name="twitter:description" />
                     <meta content={`${url}/header.png`} name="twitter:image" />
                     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -37,11 +37,11 @@ export default class Document extends NextDocument {
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
                 </Head>
-                <body className="bg-[#EFEFEF]" style={{ WebkitTapHighlightColor: 'transparent' }}>
+                <body>
                     <Main />
                     <NextScript />
                 </body>
             </Html>
-        )
+        );
     }
 }
