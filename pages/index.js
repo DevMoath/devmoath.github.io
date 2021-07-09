@@ -2,7 +2,7 @@ import Preview from '@components/Preview';
 import Education from '@components/Education';
 import Experience from '@components/Experience';
 import Skills from '@components/Skills';
-import Achievements from '@components/Achievements';
+import Projects from '@components/Projects';
 import Head from 'next/head';
 
 export default function Index() {
@@ -26,7 +26,7 @@ export default function Index() {
                     <hr />
                     <Skills />
                     <hr />
-                    <Achievements />
+                    <Projects />
                 </div>
             </div>
         </div>
