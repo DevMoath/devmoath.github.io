@@ -34,23 +34,16 @@ const Preview = () => {
     return (
         <div className="flex items-center mx-4 h-screen">
             <div>
-                <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-lg" />
-                <h1 className="my-5 text-4xl">Moath Alhajri</h1>
-                <p className="mb-5 text-lg">
-                    B.S. in Information Systems from
-                    <a href="https://twitter.com/_KSU" className="mx-1 text-blue-500 no-underline hover:underline">
-                        @_KSU
+                <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-3xl" />
+                <h1 className="my-5 text-4xl">Hi 👋</h1>
+                <p className="my-5 mx-3 text-lg">
+                    I'm Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from
+                    <a href="https://ksu.edu.sa/" className="btn btn-link">
+                        King Saud University
                     </a>
-                    , Full-Stack Web Developer, Clean Code Enthusiast, Software Developer at
-                    <a
-                        href="https://twitter.com/TamkeenTech"
-                        className="mx-1 text-blue-500 no-underline hover:underline"
-                    >
-                        @TamkeenTech
-                    </a>
-                    , Creator of
-                    <a href="https://infosystems.blog" className="mx-1 text-blue-500 no-underline hover:underline">
-                        infosystems.blog
+                    and I'm working now as Software Developer at
+                    <a href="https://tamkeentech.sa/" className="btn btn-link">
+                        Tamkeen Tech company
                     </a>
                 </p>
                 <div className="flex justify-center my-5">
