@@ -10,6 +10,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.2.6",
+        "daisyui": "^1.6.1",
         "postcss": "^8.3.5",
         "prettier": "^2.3.2",
         "tailwindcss": "^2.2.4"
