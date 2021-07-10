@@ -59,11 +59,19 @@ export default function Projects() {
             <h1 className="mb-10 text-center text-4xl">Projects</h1>
             {projects.map((project) => {
                 return (
-                    <div className="my-7">
+                    <div className="my-7" key={Math.random()}>
                         <div>
                             <div className="flex gap-4">
                                 {(project.image && (
-                                    <Image alt="" className="rounded-lg" loading="lazy" width="75" height="75" layout="fixed" src={project.image} />
+                                    <Image
+                                        alt="project logo"
+                                        className="rounded-lg"
+                                        loading="lazy"
+                                        width="75"
+                                        height="75"
+                                        layout="fixed"
+                                        src={project.image}
+                                    />
                                 )) || (
                                     <div className="w-[75px] h-[75px] bg-gray-600 rounded-lg flex">
                                         <span className="m-auto">no logo</span>

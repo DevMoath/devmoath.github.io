@@ -1,49 +1,32 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import copy from '@devmoath/copy-text';
 
 const Preview = () => {
-    const [state, setState] = useState('idle');
+    const email = 'moath.alhajrii@gmail.com';
 
-    useEffect(async () => {
-        let current = true;
+    const [state, setState] = useState(false);
 
-        if (state === 'copying') {
-            navigator.clipboard
-                .writeText('moath.alhajrii@gmail.com')
-                .then(() => {
-                    if (current) {
-                        setState('copied');
-                    }
-                })
-                .catch(() => {
-                    if (current) {
-                        setState('error');
-                    }
-                });
-        } else if (state === 'copied' || state === 'error') {
-            window.setTimeout(() => {
-                if (current) {
-                    setState('idle');
-                }
-            }, 2000);
-        }
+    const copyEmail = () => {
+        copy(email);
+        setState(true);
 
-        return () => (current = false);
-    }, [state]);
+        setTimeout(() => setState(false), 2000);
+    };
 
     return (
         <div className="flex items-center mx-4 h-screen">
             <div className="mx-3">
                 <div className="mb-5">
-                    <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-3xl" />
+                    <Image src="/image/code_logo.svg" width="200" height="200" layout="fixed" className="rounded-3xl" alt="my logo" />
                 </div>
                 <h1 className="text-4xl">Hi 👋</h1>
                 <p className="my-5 text-lg">
-                    I'm Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from
+                    I am Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from
                     <a href="https://ksu.edu.sa/" className="link text-info mx-1 link-hover">
                         King Saud University
                     </a>
-                    and I'm working now as Software Developer at
+                    and I am working now as Software Developer at
                     <a href="https://tamkeentech.sa/" className="link text-info mx-1 link-hover">
                         Tamkeen Tech
                     </a>
@@ -53,7 +36,6 @@ const Preview = () => {
                     <a href="https://twitter.com/Dev_Moath" className="mx-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-twitter"
                             width="32"
                             height="32"
                             viewBox="0 0 24 24"
@@ -70,7 +52,6 @@ const Preview = () => {
                     <a href="https://github.com/DevMoath" className="mx-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-github"
                             width="32"
                             height="32"
                             viewBox="0 0 24 24"
@@ -87,7 +68,6 @@ const Preview = () => {
                     <a href="https://www.linkedin.com/in/moath-alhajri/" className="mx-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-linkedin"
                             width="32"
                             height="32"
                             viewBox="0 0 24 24"
@@ -108,7 +88,6 @@ const Preview = () => {
                     <a href="https://www.youtube.com/channel/UCm-qdl6K8w6hvxFwgO7u5qw" className="mx-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-brand-youtube"
                             width="32"
                             height="32"
                             viewBox="0 0 24 24"
@@ -124,27 +103,20 @@ const Preview = () => {
                         </svg>
                     </a>
                 </div>
-                <button
-                    type="button"
-                    className="flex flex-none items-center justify-center mx-auto py-3 w-full text-gray-400 hover:text-gray-900 font-mono leading-6 bg-gray-50 border border-gray-400 rounded-xl focus:outline-none shadow-lg space-x-2 transition-colors duration-200 focus:ring-gray-300 focus:ring-offset-white focus:ring-offset-2 focus:ring-2 sm:px-6 sm:w-auto sm:space-x-4"
-                    onClick={() => setState('copying')}
-                >
-                    <span className="text-gray-900">moath.alhajrii@gmail.com</span>
-                    <span className="sr-only">(click to copy to clipboard)</span>
-                    {state === 'copied' ? (
-                        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                    ) : state === 'error' ? (
-                        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    ) : (
-                        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                            <path d="M8 16c0 1.886 0 2.828.586 3.414C9.172 20 10.114 20 12 20h4c1.886 0 2.828 0 3.414-.586C20 18.828 20 17.886 20 16v-4c0-1.886 0-2.828-.586-3.414C18.828 8 17.886 8 16 8m-8 8h4c1.886 0 2.828 0 3.414-.586C16 14.828 16 13.886 16 12V8m-8 8c-1.886 0-2.828 0-3.414-.586C4 14.828 4 13.886 4 12V8c0-1.886 0-2.828.586-3.414C5.172 4 6.114 4 8 4h4c1.886 0 2.828 0 3.414.586C16 5.172 16 6.114 16 8" />
-                        </svg>
-                    )}
-                </button>
+                <div className="flex">
+                    <button type="button" className="btn mx-auto shadow-lg" onClick={() => copyEmail()}>
+                        <span className="mr-3">{email}</span>
+                        {state ? (
+                            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        ) : (
+                            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                                <path d="M8 16c0 1.886 0 2.828.586 3.414C9.172 20 10.114 20 12 20h4c1.886 0 2.828 0 3.414-.586C20 18.828 20 17.886 20 16v-4c0-1.886 0-2.828-.586-3.414C18.828 8 17.886 8 16 8m-8 8h4c1.886 0 2.828 0 3.414-.586C16 14.828 16 13.886 16 12V8m-8 8c-1.886 0-2.828 0-3.414-.586C4 14.828 4 13.886 4 12V8c0-1.886 0-2.828.586-3.414C5.172 4 6.114 4 8 4h4c1.886 0 2.828 0 3.414.586C16 5.172 16 6.114 16 8" />
+                            </svg>
+                        )}
+                    </button>
+                </div>
             </div>
         </div>
     );
