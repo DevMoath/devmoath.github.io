@@ -13,7 +13,7 @@ export default function Index() {
                 <div className="h-screen lg:py-0 max-w-xl">
                     <Preview />
                 </div>
-                <div className="px-7 text-white bg-gray-700 lg:h-screen lg:overflow-auto">
+                <div className="px-7 text-white bg-gray-700 lg:h-screen lg:overflow-auto lg:w-full">
                     <Projects />
                 </div>
             </div>
