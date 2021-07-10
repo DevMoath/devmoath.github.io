@@ -47,6 +47,11 @@ export default function Projects() {
             description: 'Password generator app to give you strong password.',
             link: 'https://password-generator-app-ten.vercel.app',
         },
+        {
+            title: 'Copy Text',
+            description: 'Copy text to user clipboard.',
+            link: 'https://www.npmjs.com/package/@devmoath/copy-text',
+        },
     ];
 
     return (
