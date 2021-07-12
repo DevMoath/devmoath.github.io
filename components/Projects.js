@@ -1,19 +1,15 @@
 import Image from 'next/image';
 import projects from '@data/projects';
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '@utils/Helpers';
 
 export default function Projects() {
     const length = projects.length - 1;
 
     return (
-        <div className="py-16">
-            <h1 className="mb-10 text-center text-4xl">Projects</h1>
+        <>
             {projects.map((project, index) => {
                 return (
-                    <div className={classNames('my-10 pb-10', index < length && 'border-b-2')} key={Math.random()}>
+                    <div className={classNames('mt-10 pb-10', index < length && 'border-b-2 mb-10')} key={Math.random()}>
                         <div className="flex gap-4">
                             {(project.image && (
                                 <Image
@@ -45,6 +41,6 @@ export default function Projects() {
                     </div>
                 );
             })}
-        </div>
+        </>
     );
 }
