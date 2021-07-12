@@ -21,7 +21,7 @@ export default function Projects() {
                                         src={project.image}
                                     />
                                 )) || (
-                                    <div className="w-[75px] h-[75px] bg-gray-600 rounded-lg flex">
+                                    <div className="w-[75px] h-[75px] min-w-[75px] min-h-[75px] bg-gray-600 rounded-lg flex">
                                         <span className="m-auto">no logo</span>
                                     </div>
                                 )}
