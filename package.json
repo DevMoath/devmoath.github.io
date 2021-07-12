@@ -1,8 +1,4 @@
 {
-    "name": "moath",
-    "version": "2.0.0",
-    "private": true,
-    "author": "moath",
     "dependencies": {
         "@devmoath/copy-text": "^0.0.1",
         "next": "^11.0.1",
