@@ -16,7 +16,7 @@ Arr::macro('rekey', function (array $array, array $map) {
     },
     {
         title: 'Tailwindcss - plugin to capitalize first character for each word',
-        language: 'js',
+        language: 'javascript',
         code: `// tailwind.config.js
 const plugin = require('tailwindcss/plugin');
 

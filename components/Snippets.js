@@ -12,7 +12,7 @@ export default function Snippets() {
                 return (
                     <div className={classNames('mt-10 pb-10', index < length && 'border-b-2 mb-10')} key={Math.random()}>
                         <p className="text-lg mb-5">{snippet.title}</p>
-                        <SyntaxHighlighter language="php" style={atomOneDark} className="rounded-box !p-5">
+                        <SyntaxHighlighter language={snippet.language} style={atomOneDark} className="rounded-box !p-5">
                             {snippet.code}
                         </SyntaxHighlighter>
                     </div>
