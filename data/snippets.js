@@ -51,6 +51,7 @@ sudo apt-get -y update
 sudo apt-get -y --allow-downgrades upgrade
 sudo apt-get -y dist-upgrade
 nvm install node || echo 'nvm is not exists'
+nvm install-latest-npm || echo 'nvm is not exists'
 sudo npm up -g
 sudo composer self-update`,
     },
