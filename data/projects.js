@@ -24,7 +24,6 @@ const projects = [
     },
     {
         title: 'Tailwindcss Typography RTL',
-        image: '/image/tailwindcss_typography_rtl.png',
         description: 'Add RTL support for tailwindcss-typography plugin.',
         link: 'https://www.npmjs.com/package/@devmoath/tailwindcss-typography-rtl',
     },
