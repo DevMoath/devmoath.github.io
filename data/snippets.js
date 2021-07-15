@@ -210,7 +210,7 @@ return (new \\PhpCsFixer\\Config('Laravel'))
             'operators' => [
                 '|' => 'no_space',
                 '=' => 'single_space',
-                '=>' => null,
+                '=>' => 'single_space',
             ],
         ],
         'fully_qualified_strict_types' => true,
