@@ -111,7 +111,7 @@ return (new \\PhpCsFixer\\Config('Laravel'))
             'syntax' => 'short',
         ],
         'lowercase_cast' => true,
-        'lowercase_constants' => true,
+        'constant_case' => ['case' => 'lower'],
         'lowercase_keywords' => true,
         'magic_constant_casing' => true,
         'method_argument_space' => true,
@@ -163,7 +163,9 @@ return (new \\PhpCsFixer\\Config('Laravel'))
         'not_operator_with_successor_space' => true,
         'object_operator_without_whitespace' => true,
         'phpdoc_indent' => true,
-        'phpdoc_inline_tag' => true,
+        'general_phpdoc_tag_rename' => true,
+        'phpdoc_inline_tag_normalizer' => true,
+        'phpdoc_tag_type' => true,
         'phpdoc_no_access' => true,
         'phpdoc_no_package' => true,
         'phpdoc_no_useless_inheritdoc' => true,
@@ -171,9 +173,6 @@ return (new \\PhpCsFixer\\Config('Laravel'))
         'phpdoc_single_line_var_spacing' => true,
         'phpdoc_to_comment' => true,
         'phpdoc_trim' => true,
-        'phpdoc_no_alias_tag' => [
-            'type' => 'var',
-        ],
         'phpdoc_types' => true,
         'phpdoc_var_without_name' => true,
         'increment_style' => [
@@ -198,7 +197,7 @@ return (new \\PhpCsFixer\\Config('Laravel'))
         'switch_case_semicolon_to_colon' => true,
         'switch_case_space' => true,
         'ternary_operator_spaces' => true,
-        'trailing_comma_in_multiline_array' => true,
+        'trailing_comma_in_multiline' => ['elements' => ['arrays']],
         'trim_array_spaces' => true,
         'unary_operator_spaces' => true,
         'line_ending' => true,
@@ -206,7 +205,7 @@ return (new \\PhpCsFixer\\Config('Laravel'))
         'no_alias_functions' => true,
         'no_unreachable_default_argument_value' => true,
         'self_accessor' => true,
-        'psr4' => true,
+        'psr_autoloading' => true,
         'binary_operator_spaces' => [
             'operators' => [
                 '|' => 'no_space',
