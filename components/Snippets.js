@@ -1,4 +1,4 @@
-import { classNames } from '@utils/Helpers';
+import classNames from 'classnames';
 import snippets from '@data/snippets';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';

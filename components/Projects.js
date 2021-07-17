@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import projects from '@data/projects';
-import { classNames } from '@utils/Helpers';
+import classNames from 'classnames';
 
 export default function Projects() {
     const length = projects.length - 1;

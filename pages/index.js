@@ -2,8 +2,8 @@ import Preview from '@components/Preview';
 import Projects from '@components/Projects';
 import Head from 'next/head';
 import { useState } from 'react';
-import { classNames } from '@utils/Helpers';
 import Snippets from '@components/Snippets';
+import classNames from 'classnames';
 
 export default function Index() {
     const [tab, setTab] = useState('projects');
