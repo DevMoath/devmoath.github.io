@@ -42,18 +42,17 @@ module.exports = {
 
 set -e
 
-# loads nvm if it exists
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
+sudo composer self-update
+
 if [ -s "$HOME/.nvm/nvm.sh" ]; then
     source "$HOME/.nvm/nvm.sh"
-fi
-
-sudo apt-get -y update
-sudo apt-get -y --allow-downgrades upgrade
-sudo apt-get -y dist-upgrade
-nvm install node || echo 'nvm is not exists'
-nvm install-latest-npm || echo 'nvm is not exists'
-sudo npm up -g
-sudo composer self-update`,
+    nvm install node
+    nvm install-latest-npm
+    sudo npm up -g
+fi`,
     },
     {
         title: 'Laravel - code style',
