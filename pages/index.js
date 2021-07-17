@@ -18,7 +18,7 @@ export default function Index() {
                 <div className="h-screen lg:py-0 max-w-xl">
                     <Preview />
                 </div>
-                <div className="px-7 text-white bg-gray-700 lg:h-screen lg:overflow-auto lg:w-full pt-10">
+                <div className="px-7 text-white bg-gray-700 lg:h-screen lg:overflow-auto lg:w-full pt-10" data-theme="dark">
                     <div className="tabs transition-all duration-300">
                         <a
                             className={classNames('tab tab-bordered w-1/2 tab-lg transition-all duration-500', tab === 'projects' && 'tab-active')}
