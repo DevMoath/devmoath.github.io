@@ -54,7 +54,7 @@ function YouTubeIcon() {
     );
 }
 
-const Preview = () => {
+export default function Preview() {
     const email = 'moath.alhajrii@gmail.com';
 
     const [state, setState] = useState(false);
@@ -115,6 +115,4 @@ const Preview = () => {
             </div>
         </div>
     );
-};
-
-export default Preview;
+}
