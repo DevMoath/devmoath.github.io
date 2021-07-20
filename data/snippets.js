@@ -34,6 +34,41 @@ if [ -s "$HOME/.nvm/nvm.sh" ]; then
 fi`,
     },
     {
+        title: 'PHP - basic config file for unused-scanner package',
+        language: 'php',
+        code: `<?php
+
+$projectPath = __DIR__;
+
+$scanDirectories = [
+    "$projectPath/app/",
+];
+
+$scanFiles = [
+    "$projectPath/autocomplete.php",
+];
+
+$excludeDirectories = [
+    'runtime',
+    'storage/logs',
+];
+
+return [
+    'composerJsonPath' => "$projectPath/composer.json",
+    'vendorPath' => "$projectPath/vendor/",
+    'scanDirectories' => $scanDirectories,
+    'skipPackages' => [],
+    'excludeDirectories' => $excludeDirectories,
+    'scanFiles' => $scanFiles,
+    'extensions' => ['*.php'],
+    'requireDev' => true,
+    'customMatch' => null,
+    'reportPath' => null,
+    'reportFormatter' => null,
+    'reportExtension' => null,
+];`,
+    },
+    {
         title: 'Laravel - code style',
         language: 'php',
         code: `<?php
