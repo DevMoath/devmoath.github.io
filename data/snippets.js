@@ -15,27 +15,6 @@ Arr::macro('rekey', function (array $array, array $map) {
 });`,
     },
     {
-        title: 'Tailwindcss - plugin to capitalize first character for each word',
-        language: 'javascript',
-        code: `// tailwind.config.js
-const plugin = require('tailwindcss/plugin');
-
-// Let's create a plugin that adds utilities!
-const capitalizeFirst = plugin(function ({ addUtilities }) {
-    const newUtilities = {
-        '.capitalize-first:first-letter': {
-            textTransform: 'uppercase',
-        },
-    };
-    addUtilities(newUtilities, ['responsive', 'hover']);
-});
-
-module.exports = {
-    // ...
-    plugins: [capitalizeFirst],
-};`,
-    },
-    {
         title: 'Bash - upgrade packages in linux server',
         language: 'bash',
         code: `#!/usr/bin/env bash
