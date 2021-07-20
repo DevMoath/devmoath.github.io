@@ -74,14 +74,14 @@ export default function Preview() {
                 </div>
                 <h1 className="text-4xl">Hi 👋</h1>
                 <p className="my-5 text-lg">
-                    I am Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from
-                    <a href="https://ksu.edu.sa/" className="link text-info mx-1 link-hover">
+                    I am Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from{' '}
+                    <a href="https://ksu.edu.sa/" className="link text-info link-hover">
                         King Saud University
-                    </a>
-                    and I am working now as Software Developer at
-                    <a href="https://tamkeentech.sa/" className="link text-info mx-1 link-hover">
-                        Tamkeen Tech
-                    </a>
+                    </a>{' '}
+                    and I am working now as Software Developer at{' '}
+                    <a href="https://tamkeentech.sa/" className="link text-info link-hover">
+                        TamkeenTech
+                    </a>{' '}
                     company
                 </p>
                 <div className="flex justify-center gap-x-6 my-5">
@@ -107,7 +107,7 @@ export default function Preview() {
                     </Link>
                 </div>
                 <div className="flex">
-                    <button type="button" className="btn mx-auto shadow-lg" onClick={() => copyEmail()}>
+                    <button type="button" className="btn mx-auto shadow-lg" onClick={copyEmail}>
                         <span className="mr-3">{email}</span>
                         {state ? <ClipboardCheckIcon className="h-6 w-6" /> : <ClipboardIcon className="h-6 w-6" />}
                     </button>
