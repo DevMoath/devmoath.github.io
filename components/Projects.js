@@ -5,7 +5,7 @@ export default function Projects() {
         <div className="flex flex-col gap-8 my-10">
             {projects.map((project) => {
                 return (
-                    <div className="card bordered shadow-lg" key={Math.random()}>
+                    <div className="card bordered bg-base-100 shadow-md" key={Math.random()}>
                         <div className="card-body">
                             <div className="card-title">
                                 <div className="flex gap-4 mb-5">
