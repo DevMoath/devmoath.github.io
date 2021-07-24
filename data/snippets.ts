@@ -1,4 +1,10 @@
-const snippets = [
+interface Snippet {
+    title: string;
+    language: string;
+    code: string;
+}
+
+const snippets: Array<Snippet> = [
     {
         title: 'Laravel - macro function for `Arr` class to replace array keys with new keys',
         language: 'php',

@@ -1,6 +1,11 @@
 import { NextSeo } from 'next-seo';
 
-export default function SEO({ title = 'Moath Alhajri', description = 'Software Developer' }) {
+interface SEOProps {
+    title?: string;
+    description?: string;
+}
+
+export default function SEO({ title = 'Moath Alhajri', description = 'Software Developer' }: SEOProps) {
     return (
         <NextSeo
             title={title}

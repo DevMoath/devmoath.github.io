@@ -1,4 +1,11 @@
-const projects = [
+interface Project {
+    title: string;
+    image?: string;
+    description: string;
+    link: string;
+}
+
+const projects: Array<Project> = [
     {
         title: 'Information Systems Blog',
         image: '/image/blog-icon.png',
