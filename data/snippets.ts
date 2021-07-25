@@ -75,6 +75,13 @@ return [
 ];`,
     },
     {
+        title: 'Laravel - Send test mail',
+        language: 'php',
+        code: `<?php
+        
+Mail::raw('Hello World!', function($msg) { $msg->from('mysender@app.com')->to('myemail@gmail.com')->subject('Test Email'); });`,
+    },
+    {
         title: 'Laravel - code style',
         language: 'php',
         code: `<?php
