@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import snippets from '@data/snippets';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import copy from '@devmoath/copy-text';
+import { copy } from '@devmoath/copy-text';
 import { useState } from 'react';
 import { ClipboardCheckIcon, ClipboardIcon } from '@heroicons/react/outline';
 
