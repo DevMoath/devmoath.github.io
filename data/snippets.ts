@@ -46,26 +46,20 @@ fi`,
 
 $projectPath = __DIR__;
 
-$scanDirectories = [
-    "$projectPath/app/",
-];
-
-$scanFiles = [
-    "$projectPath/autocomplete.php",
-];
-
-$excludeDirectories = [
-    'runtime',
-    'storage/logs',
-];
-
 return [
     'composerJsonPath' => "$projectPath/composer.json",
     'vendorPath' => "$projectPath/vendor/",
-    'scanDirectories' => $scanDirectories,
+    'scanDirectories' => [
+        "$projectPath/app/",
+    ],
     'skipPackages' => [],
-    'excludeDirectories' => $excludeDirectories,
-    'scanFiles' => $scanFiles,
+    'excludeDirectories' => [
+        'runtime',
+        'storage/logs',
+    ],
+    'scanFiles' => [
+        "$projectPath/autocomplete.php",
+    ],
     'extensions' => ['*.php'],
     'requireDev' => true,
     'customMatch' => null,
