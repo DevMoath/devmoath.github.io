@@ -1,6 +1,6 @@
 {
     "dependencies": {
-        "@devmoath/copy-text": "^0.1.0",
+        "@devmoath/copy-text": "^0.2.0",
         "@heroicons/react": "^1.0.2",
         "classnames": "^2.2.6",
         "next": "^11.0.1",

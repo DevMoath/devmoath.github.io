@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import { copy } from '@devmoath/copy-text';
+import copy from '@devmoath/copy-text';
 import Link from 'next/link';
 import { ClipboardCheckIcon, ClipboardIcon } from '@heroicons/react/outline';
 
