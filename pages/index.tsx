@@ -1,20 +1,17 @@
 import Preview from '@components/Preview';
 import Projects from '@components/Projects';
-import Head from 'next/head';
 import { useState } from 'react';
 import Snippets from '@components/Snippets';
 import classNames from 'classnames';
 import { BriefcaseIcon, CodeIcon } from '@heroicons/react/outline';
+import SEO from '@components/SEO';
 
 export default function Index() {
     const [tab, setTab] = useState('projects');
 
     return (
         <div>
-            <Head>
-                <title>Moath Alhajri</title>
-                <meta content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" name="viewport" />
-            </Head>
+            <SEO />
             <div className="lg:flex">
                 <div className="h-screen lg:py-0 max-w-xl">
                     <Preview />
