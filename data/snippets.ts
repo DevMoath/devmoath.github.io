@@ -222,10 +222,6 @@ return (new \\PhpCsFixer\\Config('Laravel'))
         'unary_operator_spaces' => true,
         'line_ending' => true,
         'whitespace_after_comma_in_array' => true,
-        'no_alias_functions' => true,
-        'no_unreachable_default_argument_value' => true,
-        'self_accessor' => true,
-        'psr_autoloading' => true,
         'binary_operator_spaces' => [
             'operators' => [
                 '|' => 'no_space',
@@ -236,8 +232,6 @@ return (new \\PhpCsFixer\\Config('Laravel'))
         'fully_qualified_strict_types' => true,
         'global_namespace_import' => true,
         'phpdoc_summary' => false,
-        'native_function_invocation' => true,
-        'native_constant_invocation' => true,
     ]);`,
     },
 ];
