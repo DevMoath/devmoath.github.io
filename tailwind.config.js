@@ -6,7 +6,11 @@ module.exports = {
     darkMode: false,
 
     theme: {
-        extend: {},
+        extend: {
+            container: {
+                center: true,
+            },
+        },
     },
 
     variants: {

@@ -28,7 +28,7 @@ export default function NavBar() {
             {({ open }) => (
                 <Fragment>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                        <div className="relative flex items-center justify-between h-16 container">
+                        <div className="container relative flex items-center justify-between h-16">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 <Disclosure.Button className="transition-colors duration-200 transform inline-flex items-center justify-center p-2 rounded-lg text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Open main menu</span>
