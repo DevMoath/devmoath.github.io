@@ -91,6 +91,10 @@ function YouTubeIcon() {
 export default function NavBar() {
     const navigation = [
         {
+            name: 'Projects',
+            href: '/projects',
+        },
+        {
             name: 'Blog',
             href: '/blog',
         },
@@ -135,7 +139,7 @@ export default function NavBar() {
                                     </Button>
                                 </div>
                                 <div className="hidden sm:block sm:ml-3">
-                                    <div className="flex items-center">
+                                    <div className="flex items-center space-x-1">
                                         {navigation.map((item) => (
                                             <Button key={Math.random()} href={item.href} asLink>
                                                 {item.name}
