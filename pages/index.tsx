@@ -5,6 +5,7 @@ import Snippets from '@components/Snippets';
 import classNames from 'classnames';
 import { BriefcaseIcon, CodeIcon } from '@heroicons/react/outline';
 import SEO from '@components/SEO';
+import NavBar from '@components/NavBar';
 
 export default function Index() {
     const [tab, setTab] = useState('projects');
@@ -12,6 +13,7 @@ export default function Index() {
     return (
         <div>
             <SEO />
+            <NavBar />
             <div className="lg:flex">
                 <div className="h-screen lg:py-0 max-w-xl">
                     <Preview />
