@@ -61,6 +61,16 @@ module.exports = {
                 destination: 'https://www.youtube.com/channel/UCm-qdl6K8w6hvxFwgO7u5qw',
                 permanent: true,
             },
+            {
+                source: '/ksu',
+                destination: 'https://ksu.edu.sa',
+                permanent: true,
+            },
+            {
+                source: '/work',
+                destination: 'https://tamkeentech.sa/',
+                permanent: true,
+            },
         ];
     },
 };

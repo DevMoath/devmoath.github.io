@@ -92,23 +92,23 @@ export default function NavBar() {
     const navigation = [
         {
             name: 'Blog',
-            href: 'blog',
+            href: '/blog',
         },
         {
             name: TwitterIcon(),
-            href: 'twitter',
+            href: '/twitter',
         },
         {
             name: GitHubIcon(),
-            href: 'github',
+            href: '/github',
         },
         {
             name: LinkedInIcon(),
-            href: 'linkedin',
+            href: '/linkedin',
         },
         {
             name: YouTubeIcon(),
-            href: 'youtube',
+            href: '/youtube',
         },
     ];
 

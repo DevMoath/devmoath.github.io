@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Link from 'next/link';
 import SEO from '@components/SEO';
 import NavBar from '@components/NavBar';
 import Image from 'next/image';
@@ -12,13 +13,13 @@ export default function Index() {
                 <h1 className="text-4xl text-black font-bold col-span-4">Hello, I'm Moath</h1>
                 <p className="my-8 text-lg leading-8 col-span-4 md:col-span-2">
                     I am Moath Alhajri from Saudi Arabia, I have bachelor degree in Information Systems from{' '}
-                    <a href="https://ksu.edu.sa/" className="text-blue-500 hover:underline">
-                        King Saud University
-                    </a>{' '}
+                    <Link href="/ksu">
+                        <a className="text-blue-500 hover:underline">King Saud University</a>
+                    </Link>{' '}
                     and I am working now as Software Developer at{' '}
-                    <a href="https://tamkeentech.sa/" className="text-blue-500 hover:underline">
-                        TamkeenTech
-                    </a>{' '}
+                    <Link href="/work">
+                        <a className="text-blue-500 hover:underline">Tamkeen Tech</a>
+                    </Link>{' '}
                     company.
                 </p>
                 <Image
