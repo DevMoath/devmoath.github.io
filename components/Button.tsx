@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import classnames from 'classnames';
 
-export default function Button({ children, href, classNames = '', asLink = false }) {
+export default function Button({ children, href, classNames, asLink }: { children: any; href: string; classNames?: string; asLink?: boolean }) {
     classNames = classnames(
-        'flex justify-center text-center transition-colors duration-200 transform px-3 py-2 rounded-lg text-black hover:bg-gray-300',
+        'flex justify-center text-center transition-colors duration-300 transform px-3 py-2 rounded-lg text-black hover:text-white hover:bg-blue-500',
         classNames
     );
 
