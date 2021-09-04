@@ -93,10 +93,10 @@ export default function NavBar() {
             name: 'Projects',
             href: '/projects',
         },
-        {
-            name: 'Blog',
-            href: '/blog',
-        },
+        // {
+        //     name: 'Blog',
+        //     href: '/blog',
+        // },
         {
             name: TwitterIcon(),
             href: '/twitter',
