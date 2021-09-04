@@ -6,7 +6,7 @@
         "lint": "next lint",
         "start": "next start"
     },
-    "dependencies": {
+    "devDependencies": {
         "@headlessui/react": "^1.4.0",
         "@heroicons/react": "^1.0.2",
         "@tailwindcss/line-clamp": "^0.2.1",
