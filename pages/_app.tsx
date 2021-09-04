@@ -9,7 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <Fragment>
             <SEO />
             <NavBar />
-            <Component {...pageProps} />
+            <div className="max-w-4xl mx-auto antialiased my-16 px-4">
+                <Component {...pageProps} />
+            </div>
         </Fragment>
     );
 }

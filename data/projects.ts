@@ -1,59 +1,68 @@
-interface Project {
-    title: string;
-    image?: string;
-    description: string;
-    link: string;
-}
+import { MediaPreviewProps } from '@components/MediaPreview';
 
-const projects: Array<Project> = [
+const projects: Array<MediaPreviewProps> = [
     {
         title: 'Information Systems Blog',
-        image: '/image/blog-icon.png',
-        description: 'Blog for information systems students contains plan study details, courses description, advices, tips, and resources.',
-        link: 'https://infosystems.blog/',
+        text: 'Blog for information systems students contains plan study details, courses description, advices, tips, and resources.',
+        url: 'https://infosystems.blog',
+        image: '/image/infosystems-blog-logo.png',
+        type: 'other',
     },
     {
         title: 'Hide Twitter Trends',
-        image: '/image/hide_twitter_trends.png',
-        description: 'Hide Twitter (Trending now, Who to follow, Topics to follow) taps.',
-        link: 'https://chrome.google.com/webstore/detail/hide-twitter-trends/lapmncfnibdclongbkleadoicnkhknia?hl=en&authuser=0',
+        text: 'Hide Twitter (Trending now, Who to follow, Topics to follow) taps.',
+        url: 'https://chrome.google.com/webstore/detail/hide-twitter-trends/lapmncfnibdclongbkleadoicnkhknia?hl=en&authuser=0',
+        image: '/image/hide-twitter-trends-logo.png',
+        type: 'other',
     },
     {
         title: 'Online JWT Builder',
-        description: 'Web page used to generate fake, but valid, JSON Web Tokens.',
-        link: 'https://online-jwt-builder.herokuapp.com/',
+        text: 'Web page used to generate fake, but valid, JSON Web Tokens.',
+        url: 'https://online-jwt-builder.herokuapp.com/',
+        image: '/image/online-jwt-builder-logo.png',
+        type: 'other',
     },
     {
-        title: 'RTL Markdown Editor Web',
-        image: '/image/rtl_markdown_editor_web.svg',
-        description: 'Markdown editor for rtl language.',
-        link: 'https://rtl-markdown-editor.vercel.app/',
+        title: 'Mark Editor',
+        text: 'Markdown editor for rtl language.',
+        url: 'https://mark-editor.vercel.app/',
+        image: '/image/mark-editor-logo.png',
+        type: 'other',
     },
     {
         title: 'Tailwindcss Typography RTL',
-        description: 'Add RTL support for tailwindcss-typography plugin.',
-        link: 'https://www.npmjs.com/package/@devmoath/tailwindcss-typography-rtl',
+        text: 'Add RTL support for tailwindcss-typography plugin.',
+        url: 'https://www.npmjs.com/package/@devmoath/tailwindcss-typography-rtl',
+        image: '/image/tailwindcss-typography-rtl-logo.png',
+        type: 'other',
     },
     {
         title: 'Arabic numbers to English numbers',
-        description: 'Convert Arabic numbers to English numbers.',
-        link: 'https://www.npmjs.com/package/@devmoath/ar-num-to-en-num',
+        text: 'Convert Arabic numbers to English numbers.',
+        url: 'https://www.npmjs.com/package/@devmoath/ar-num-to-en-num',
+        image: '/image/arabic-numbers-to-english-numbers-logo.png',
+        type: 'other',
     },
     {
         title: 'Password Generator CLI',
-        description: 'Node.js cli to generate passwords.',
-        link: 'https://www.npmjs.com/package/@devmoath/pass',
+        text: 'Node.js cli to generate passwords.',
+        url: 'https://www.npmjs.com/package/@devmoath/pass',
+        image: '/image/password-generator-cli-logo.png',
+        type: 'other',
     },
     {
         title: 'Password Generator App',
-        image: '/image/password_generator_app.png',
-        description: 'Password generator app to give you strong password.',
-        link: 'https://password-generator-app-ten.vercel.app',
+        text: 'Password generator app to give you strong password.',
+        url: 'https://password-generator-app-ten.vercel.app',
+        image: '/image/password-generator-app-logo.png',
+        type: 'other',
     },
     {
         title: 'Copy Text',
-        description: 'Copy text to user clipboard.',
-        link: 'https://www.npmjs.com/package/@devmoath/copy-text',
+        text: 'Copy text to user clipboard.',
+        url: 'https://www.npmjs.com/package/@devmoath/copy-text',
+        image: '/image/copy-text-logo.png',
+        type: 'other',
     },
 ];
 
