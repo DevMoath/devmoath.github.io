@@ -12,7 +12,7 @@ export type MediaPreviewProps = {
 };
 
 export default function MediaPreview({ title, text, url, image, type }: MediaPreviewProps) {
-    const [width, height] = [1200, 628];
+    const [width, height] = type === 'other' ? [1200, 628] : [1280, 720];
 
     return (
         <Link href={url}>

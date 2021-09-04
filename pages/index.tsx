@@ -4,6 +4,7 @@ import MediaPreview, { MediaPreviewProps } from '@components/MediaPreview';
 import { PlusIcon } from '@node_modules/@heroicons/react/solid';
 import projects from '@data/projects';
 import { Fragment } from 'react';
+import videos from '@data/videos';
 
 const posts: Array<MediaPreviewProps> = [
     {
@@ -59,6 +60,25 @@ export default function Index() {
                                 <div className="h-[120px]" />
                             </div>
                             <h2 className="text-lg font-bold group-hover:text-blue-500 text-center">More Projects</h2>
+                        </a>
+                    </Link>
+                </div>
+            </div>
+            <div className="mt-20">
+                <h1 className="text-4xl text-black font-bold mb-10">Recent Videos</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {videos.map((video) => {
+                        return <MediaPreview {...video} key={Math.random()} />;
+                    })}
+                    <Link href="/youtube">
+                        <a className="text-gray-800 group block focus:text-blue-500 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 focus-visible:ring-opacity-60 focus-visible:outline-none focus:outline-none rounded">
+                            <div className="relative mb-4 overflow-hidden rounded-lg text-[0px]">
+                                <div className="absolute inset-0 z-10 flex items-center justify-center transition-colors group-hover:bg-black/20 text-black group-hover:text-blue-500">
+                                    <PlusIcon className="w-16" />
+                                </div>
+                                <div className="h-[120px]" />
+                            </div>
+                            <h2 className="text-lg font-bold group-hover:text-blue-500 text-center">More Videos</h2>
                         </a>
                     </Link>
                 </div>
