@@ -23,7 +23,7 @@ export default function MediaPreview({ title, text, url, image, type }: MediaPre
                             {type === 'youtube' ? <PlayIcon className="w-16" /> : null}
                         </div>
 
-                        <Image src={image} width={width} height={height} />
+                        <Image src={image} width={width} height={height} alt={title} />
                     </div>
                 ) : null}
                 <h2 className="text-lg font-bold group-hover:text-blue-500">{title}</h2>

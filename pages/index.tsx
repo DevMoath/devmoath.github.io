@@ -26,7 +26,7 @@ const posts: Array<MediaPreviewProps> = [
 export default function Index() {
     return (
         <Fragment>
-            <h1 className="text-4xl text-black font-bold mb-10">Hello, I'm Moath</h1>
+            <h1 className="text-4xl text-black font-bold mb-10">Hello, I am Moath</h1>
             <div className="lg:flex space-x-5 item-center lg:-mx-4">
                 <div className="lg:px-4">
                     <p className="my-8 text-lg leading-8">
