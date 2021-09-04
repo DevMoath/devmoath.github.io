@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import MediaPreview, { MediaPreviewProps } from '@components/MediaPreview';
-import { PlusIcon } from '@node_modules/@heroicons/react/solid';
 import projects from '@data/projects';
 import { Fragment } from 'react';
 import videos from '@data/videos';
+import MoreMediaPreview from '@components/MoreMediaPreview';
 
 const posts: Array<MediaPreviewProps> = [
     {
@@ -51,17 +51,7 @@ export default function Index() {
                     {projects.slice(0, 2).map((project) => {
                         return <MediaPreview {...project} key={Math.random()} />;
                     })}
-                    <Link href="/projects">
-                        <a className="text-gray-800 group block focus:text-blue-500 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 focus-visible:ring-opacity-60 focus-visible:outline-none focus:outline-none rounded">
-                            <div className="relative mb-4 overflow-hidden rounded-lg text-[0px]">
-                                <div className="absolute inset-0 z-10 flex items-center justify-center transition-colors group-hover:bg-black/20 text-black group-hover:text-blue-500">
-                                    <PlusIcon className="w-16" />
-                                </div>
-                                <div className="h-[145px]" />
-                            </div>
-                            <h2 className="text-lg font-bold group-hover:text-blue-500 text-center">More Projects</h2>
-                        </a>
-                    </Link>
+                    <MoreMediaPreview url="/projects" title="More Projects" type="other" />
                 </div>
             </div>
             <div className="mt-20">
@@ -70,17 +60,7 @@ export default function Index() {
                     {videos.map((video) => {
                         return <MediaPreview {...video} key={Math.random()} />;
                     })}
-                    <Link href="/youtube">
-                        <a className="text-gray-800 group block focus:text-blue-500 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 focus-visible:ring-opacity-60 focus-visible:outline-none focus:outline-none rounded">
-                            <div className="relative mb-4 overflow-hidden rounded-lg text-[0px]">
-                                <div className="absolute inset-0 z-10 flex items-center justify-center transition-colors group-hover:bg-black/20 text-black group-hover:text-blue-500">
-                                    <PlusIcon className="w-16" />
-                                </div>
-                                <div className="h-[155px]" />
-                            </div>
-                            <h2 className="text-lg font-bold group-hover:text-blue-500 text-center">More Videos</h2>
-                        </a>
-                    </Link>
+                    <MoreMediaPreview url="/youtube" title="More Videos" type="youtube" />
                 </div>
             </div>
             {/*<div className="mt-20">*/}
