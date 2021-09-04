@@ -57,7 +57,7 @@ export default function Index() {
                                 <div className="absolute inset-0 z-10 flex items-center justify-center transition-colors group-hover:bg-black/20 text-black group-hover:text-blue-500">
                                     <PlusIcon className="w-16" />
                                 </div>
-                                <div className="h-[120px]" />
+                                <div className="h-[145px]" />
                             </div>
                             <h2 className="text-lg font-bold group-hover:text-blue-500 text-center">More Projects</h2>
                         </a>
@@ -76,7 +76,7 @@ export default function Index() {
                                 <div className="absolute inset-0 z-10 flex items-center justify-center transition-colors group-hover:bg-black/20 text-black group-hover:text-blue-500">
                                     <PlusIcon className="w-16" />
                                 </div>
-                                <div className="h-[120px]" />
+                                <div className="h-[155px]" />
                             </div>
                             <h2 className="text-lg font-bold group-hover:text-blue-500 text-center">More Videos</h2>
                         </a>
