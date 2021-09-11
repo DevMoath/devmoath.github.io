@@ -6,7 +6,7 @@ function TwitterIcon() {
     return (
         <div className="flex space-x-2">
             <svg
-                className="w-7 h-7 "
+                className="w-7 h-7"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
@@ -26,7 +26,7 @@ function GitHubIcon() {
     return (
         <div className="flex space-x-2">
             <svg
-                className="w-7 h-7 "
+                className="w-7 h-7"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
@@ -46,7 +46,7 @@ function LinkedInIcon() {
     return (
         <div className="flex space-x-2">
             <svg
-                className="w-7 h-7 "
+                className="w-7 h-7"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
@@ -70,7 +70,7 @@ function YouTubeIcon() {
     return (
         <div className="flex space-x-2">
             <svg
-                className="w-7 h-7 "
+                className="w-7 h-7"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
@@ -83,6 +83,28 @@ function YouTubeIcon() {
                 <path d="M10 9l5 3l-5 3z" />
             </svg>
             <span className="md:hidden text-lg">YouTube</span>
+        </div>
+    );
+}
+
+function InstagramIcon() {
+    return (
+        <div className="flex space-x-2">
+            <svg
+                className="w-7 h-7"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+            </svg>
+            <span className="md:hidden text-lg">Instagram</span>
         </div>
     );
 }
@@ -112,6 +134,10 @@ export default function NavBar() {
         {
             name: YouTubeIcon(),
             href: '/youtube',
+        },
+        {
+            name: InstagramIcon(),
+            href: '/instagram',
         },
     ];
 

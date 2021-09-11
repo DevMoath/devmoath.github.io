@@ -8,6 +8,13 @@ const videos: Array<MediaPreviewProps> = [
         image: '/image/hide-twitter-trends-thumbnail.png',
         type: 'youtube',
     },
+    {
+        title: 'PHPStorm: Replace in Path Feature [Arabic]',
+        text: 'اول اختصار: إذا كنت تحتاج تغير كود قديم موجود بملفات كثيره بالمشروع الى كود جديد فالحل انك تستخدم وظيفة Replace in path وشرحها موجود بالمقطع',
+        url: 'https://youtu.be/IKOiB1RqKg8',
+        image: '/image/phpstorm-replace-in-path-feature-[arabic].png',
+        type: 'youtube',
+    },
 ];
 
 export default videos;

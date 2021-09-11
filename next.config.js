@@ -53,12 +53,17 @@ module.exports = {
             },
             {
                 source: '/linkedin',
-                destination: 'https://www.linkedin.com/in/moath-alhajri/',
+                destination: 'https://www.linkedin.com/in/moath-alhajri',
                 permanent: true,
             },
             {
                 source: '/youtube',
                 destination: 'https://www.youtube.com/channel/UCm-qdl6K8w6hvxFwgO7u5qw',
+                permanent: true,
+            },
+            {
+                source: '/instagram',
+                destination: 'https://www.instagram.com/dev_moath',
                 permanent: true,
             },
             {
